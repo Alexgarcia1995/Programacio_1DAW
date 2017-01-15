@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;utils.formato&apos; to &apos;formatos&apos;&#x0A;- Original project: &apos;Framework_Alejandro_Garcia&apos;&#x0A;- Original element: &apos;utils.formato&apos;&#x0A;- Renamed element: &apos;utils.formatos&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;formato&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;utils{formato.java[formato" matchStrategy="1" name="formatos" qualified="false" references="true" similarDeclarations="false" stamp="1480962597026" textual="false" version="1.0"/>
+</session>

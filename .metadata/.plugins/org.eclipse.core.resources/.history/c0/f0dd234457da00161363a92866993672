@@ -1,0 +1,16 @@
+package modules.user.utils.CRUD;
+
+import javax.swing.JOptionPane;
+
+import modules.user.classes.*;
+
+public class Funciones_delete {
+
+	public static void delete_admin(Persona p1){
+		int location=-1;
+		
+		if(Singleton.useradmin.isEmpty()){
+			JOptionPane.showMessageDialog(null, "No hay usuarios para eliminar");
+		}
+	}
+}

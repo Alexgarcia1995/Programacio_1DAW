@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Framework_Alejandro_Garcia/src/Main_Ejer4_Genericos.java&apos; to &apos;Main_Framework.java&apos;" description="Rename resource &apos;Main_Ejer4_Genericos.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/Main_Ejer4_Genericos.java" name="Main_Framework.java" stamp="1479481669613" updateReferences="true"/>
+</session>

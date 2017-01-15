@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Alejandro_Garcia/src/Alejandro_Garcia/Main_Ejer3.java&apos; to &apos;Main_menu.java&apos;" description="Rename resource &apos;Main_Ejer3.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/Alejandro_Garcia/Main_Ejer3.java" name="Main_menu.java" stamp="1477318734687" updateReferences="true"/>
+</session>

@@ -1,0 +1,22 @@
+package modules.user.utils.CRUD;
+
+import modules.user.classes.Admin;
+import modules.user.classes.Persona;
+import modules.user.classes.Singleton;
+import modules.user.utils.Funciones_Ejer_Genericos;
+import modules.user.utils.Funciones_find;
+
+public class Funciones_create {
+public static void create_admin(Persona p1){
+	int location=-1;
+	
+	p1=Funciones_Ejer_Genericos.Create_DNI_Generic(1);
+	location=Funciones_find.find_admin((Admin) p1);
+	if (location != -1) {
+		JOptionPane.showMessageDialog(null, Languages.message("usererror2", config, 0), Languages.message("errortitle", config, 0), JOptionPane.ERROR_MESSAGE);
+	} else {
+		a1 = Functions_users.ask_admin(config);
+		Singleton.useradmin.add(a1);
+}
+}
+}

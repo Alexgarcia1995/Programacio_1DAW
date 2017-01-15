@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/Alejandro_Garcia/src/Alejandro_Garcia/Main_menu.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="Alejandro_Garcia.Main_menu"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Alejandro_Garcia"/>
+</launchConfiguration>

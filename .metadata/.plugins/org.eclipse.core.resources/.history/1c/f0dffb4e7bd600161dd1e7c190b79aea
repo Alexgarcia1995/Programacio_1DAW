@@ -1,0 +1,114 @@
+package modules.user.classes;
+
+import javax.swing.JOptionPane;
+
+import classes.Clase_Fecha;
+import classes.Settings;
+import modules.user.utils.Funciones_data_user;
+import modules.user.utils.Funciones_fecha;
+import utils.formatos;
+
+public class Admin extends Persona {
+	//private String tipo = "Administrador";
+	private String email;
+	private String avatar;
+	private String username;
+	private String passwd;
+	private String permiso = "Lectura, Escritura y Ejecucion";
+	private String aniocont;
+	private int antiguedad;
+	private String salario;
+	private Clase_Fecha aniocon;
+
+
+	public Admin() {
+		super();
+	}
+
+	/*public String gettipo() {
+		return this.tipo;
+	}
+*/
+	public String getemail() {
+		return email;
+	}
+
+	public void setemail(String email) {
+		this.email = email;
+	}
+
+	public String getavatar() {
+		return avatar;
+	}
+
+	public void setavatar(String avatar) {
+		this.avatar = avatar;
+	}
+
+	public String getusername() {
+		return username;
+	}
+
+	public void setusername(String username) {
+		this.username = username;
+	}
+
+	public String getpasswd() {
+		return passwd;
+	}
+
+	public void setpasswd(String passwd) {
+		this.passwd = passwd;
+	}
+
+	public String getpermiso() {
+		return this.permiso;
+	}
+	
+	public String getAniocont() {
+		this.aniocont=this.aniocon.toStringFecha(Settings.getDate_config());
+		return aniocont;
+	}
+
+	public void setAniocont(String aniocont) {
+		this.aniocont = aniocont;
+	}
+
+	public int getAntiguedad() {
+		this.antiguedad=Funciones_fecha.Antiguedad(getAniocont());
+		return antiguedad;
+	}
+
+	public String getSalario() {
+		this.salario=Funciones_data_user.Salario(this.getAntiguedad(),Settings.getCurrency_config(),Settings.getDecimals_config());
+		return salario;
+}
+	public Clase_Fecha getAniocon() {
+		return aniocon;
+	}
+
+	public void setAniocon(Clase_Fecha aniocon) {
+		this.aniocon = aniocon;
+	}
+
+
+	public String toString() {
+		String cad = "";
+		cad = cad + ("DNI = " + this.getdni() + "\n");
+		cad = cad + ("Nombre = "+ this.getnom() + "\n");
+		cad = cad + ("Direccion = "+ this.getadreca() + "\n");
+		cad = cad + ("Edad = " + this.getedad() + "\n");
+		cad = cad + ("Fecha nacimiento = " + this.getFechanaix() + "\n");
+		cad = cad + ("Sexo = " + this.getsexe() + "\n");
+		//cad = cad + ("Tipo = " + this.gettipo() + "\n");
+		cad = cad + ("Email = " + this.getemail() + "\n");
+		cad = cad + ("Avatar = " + this.getavatar() + "\n");
+		cad = cad + ("Usuario = " + this.getusername() + "\n");
+		cad = cad + ("Contrasenya = " + this.getpasswd() + "\n");
+		cad = cad + ("Fecha cont = " + this.getAniocont() + "\n");
+		cad = cad + ("Antig = " + this.getAntiguedad() + "\n");
+		cad = cad + ("Salario = " + this.getSalario() + Settings.getCurrency_config()+ "\n");
+		cad = cad + ("Permisos del usuario = " + this.getpermiso() + "\n");
+		return cad;
+	}
+}

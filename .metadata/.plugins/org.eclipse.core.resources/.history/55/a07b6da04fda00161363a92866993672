@@ -1,0 +1,12 @@
+package framework_v1_5.module.classes.order;
+
+import java.util.Comparator;
+
+import framework_v1_5.module.classes.User;
+
+public class Orderdatebirthday implements Comparator <User>{
+
+	public int compare (User u1, User u2) {
+		return u1.getDatebirthday().comparedate(u2.getDatebirthday());
+	}
+}

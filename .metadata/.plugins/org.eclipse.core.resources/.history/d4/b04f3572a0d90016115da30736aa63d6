@@ -1,0 +1,35 @@
+
+import javax.swing.JOptionPane;
+
+import classes.Clase_Fecha;
+import classes.Languages;
+import modules.user.classes.Admin;
+import modules.user.classes.Persona;
+import modules.user.classes.Singleton;
+import modules.user.utils.Funciones_Ejer_Genericos;
+import modules.user.utils.Funciones_data_user;
+import modules.user.utils.Funciones_fecha;
+import modules.user.utils.Funciones_find;
+import modules.user.utils.CRUD.Funciones_create;
+import utils.Validate;
+import utils.formatos;
+import utils.funciones;
+
+public class Prueba_Validadors {
+
+	public static void main(String[] args) {
+	
+	Persona p1=null;
+		int location=-1;
+		
+		p1= Funciones_Ejer_Genericos.Create_DNI_Admin();
+		location=Funciones_find.find_admin((Admin) p1);
+		if (location != -1) {
+			JOptionPane.showMessageDialog(null, "usererror2","usererror2", JOptionPane.ERROR_MESSAGE);
+		} else {
+			p1 = Funciones_Ejer_Genericos.Create_Generic(1);
+			Singleton.useradmin.add((Admin) p1);
+	}
+}
+}
+		

@@ -1,0 +1,71 @@
+package Tema3;
+
+import javax.swing.JOptionPane;
+
+public class funciones {
+	public static int pednum (){
+		int num=0;
+		boolean good=false;
+		String s="";
+		do {
+			try{
+				s=JOptionPane.showInputDialog(null, "Give me a number", "Number", JOptionPane.INFORMATION_MESSAGE);
+				num=Integer.parseInt(s);
+				good=true;
+			}catch (Exception e){
+				JOptionPane.showMessageDialog(null, "Error, give me a number","Error", JOptionPane.ERROR_MESSAGE);
+				good=false;
+			}
+		}while (good==false);
+		return num;;
+	}// acaba pednum
+
+	public static int ped_n (){
+		int n=0;
+		boolean good=false;
+		String s="";
+		do {
+			try{
+				s=JOptionPane.showInputDialog (null, "Give me a number", "Number", JOptionPane.INFORMATION_MESSAGE);
+				n=Integer.parseInt(s);
+				good=true;
+			}catch (Exception e){
+				JOptionPane.showMessageDialog(null, "Error, give me a number","Error", JOptionPane.ERROR_MESSAGE);
+				good=false;
+			}
+		}while (good==false);
+		return n;
+	}// acaba ped_n
+
+	public static char ped_char(){
+		char n=0;
+		boolean good=false;
+		String s="";
+		do {
+			try{
+				s=JOptionPane.showInputDialog (null, "Give me a number", "Number", JOptionPane.INFORMATION_MESSAGE);
+				n=s.charAt(0);
+				good=true;
+			}catch (Exception e){
+				JOptionPane.showMessageDialog(null, "Error, give me a number","Error", JOptionPane.ERROR_MESSAGE);
+				good=false;
+			}
+		}while (good==false);
+		return n;
+	}// acaba ped_char
+
+	public static int menu(){
+		int men=0;
+		String[] option= { "Ejercicio 1",  "Ejercicio 2", "Ejercicio 3" ,"Ejercicio 4"};
+		men=JOptionPane.showOptionDialog(null, "Choose an option", "Option", 0 , JOptionPane.QUESTION_MESSAGE, null, option, option[0]);
+		return men;
+	}
+
+	public static int menu_retro(){
+		int men1=0;
+		String[] option= { "Continue",  "Back", "Exit" };
+		men1=JOptionPane.showOptionDialog(null, "WHat do you want to do?", "Option", 0 , JOptionPane.QUESTION_MESSAGE, null, option, option[0]);
+		return men1;
+	}
+
+}

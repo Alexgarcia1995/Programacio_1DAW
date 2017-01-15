@@ -1,0 +1,11 @@
+package framework_v1_5.module.classes.order;
+
+import java.util.Comparator;
+import framework_v1_5.module.classes.*;
+
+public class Orderdateup implements Comparator <User>{
+
+	public int compare (User u1, User u2) {
+		return ((Client)u1).getDateup().comparedate(((Client)u2).getDateup());
+	}
+}

@@ -1,0 +1,16 @@
+package modules.user.utils.CRUD;
+
+import javax.swing.JOptionPane;
+
+import classes.Languages;
+import modules.user.classes.Admin;
+import modules.user.classes.Persona;
+import modules.user.classes.Singleton;
+import modules.user.utils.Funciones_Ejer_Genericos;
+import modules.user.utils.Funciones_find;
+
+public class Funciones_create {
+public static void create_admin(Persona p1){
+
+}
+}

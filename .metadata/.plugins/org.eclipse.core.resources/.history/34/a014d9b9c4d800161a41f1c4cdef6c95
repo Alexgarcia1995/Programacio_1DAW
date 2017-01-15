@@ -1,0 +1,8 @@
+package modules.user.classes;
+import java.util.ArrayList;
+
+import modules.user.classes.*;
+public class Singleton {
+	
+	public static Arraylist <Admin> useradmin;
+}
