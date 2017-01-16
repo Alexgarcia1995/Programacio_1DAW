@@ -9,6 +9,7 @@ import classes.Settings;
 import modules.user.utils.*;
 import modules.user.utils.CRUD.Funciones_create;
 import modules.user.utils.CRUD.Funciones_delete;
+import modules.user.utils.CRUD.Funciones_order;
 import modules.user.utils.CRUD.Funciones_read;
 import modules.user.utils.CRUD.Funciones_update;
 import modules.user.classes.*;
@@ -38,8 +39,8 @@ public class Main_Framework2 {
 		
 		
 		do{
-			String[] principal={"Menu principal",lenguajes.getProperty("opciones"),"Order",lenguajes.getProperty("exit")};
-			String[] option = {lenguajes.getProperty("create"), lenguajes.getProperty("read"), lenguajes.getProperty("update"), lenguajes.getProperty("delete"), lenguajes.getProperty("exit") };
+			String[] principal={"Menu principal",lenguajes.getProperty("opciones"),lenguajes.getProperty("exit")};
+			String[] option = {lenguajes.getProperty("create"), lenguajes.getProperty("read"), lenguajes.getProperty("update"), lenguajes.getProperty("delete"),"Order",lenguajes.getProperty("exit") };
 			String[] option1 = {lenguajes.getProperty("client"), lenguajes.getProperty("admin"), lenguajes.getProperty("normal"),lenguajes.getProperty("exit")};
 			
 		menprin= funciones.menu(principal, "Menu","Menu");
@@ -57,35 +58,23 @@ public class Main_Framework2 {
 					men = funciones.menu(option, lenguajes.getProperty("options"), lenguajes.getProperty("opciones"));
 					switch (men) {
 					case 0:
-						p=Funciones_Ejer_Genericos.Create_Generic(men1);
+						Funciones_create.create_client(p1);
 						break;
 					case 1:
-						if(p==null){
-							JOptionPane.showMessageDialog(null, lenguajes.getProperty("error2"), lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
-						}
-						else{
-							cad=Funciones_Ejer_Genericos.Read_Generic(p);
-							JOptionPane.showMessageDialog(null, cad);
-						}
+						Funciones_read.read_client(p1);
 						break;
 					case 2:
-						if(p==null){
-							JOptionPane.showMessageDialog(null, lenguajes.getProperty("error2"), lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
-						}
-						else{
-							p=Funciones_Ejer_Genericos.Update_Generic(p);
-						}
+						Funciones_update.update_client(p1);
 						break;
 					case 3:
-						if(p==null){
-							JOptionPane.showMessageDialog(null, lenguajes.getProperty("error2"), lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
-						}
-						else{
-							p=Funciones_Ejer_Genericos.Delete_Generic(p);
-						}
+						Funciones_delete.delete_client(p1);
+						break;
+					case 4:
+						Funciones_order.order_client();
 						break;
 					}
-				} while (men != 4);
+					
+				} while (men != 5);
 				break;
 			// Admins
 			case 1:
@@ -93,36 +82,22 @@ public class Main_Framework2 {
 					men = funciones.menu(option, lenguajes.getProperty("options"), lenguajes.getProperty("opciones"));
 					switch (men) {
 					case 0:
-						p1=Funciones_Ejer_Genericos.Create_Generic(men1);
+						Funciones_create.create_admin(p);
 						break;
 					case 1:
-						if(p1==null){
-							JOptionPane.showMessageDialog(null, lenguajes.getProperty("error2"), lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
-						}
-						else{
-							cad=Funciones_Ejer_Genericos.Read_Generic(p1);
-							JOptionPane.showMessageDialog(null, cad);
-						}
+						Funciones_read.read_admin(p);
 						break;
 					case 2:
-						if(p1==null){
-							JOptionPane.showMessageDialog(null, lenguajes.getProperty("error2"), lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
-						}
-						else{
-							p1=Funciones_Ejer_Genericos.Update_Generic(p1);
-						}
+						Funciones_update.update_admin(p);
 						break;
 					case 3:
-						if(p1==null){
-							JOptionPane.showMessageDialog(null, lenguajes.getProperty("error2"), lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
-						}
-						else{
-							p1=Funciones_Ejer_Genericos.Delete_Generic(p1);
-						}
+						Funciones_delete.delete_admin(p);
 						break;
-						
+					case 4:
+						Funciones_order.order_admin();
+						break;
 					}
-				} while (men != 4);
+				} while (men != 5);
 				break;
 				//Normal
 			case 2:
@@ -141,9 +116,11 @@ public class Main_Framework2 {
 					case 3:
 						Funciones_delete.delete_normal(p2);
 						break;
-						
+					case 4:
+						Funciones_order.order_normal();
+						break;
 					}
-				} while (men != 4);
+				} while (men != 5);
 				break;
 				
 			}
@@ -175,16 +152,12 @@ public class Main_Framework2 {
 			} while (men != 5);
 			break;
 			
+			
 		case 2:
-			
-			break;
-			
-			
-		case 3:
 			System.exit(0);
 		}
 		
 		
-}while(menprin != 3);
+}while(menprin != 2);
 	}
 }

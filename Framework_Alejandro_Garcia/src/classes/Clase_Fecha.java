@@ -150,6 +150,22 @@ public int comparaFechas(String Fecha_naix){
 		  return 0;
 	  }
 }
+
+public int comparaFechas1(String Fecha_naix){
+	
+	Calendar cal1 = this.StringToCalendar(fecha);
+	Calendar cal2 = this.StringToCalendar(Fecha_naix);
+	
+	  if (cal1.before(cal2)) 
+		  return 1;
+	  else if (cal1.after(cal2)) 
+		  return -1;
+	  else if (cal1.equals(cal2))
+		  return 0;
+	  else {
+		  return 0;
+	  }
+}
 public boolean ValidaFecha(){
 	
 	int dia;

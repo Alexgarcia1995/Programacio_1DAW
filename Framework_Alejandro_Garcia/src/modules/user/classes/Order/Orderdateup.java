@@ -6,6 +6,6 @@ import modules.user.classes.*;
 public class Orderdateup implements Comparator <Persona>{
 
 	public int compare (Persona u1, Persona u2) {
-		return ((Client)u1).getFechaalta().comparaFechas(((Client)u2).getFecha_alta());
+		return ((Client)u1).getFechaalta().comparaFechas1(((Client)u2).getFecha_alta());
 	}
 }

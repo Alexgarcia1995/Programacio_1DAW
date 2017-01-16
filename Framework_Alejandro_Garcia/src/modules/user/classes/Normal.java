@@ -14,6 +14,11 @@ public class Normal extends Persona{
 	public Normal(){
 		super();
 	}
+	
+	public Normal(String DNI){
+		super(DNI);
+	}
+	
 	public String getemail() {
 		return email;
 	}

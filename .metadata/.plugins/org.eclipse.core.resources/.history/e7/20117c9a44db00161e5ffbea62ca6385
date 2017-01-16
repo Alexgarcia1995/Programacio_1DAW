@@ -1,0 +1,52 @@
+package modules.user.utils.CRUD;
+
+import java.util.Collections;
+
+import javax.swing.JOptionPane;
+
+import classes.Languages;
+import modules.user.classes.*;
+import utils.funciones;
+public class Funciones_order {
+	public static void order_admin () {
+		String [] options = { "A) DNI", "B) user", "C) name", "D) surname", "E) datebirthday", "F) age", "G) benefits", "H) datecontract", "I) salary" };
+		String menu = "";
+		char order = ' ';
+		
+		if(Singleton.useradmin.isEmpty()){
+			JOptionPane.showMessageDialog(null, Languages.message("mainerror", config, 0), Languages.message("errortitle", config, 0), JOptionPane.ERROR_MESSAGE);
+		}else{
+			menu = funciones.combo_box(options, "Orden", "Orden");
+			order = menu.charAt(0);
+			switch (order) {
+				case 'A':
+					Collections.sort(Singleton.useradmin);
+					break;
+				case 'B':
+					Collections.sort(Singleton.useradmin, new Orderuser());
+					break;
+				case 'C':
+					Collections.sort(Singleton.useradmin, new Ordername());
+					break;
+				case 'D':
+					Collections.sort(Singleton.useradmin, new Ordersurname());
+					break;
+				case 'E':
+					Collections.sort(Singleton.useradmin, new Orderdatebirthday());
+					break;
+				case 'F':
+					Collections.sort(Singleton.useradmin, new Orderage());
+					break;
+				case 'G':
+					Collections.sort(Singleton.useradmin, new Orderbenefits());
+					break;
+				case 'H':
+					Collections.sort(Singleton.useradmin, new Orderdatecontract());
+					break;
+				case 'I':
+					Collections.sort(Singleton.useradmin, new Ordersalary());
+					break;
+			}
+		}
+	}
+}

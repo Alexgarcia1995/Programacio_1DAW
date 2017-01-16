@@ -7,6 +7,6 @@ import modules.user.classes.Persona;
 public class Orderdatebirthday implements Comparator <Persona>{
 
 	public int compare (Persona u1, Persona u2) {
-		return u1.getFechanac().comparaFechas(u2.getFechanaix());
+		return u1.getFechanac().comparaFechas1(u2.getFechanaix());
 	}
 }

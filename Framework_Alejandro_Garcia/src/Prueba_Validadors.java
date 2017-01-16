@@ -22,7 +22,10 @@ public class Prueba_Validadors {
 
 	public static void main(String[] args) {
 	
-		
+		String [] options = { "A) " + Languages.lenguajes.getProperty("dni"), "B) user", "C) name", "D) surname", "E) datebirthday", "F) age", "G) benefits", "H) datecontract", "I) salary" };
+		String menu = "";
+		char order = ' ';
+			menu = funciones.combo_box(options, "Orden", "Orden");
 }
 }
 		
