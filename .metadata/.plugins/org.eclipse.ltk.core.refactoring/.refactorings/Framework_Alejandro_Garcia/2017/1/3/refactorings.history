@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;modules.user.classes.Order.Orderuser&apos; to &apos;Orderuser_admin&apos;&#x0D;&#x0A;- Original project: &apos;Framework_Alejandro_Garcia&apos;&#x0D;&#x0A;- Original element: &apos;modules.user.classes.Order.Orderuser&apos;&#x0D;&#x0A;- Renamed element: &apos;modules.user.classes.Order.Orderuser_admin&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Orderuser&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;modules.user.classes.Order{Orderuser.java[Orderuser" matchStrategy="1" name="Orderuser_admin" qualified="false" references="true" similarDeclarations="false" stamp="1484679407783" textual="false" version="1.0"/>
+</session>

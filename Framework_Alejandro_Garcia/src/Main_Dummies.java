@@ -1,12 +1,18 @@
 
+import java.util.ArrayList;
+
 import javax.swing.JOptionPane;
 
 import classes.Languages;
 import classes.Settings;
+import modules.user.classes.Admin;
+import modules.user.classes.Client;
+import modules.user.classes.Normal;
 import modules.user.classes.Persona;
+import modules.user.classes.Singleton;
 import utils.formatos;
 import utils.funciones;
-import modules.user.utils.Funciones_Ejer_Dummies;
+import modules.user.utils.CRUD_Dummies.*;
 public class Main_Dummies {
 	public static Settings settings=null;
 	public static Languages lenguajes=Languages.lenguajes;
@@ -19,14 +25,30 @@ public class Main_Dummies {
 		Persona p2=null;
 		
 		settings=new Settings();
+		Singleton.useradmin = new ArrayList <Admin> ();
+		Singleton.userclient = new ArrayList <Client> ();
+		Singleton.usernormal = new ArrayList <Normal> ();
+	
+
+		int menprin=0;
 		
-		do {
+		
+		
+		
+		do{
 			if(Settings.dummies==false){
 				Main_Framework2.main(null);
 			}
-			String[] option = {lenguajes.getProperty("create"), lenguajes.getProperty("read"), lenguajes.getProperty("update"), lenguajes.getProperty("delete"), lenguajes.getProperty("exit") };
-			String[] option1 = {lenguajes.getProperty("client"), lenguajes.getProperty("admin"), lenguajes.getProperty("normal"),lenguajes.getProperty("opciones"),lenguajes.getProperty("exit")};
-			men1 = funciones.menu(option1, lenguajes.getProperty("crear") + " Dummies ", lenguajes.getProperty("opciones"));
+			String[] principal={lenguajes.getProperty("menu_p"),lenguajes.getProperty("opciones"),lenguajes.getProperty("exit")};
+			String[] option = {lenguajes.getProperty("create"), lenguajes.getProperty("read"), lenguajes.getProperty("update"), lenguajes.getProperty("delete"),"Order",lenguajes.getProperty("exit") };
+			String[] option1 = {lenguajes.getProperty("client"), lenguajes.getProperty("admin"), lenguajes.getProperty("normal"),lenguajes.getProperty("exit")};
+			
+		menprin= funciones.menu(principal, lenguajes.getProperty("menu") + "("+ lenguajes.getProperty("dummies")+")",lenguajes.getProperty("menu_p"));
+		switch(menprin){
+		case 0:
+		do{
+			
+			men1 = funciones.menu(option1, lenguajes.getProperty("crear"), lenguajes.getProperty("opciones"));
 			switch (men1) {
 			// Cliente
 			case 0:
@@ -34,35 +56,23 @@ public class Main_Dummies {
 					men = funciones.menu(option, lenguajes.getProperty("options"), lenguajes.getProperty("opciones"));
 					switch (men) {
 					case 0:
-						p=Funciones_Ejer_Dummies.Create_Generic(men1);
+						Funciones_create_dummies.create_client(p1);
 						break;
 					case 1:
-						if(p==null){
-							JOptionPane.showMessageDialog(null, lenguajes.getProperty("error2"), lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
-						}
-						else{
-							cad=Funciones_Ejer_Dummies.Read_Generic(p);
-							JOptionPane.showMessageDialog(null, cad);
-						}
+						Funciones_read_dummies.read_client(p1);
 						break;
 					case 2:
-						if(p==null){
-							JOptionPane.showMessageDialog(null, lenguajes.getProperty("error2"), lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
-						}
-						else{
-							p=Funciones_Ejer_Dummies.Update_Generic(p);
-						}
+						Funciones_update_dummies.update_client(p1);
 						break;
 					case 3:
-						if(p==null){
-							JOptionPane.showMessageDialog(null, lenguajes.getProperty("error2"), lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
-						}
-						else{
-							p=Funciones_Ejer_Dummies.Delete_Generic(p);
-						}
+						Funciones_delete_dummies.delete_client(p1);
+						break;
+					case 4:
+						Funciones_order_dummies.order_client();
 						break;
 					}
-				} while (men != 4);
+					
+				} while (men != 5);
 				break;
 			// Admins
 			case 1:
@@ -70,36 +80,22 @@ public class Main_Dummies {
 					men = funciones.menu(option, lenguajes.getProperty("options"), lenguajes.getProperty("opciones"));
 					switch (men) {
 					case 0:
-						p1=Funciones_Ejer_Dummies.Create_Generic(men1);
+						Funciones_create_dummies.create_admin(p);
 						break;
 					case 1:
-						if(p1==null){
-							JOptionPane.showMessageDialog(null, lenguajes.getProperty("error2"), lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
-						}
-						else{
-							cad=Funciones_Ejer_Dummies.Read_Generic(p1);
-							JOptionPane.showMessageDialog(null, cad);
-						}
+						Funciones_read_dummies.read_admin(p);
 						break;
 					case 2:
-						if(p1==null){
-							JOptionPane.showMessageDialog(null, lenguajes.getProperty("error2"), lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
-						}
-						else{
-							p1=Funciones_Ejer_Dummies.Update_Generic(p1);
-						}
+						Funciones_update_dummies.update_admin(p);
 						break;
 					case 3:
-						if(p1==null){
-							JOptionPane.showMessageDialog(null, lenguajes.getProperty("error2"), lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
-						}
-						else{
-							p1=Funciones_Ejer_Dummies.Delete_Generic(p1);
-						}
+						Funciones_delete_dummies.delete_admin(p);
 						break;
-						
+					case 4:
+						Funciones_order_dummies.order_admin();
+						break;
 					}
-				} while (men != 4);
+				} while (men != 5);
 				break;
 				//Normal
 			case 2:
@@ -107,65 +103,60 @@ public class Main_Dummies {
 					men = funciones.menu(option, lenguajes.getProperty("options"), lenguajes.getProperty("opciones"));
 					switch (men) {
 					case 0:
-						p2=Funciones_Ejer_Dummies.Create_Generic(men1);
+						Funciones_create_dummies.create_normal(p2);
 						break;
 					case 1:
-						if(p2==null){
-							JOptionPane.showMessageDialog(null, lenguajes.getProperty("error2"), lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
-						}
-						else{
-							cad=Funciones_Ejer_Dummies.Read_Generic(p2);
-							JOptionPane.showMessageDialog(null, cad);
-						}
+						Funciones_read_dummies.read_normal(p2);
 						break;
 					case 2:
-						if(p2==null){
-							JOptionPane.showMessageDialog(null, lenguajes.getProperty("error2"), lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
-						}
-						else{
-							p2=Funciones_Ejer_Dummies.Update_Generic(p2);
-						}
+						Funciones_update_dummies.update_normal(p2);
 						break;
 					case 3:
-						if(p2==null){
-							JOptionPane.showMessageDialog(null, lenguajes.getProperty("error2"), lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
-						}
-						else{
-							p2=Funciones_Ejer_Dummies.Delete_Generic(p2);
-						}
-						break;
-						
-					}
-				} while (men != 4);
-				break;
-			case 3:
-				do {
-					String[] option2= {lenguajes.getProperty("fecha"), lenguajes.getProperty("moneda"), lenguajes.getProperty("decimales"), lenguajes.getProperty("lenguajes"),"Dummies",lenguajes.getProperty("exit")};
-					men = funciones.menu(option2, lenguajes.getProperty("formato"), lenguajes.getProperty("formato2"));
-					switch (men) {
-					case 0:
-						formatos.Formatfecha();
-						break;
-					case 1:
-						formatos.Formatomoneda();
-						break;
-					case 2:
-						formatos.Formatdecimal();
-						break;
-					case 3:
-						Languages.Lengua(lenguajes);
+						Funciones_delete_dummies.delete_normal(p2);
 						break;
 					case 4:
-						formatos.Dummies();
+						Funciones_order_dummies.order_normal();
 						break;
 					}
 				} while (men != 5);
+				break;
+				
 			}
-			if (men1==4){
-				System.exit(0);
-			}
-		} while (men1 != 4) ;
-
+		} while (men1 != 3) ;
+		break;
+		
+		
+		case 1:
+			do {
+				String[] option2= {lenguajes.getProperty("fecha"), lenguajes.getProperty("moneda"), lenguajes.getProperty("decimales"), lenguajes.getProperty("lenguajes"),"Dummies",lenguajes.getProperty("exit")};
+				men = funciones.menu(option2, lenguajes.getProperty("formato"), lenguajes.getProperty("formato2"));
+				switch (men) {
+				case 0:
+					formatos.Formatfecha();
+					break;
+				case 1:
+					formatos.Formatomoneda();
+					break;
+				case 2:
+					formatos.Formatdecimal();
+					break;
+				case 3:
+					Languages.Lengua(lenguajes);
+					break;
+				case 4:
+					formatos.Dummies();
+					break;
+				}
+			} while (men != 5);
+			break;
+			
+			
+		case 2:
+			System.exit(0);
+		}
+		
+		
+}while(menprin != 2);
 	}
 }
 

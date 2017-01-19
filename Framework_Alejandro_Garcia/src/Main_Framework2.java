@@ -39,17 +39,17 @@ public class Main_Framework2 {
 		
 		
 		do{
-			String[] principal={"Menu principal",lenguajes.getProperty("opciones"),lenguajes.getProperty("exit")};
-			String[] option = {lenguajes.getProperty("create"), lenguajes.getProperty("read"), lenguajes.getProperty("update"), lenguajes.getProperty("delete"),"Order",lenguajes.getProperty("exit") };
-			String[] option1 = {lenguajes.getProperty("client"), lenguajes.getProperty("admin"), lenguajes.getProperty("normal"),lenguajes.getProperty("exit")};
-			
-		menprin= funciones.menu(principal, "Menu","Menu");
-		switch(menprin){
-		case 0:
-		do{
 			if(Settings.dummies==true){
 				Main_Dummies.main(null);
 			}
+			String[] principal={lenguajes.getProperty("menu_p"),lenguajes.getProperty("opciones"),lenguajes.getProperty("exit")};
+			String[] option = {lenguajes.getProperty("create"), lenguajes.getProperty("read"), lenguajes.getProperty("update"), lenguajes.getProperty("delete"),"Order",lenguajes.getProperty("exit") };
+			String[] option1 = {lenguajes.getProperty("client"), lenguajes.getProperty("admin"), lenguajes.getProperty("normal"),lenguajes.getProperty("exit")};
+			
+		menprin= funciones.menu(principal,lenguajes.getProperty("menu"),lenguajes.getProperty("menu"));
+		switch(menprin){
+		case 0:
+		do{
 			men1 = funciones.menu(option1, lenguajes.getProperty("crear"), lenguajes.getProperty("opciones"));
 			switch (men1) {
 			// Cliente

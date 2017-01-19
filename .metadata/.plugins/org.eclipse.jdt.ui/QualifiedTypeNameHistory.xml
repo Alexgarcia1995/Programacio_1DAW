@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="PDF1_Funcions.Funciones_ejer"/>
-<fullyQualifiedTypeName name="Funciones_Java.funciones"/>
-<fullyQualifiedTypeName name="PDF3_Funcions.Funciones_ejer"/>
 <fullyQualifiedTypeName name="Tema3_Ejer3.funciones"/>
 <fullyQualifiedTypeName name="Tema3_Ejer3.Funciones_ejer"/>
 <fullyQualifiedTypeName name="Alejandro_Garcia.Funciones_ejer"/>
@@ -53,11 +50,14 @@
 <fullyQualifiedTypeName name="modules.user.utils.Funciones_Ejer_Genericos"/>
 <fullyQualifiedTypeName name="modules.user.utils.CRUD.Funciones_create"/>
 <fullyQualifiedTypeName name="modules.user.utils.CRUD.Funciones_read"/>
-<fullyQualifiedTypeName name="modules.user.utils.CRUD.Funciones_update"/>
-<fullyQualifiedTypeName name="modules.user.utils.CRUD.Funciones_delete"/>
-<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
 <fullyQualifiedTypeName name="utils.funciones"/>
-<fullyQualifiedTypeName name="classes.Languages"/>
 <fullyQualifiedTypeName name="modules.user.utils.CRUD.Funciones_order"/>
+<fullyQualifiedTypeName name="modules.user.utils.CRUD.Funciones_update"/>
+<fullyQualifiedTypeName name="modules.user.utils.CRUD.Funciones_delete"/>
+<fullyQualifiedTypeName name="modules.user.classes.Order.Ordershopping"/>
+<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+<fullyQualifiedTypeName name="classes.Languages"/>
+<fullyQualifiedTypeName name="modules.user.utils.Funciones_Ejer_Dummies"/>
+<fullyQualifiedTypeName name="modules.user.utils.CRUD_Dummies.Funciones_create_dummies"/>
 </qualifiedTypeNameHistroy>

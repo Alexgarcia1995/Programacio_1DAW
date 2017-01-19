@@ -1,0 +1,86 @@
+//Menus
+crear:¿Que deseas crear?
+options:Selecciona una opcion
+cambio:¿Que desea cambiar?
+cambio2:Cambio
+menu: Menu principal
+
+//Menu1
+create:Crear
+read:Leer
+update:Actualizar
+delete:Eliminar
+exit:Salir
+
+//Menu2
+client:Cliente
+admin:Administrador
+normal:Usuario normal
+opciones:Opciones
+
+//Menu3
+formato:¿Que formato deseas cambiar?
+formato2:Formato
+fecha:Fecha
+moneda:Moneda
+decimales:Decimales
+lenguajes:Lengua
+
+//Persona
+dni:DNI
+nom:Nombre
+direccion:Direccion
+fecha_naix:Fecha nacimiento
+edad:Edad
+sexe:Sexo
+
+//Funcions
+pidedni:Introduce un DNI valido (xxxxxxxxA)
+pidenom:Introduce tu nombre
+pidedireccion:Introduce tu direccion
+pidefecha_naix:Introduce tu fecha de nacimiento
+pidesexe:Introduce tu sexo (H/M)
+pideusername:Introduce tu nombre de usuario
+pidecomments:Introduce numero de comentarios
+pideemail:Introduce un correo electronico (example@example.com)
+
+//Normal
+username:Nombre usuario
+comments:Numero comentarios
+puntos:Puntos
+email:Correo electronico
+
+//Admin
+contraseña:Contraseña
+salario:Salario
+permisos:Permisos
+fecha_cont:Fecha contratacion
+antig:Antiguedad
+
+//Client
+fecha_alta:Fecha alta sistema
+antig_sis:Antiguedad sistema
+compras:Nº compras
+descuento:Descuento
+
+//Languages
+espanol:Espanol
+ingles:Ingles
+catala:Catalan
+
+//Errors
+error:Error
+error2:Error, no hay objeto para leer
+error_edad:Debes tener 18 años
+error_nom:Error, introduce un nombre correcto
+error_direccio:Error, introduce una direccion correcta
+error_fechanaix:Error, introduce una fecha correcta
+error_sexe:Error, introduce un sexo correcto
+error_username:Error, introduce un nombre usuario correcto
+error_comments:Error, introduce un numero de comentarios
+error_email:Error, introduce un correo electronico correcto
+error_fecha1:La fecha no puede ser mayor a la fecha nacimiento
+error_fecha2:La fecha no puede ser menor al ano en que cumplias 18
+error_fecha3:La fecha  no puede ser posterior al ano actual
+error_fecha4:La fecha es igual a la fecha nacimiento
+error_fecha5:No puedes cambiar tu fecha de nacimiento a una anterior a los 18 anos

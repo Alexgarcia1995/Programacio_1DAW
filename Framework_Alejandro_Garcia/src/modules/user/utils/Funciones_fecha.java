@@ -136,7 +136,7 @@ public static String formato="dd/mm/yyyy";
 						JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_fecha2"));
 						result1 = false;
 				 	}
-					else if ((actual<0)||(mes<0)||(dia<0)){
+					else if ((actual<0)&&(mes<0)&&(dia<0)){
 						JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_fecha3"));
 						result1 = false;
 					}

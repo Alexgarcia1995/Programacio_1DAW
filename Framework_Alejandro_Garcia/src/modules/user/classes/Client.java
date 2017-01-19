@@ -22,6 +22,9 @@ public class Client extends Persona {
 	public Client(){
 		super();
 	}
+	public Client(String dni){
+		super(dni);
+	}
 
 
 	public String gettipo() {

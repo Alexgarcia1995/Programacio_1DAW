@@ -55,7 +55,50 @@ public class Funciones_Ejer_Dummies {
 		}
 		return Persona1;
 	}
-
+	public static Persona Create_Generic_1(int i){
+		Clase_Fecha Fecha=null, Fecha2=null;
+		Persona Persona1=null;
+		if(i==0){
+			Persona1 = new Client();
+			Persona1.setdni("123456789Z");
+			Persona1.setnom("Alex");
+			Persona1.setadreca("Avda. Diputacion 68B");
+			Persona1.setFechanac(Fecha=new Clase_Fecha("14/09/1970","dd/mm/yyyy"));
+			Persona1.setsexe("H");
+			((Client) Persona1).setemail("alex@gmail.com");
+			((Client) Persona1).setavatar("asdasdas");
+			((Client) Persona1).setusername("alex");
+			((Client) Persona1).setpasswd("alex123@");
+			((Client) Persona1).setFechaalta(Fecha2=new Clase_Fecha("01/02/2000","dd/mm/yyyy"));
+			((Client) Persona1).setCompras(20);
+		}
+		if (i==1){
+			Persona1 = new Admin();
+			Persona1.setdni("123456789Z");
+			Persona1.setnom("Alex");
+			Persona1.setadreca("Avda. Diputacion 68B");
+			Persona1.setFechanac(Fecha=new Clase_Fecha("14/09/1970","dd/mm/yyyy"));
+			Persona1.setsexe("H");
+			((Admin) Persona1).setemail("alex@gmail.com");
+			((Admin) Persona1).setavatar("asdasdas");
+			((Admin) Persona1).setusername("alex");
+			((Admin) Persona1).setpasswd("alex123@");
+			((Admin) Persona1).setAniocon(Fecha2=new Clase_Fecha("01/02/2014","dd/mm/yyyy"));
+		}
+		
+		if (i==2){
+			Persona1 = new Normal();
+			Persona1.setdni("123456789Z");
+			Persona1.setnom("Alex");
+			Persona1.setadreca("Avda. Diputacion 68B");
+			Persona1.setFechanac(Fecha=new Clase_Fecha("14/09/1970","dd/mm/yyyy"));
+			Persona1.setsexe("H");
+			((Normal) Persona1).setemail("alex@gmail.com");
+			((Normal) Persona1).setusername("alex");
+			((Normal) Persona1).setComments(20);
+		}
+		return Persona1;
+	}
 	public static String Read_Generic(Persona Persona1){
 		String cad="";
 		if (Persona1 instanceof Client){
