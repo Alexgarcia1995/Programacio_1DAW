@@ -2,6 +2,7 @@ package modules.user.utils.CRUD;
 
 import javax.swing.JOptionPane;
 
+import classes.Languages;
 import modules.user.classes.*;
 import modules.user.utils.Funciones_Ejer_Genericos;
 import modules.user.utils.Funciones_find;
@@ -11,7 +12,7 @@ public class Funciones_update {
 		int location = -1;
 		
 		if(Singleton.useradmin.isEmpty()){
-			JOptionPane.showMessageDialog(null, "Usuario vacio", "Error", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_vac"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
 		}else{
 			location = -1;
 			a1=Funciones_Ejer_Genericos.Create_DNI_Generic(1);
@@ -22,7 +23,7 @@ public class Funciones_update {
 				Singleton.useradmin.set(location, (Admin) a1);
 			}
 			else {
-				JOptionPane.showMessageDialog(null, "Error","Error", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_act"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
 			}
 			}
 }
@@ -34,7 +35,7 @@ public class Funciones_update {
 		int location = -1;
 		
 		if(Singleton.userclient.isEmpty()){
-			JOptionPane.showMessageDialog(null, "Usuario vacio", "Error", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_vac"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
 		}else{
 			location = -1;
 			a1=Funciones_Ejer_Genericos.Create_DNI_Generic(1);
@@ -45,7 +46,7 @@ public class Funciones_update {
 				Singleton.userclient.set(location, (Client) a1);
 			}
 			else {
-				JOptionPane.showMessageDialog(null, "Error","Error", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_act"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
 			}
 			}
 }
@@ -56,7 +57,7 @@ public class Funciones_update {
 		int location = -1;
 		
 		if(Singleton.usernormal.isEmpty()){
-			JOptionPane.showMessageDialog(null, "Usuario vacio", "Error", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_vac"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
 		}else{
 			location = -1;
 			a1=Funciones_Ejer_Genericos.Create_DNI_Generic(2);
@@ -67,7 +68,7 @@ public class Funciones_update {
 				Singleton.usernormal.set(location, (Normal) a1);
 			}
 			else {
-				JOptionPane.showMessageDialog(null, "Error","Error", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_act"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
 			}
 			}
 }

@@ -24,6 +24,7 @@ public class Client extends Persona {
 	}
 	public Client(String dni){
 		super(dni);
+		
 	}
 
 
@@ -123,11 +124,6 @@ public class Client extends Persona {
 	}
 
 
-	@Override
-	public int compareTo(Persona o) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 }
 
 

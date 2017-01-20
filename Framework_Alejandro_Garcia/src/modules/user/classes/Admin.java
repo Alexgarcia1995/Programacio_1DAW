@@ -116,9 +116,4 @@ public class Admin extends Persona {
 		return cad;
 	}
 
-	@Override
-	public int compareTo(Persona o) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 }

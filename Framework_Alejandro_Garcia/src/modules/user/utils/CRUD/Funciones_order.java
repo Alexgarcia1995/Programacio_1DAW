@@ -18,7 +18,7 @@ public class Funciones_order {
 		char order = ' ';
 		
 		if(Singleton.useradmin.isEmpty()){
-			JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error"),Languages.lenguajes.getProperty("error"),JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_vac"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
 		}else{
 			menu = funciones.combo_box(options, "Orden", "Orden");
 			order = menu.charAt(0);
@@ -56,7 +56,7 @@ public class Funciones_order {
 		char order = ' ';
 		
 		if(Singleton.userclient.isEmpty()){
-			JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error"),Languages.lenguajes.getProperty("error"),JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_vac"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
 		}else{
 			menu = funciones.combo_box(options, "Orden", "Orden");
 			order = menu.charAt(0);
@@ -93,7 +93,7 @@ public class Funciones_order {
 		char order = ' ';
 		
 		if(Singleton.usernormal.isEmpty()){
-			JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error"),Languages.lenguajes.getProperty("error"),JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_vac"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
 		}else{
 			menu = funciones.combo_box(options, "Orden", "Orden");
 			order = menu.charAt(0);

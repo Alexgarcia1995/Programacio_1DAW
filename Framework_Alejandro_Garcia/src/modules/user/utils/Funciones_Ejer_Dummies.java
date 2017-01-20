@@ -15,8 +15,7 @@ public class Funciones_Ejer_Dummies {
 		Clase_Fecha Fecha=null, Fecha2=null;
 		Persona Persona1=null;
 		if(i==0){
-			Persona1 = new Client();
-			Persona1.setdni("73099940Y");
+			Persona1 = new Client("73099940Y");
 			Persona1.setnom("Pepe");
 			Persona1.setadreca("Avda. Diputacion 68B");
 			Persona1.setFechanac(Fecha=new Clase_Fecha("14/09/1995","dd/mm/yyyy"));
@@ -55,12 +54,12 @@ public class Funciones_Ejer_Dummies {
 		}
 		return Persona1;
 	}
-	public static Persona Create_Generic_1(int i){
+	
+public static Persona Create_Generic_1(int i){
 		Clase_Fecha Fecha=null, Fecha2=null;
 		Persona Persona1=null;
 		if(i==0){
-			Persona1 = new Client();
-			Persona1.setdni("123456789Z");
+			Persona1 = new Client("12345678Z");
 			Persona1.setnom("Alex");
 			Persona1.setadreca("Avda. Diputacion 68B");
 			Persona1.setFechanac(Fecha=new Clase_Fecha("14/09/1970","dd/mm/yyyy"));
@@ -74,7 +73,7 @@ public class Funciones_Ejer_Dummies {
 		}
 		if (i==1){
 			Persona1 = new Admin();
-			Persona1.setdni("123456789Z");
+			Persona1.setdni("12345678Z");
 			Persona1.setnom("Alex");
 			Persona1.setadreca("Avda. Diputacion 68B");
 			Persona1.setFechanac(Fecha=new Clase_Fecha("14/09/1970","dd/mm/yyyy"));
@@ -88,7 +87,7 @@ public class Funciones_Ejer_Dummies {
 		
 		if (i==2){
 			Persona1 = new Normal();
-			Persona1.setdni("123456789Z");
+			Persona1.setdni("12345678Z");
 			Persona1.setnom("Alex");
 			Persona1.setadreca("Avda. Diputacion 68B");
 			Persona1.setFechanac(Fecha=new Clase_Fecha("14/09/1970","dd/mm/yyyy"));
@@ -99,7 +98,8 @@ public class Funciones_Ejer_Dummies {
 		}
 		return Persona1;
 	}
-	public static String Read_Generic(Persona Persona1){
+	
+public static String Read_Generic(Persona Persona1){
 		String cad="";
 		if (Persona1 instanceof Client){
 			cad=((Client)Persona1).toString();
@@ -112,68 +112,75 @@ public class Funciones_Ejer_Dummies {
 		}
 		return cad;
 	}
-	public static Persona Update_Generic(Persona Persona1){
+	
+public static Persona Update_Generic(Persona Persona1){
 		String e;
-		if (Persona1 instanceof Client){
-		String[] opcion = { Languages.lenguajes.getProperty("dni"), Languages.lenguajes.getProperty("nom"), Languages.lenguajes.getProperty("direccion"),Languages.lenguajes.getProperty("Sexo"),Languages.lenguajes.getProperty("fecha_naix"), Languages.lenguajes.getProperty("email"),
-				"Avatar", Languages.lenguajes.getProperty("username"), "Contrasena", "Fecha alta", "N compras"};
-		e = funciones.combo_box(opcion, "What do you want to change?", "Change");
-		switch (e) {
-		case "DNI":
+		char c;
+		if (Persona1 instanceof Client){String[] opcion = {"A)" + Languages.lenguajes.getProperty("dni"), "B)"+ Languages.lenguajes.getProperty("direccion"), 
+				"C) " + Languages.lenguajes.getProperty("nom"), "D)" + Languages.lenguajes.getProperty("fecha_naix"), 
+				"E) " + Languages.lenguajes.getProperty("sexe"), "F) " + Languages.lenguajes.getProperty("username"),
+				"G) " + Languages.lenguajes.getProperty("email"), "H) Avatar","I) " + Languages.lenguajes.getProperty("contraseña"),
+				"J) " + Languages.lenguajes.getProperty("fecha_alta"), "K) " + Languages.lenguajes.getProperty("compras")};
+		e = funciones.combo_box(opcion, Languages.lenguajes.getProperty("cambio"),Languages.lenguajes.getProperty("cambio2"));
+		c=e.charAt(0);
+		switch (c) {
+		case 'A':
 			Persona1.setdni(Funciones_data_user.PideDNI());
 			break;
-		case "Nombre":
-			Persona1.setnom(Funciones_data_user.PideNom());
-			break;
-		case "Direccion":
+		case 'B':
 			Persona1.setadreca(Funciones_data_user.PideDireccion());
 			break;
-		case "Sexo":
+		case 'C':
+			Persona1.setnom(Funciones_data_user.PideNom());
+			break;
+		case 'D':
+				boolean good=false;
+				do{
+				good=Funciones_fecha.update_fecha_naix(Persona1);
+				}while(good==false);
+			break;
+		case 'E':
 			Persona1.setsexe(Funciones_data_user.Pidesexe());
 			break;
-		case "Fecha nacimiento":
-			boolean good=false;
-			do{
-			good=Funciones_fecha.update_fecha_naix(Persona1);
-			}while(good==false);
-			break;
-		case "Email":	
-			((Client) Persona1).setemail(Funciones_data_user.Pideemail());
-			break;
-		case  "Avatar":
-			((Client) Persona1).setavatar(funciones.ped_string("Introduce tu avatar", "Avatar"));
-		case "Nombre usuario":
+		case 'F':
 			((Client) Persona1).setusername(Funciones_data_user.Pideusername());
 			break;
-		case "Contrasena":
+		case 'G':
+			((Client) Persona1).setemail(Funciones_data_user.Pideemail());
+			break;
+		case 'H':
+			((Client) Persona1).setavatar(funciones.ped_string("Introduce tu avatar", "Avatar"));
+			break;
+		case 'I':
 			((Client) Persona1).setpasswd(Funciones_data_user.PidePassword());
 			break;
-		case "Fecha alta":
+		case 'J':
 			((Client) Persona1).setFechaalta(Funciones_fecha.fecha_alta(Persona1.getFechanaix(), Persona1.getedad()));
 			break;
-		case "N compras":
+		case 'K':
 			((Client) Persona1).setCompras(Funciones_data_user.Pidecompras());
 			break;
 		}
-		
 	}
 		if (Persona1 instanceof Admin){
-			String[] opcion = { "DNI", "Nombre", "Direccion","Sexo","Fecha nacimiento", "Email", "Avatar", "Nombre usuario", "Contrasena", "Fecha contratacion"};
-			e = funciones.combo_box(opcion, "What do you want to change?", "Change");
-			switch (e) {
-			case "DNI":
+			String[] opcion = {"A)" + Languages.lenguajes.getProperty("dni"), "B)"+ Languages.lenguajes.getProperty("direccion"), 
+					"C) " + Languages.lenguajes.getProperty("nom"), "D)" + Languages.lenguajes.getProperty("fecha_naix"), 
+					"E) " + Languages.lenguajes.getProperty("sexe"), "F) " + Languages.lenguajes.getProperty("username"),
+					"G) " + Languages.lenguajes.getProperty("email"), "H) Avatar","I) " + Languages.lenguajes.getProperty("contraseña"),
+					"J) " + Languages.lenguajes.getProperty("fecha_cont")};
+			e = funciones.combo_box(opcion, Languages.lenguajes.getProperty("cambio"),Languages.lenguajes.getProperty("cambio2"));
+			c=e.charAt(0);
+			switch (c) {
+			case 'A':
 				Persona1.setdni(Funciones_data_user.PideDNI());
 				break;
-			case "Nombre":
-				Persona1.setnom(Funciones_data_user.PideNom());
-				break;
-			case "Direccion":
+			case 'B':
 				Persona1.setadreca(Funciones_data_user.PideDireccion());
 				break;
-			case "Sexo":
-				Persona1.setsexe(Funciones_data_user.Pidesexe());
+			case 'C':
+				Persona1.setnom(Funciones_data_user.PideNom());
 				break;
-			case "Fecha nacimiento":
+			case 'D':
 				boolean good=false;
 				do{
 				Persona1.setFechanac(Funciones_fecha.fecha_naix());
@@ -186,111 +193,90 @@ public class Funciones_Ejer_Dummies {
 				}
 				}while(good==false);
 				break;
-			case "Email":	
-				((Admin) Persona1).setemail(Funciones_data_user.Pideemail());
+			case 'E':
+				Persona1.setsexe(Funciones_data_user.Pidesexe());
 				break;
-			case "Avatar":
-				((Admin) Persona1).setavatar(funciones.ped_string("Introduce tu avatar", "Avatar"));
-			case "Nombre usuario":
+			case 'F':
 				((Admin) Persona1).setusername(Funciones_data_user.Pideusername());
 				break;
-			case "Contrasena":
+			case 'G':
+				((Admin) Persona1).setemail(Funciones_data_user.Pideemail());
+				break;
+			case 'H':
+				((Admin) Persona1).setavatar(funciones.ped_string("Introduce tu avatar", "Avatar"));
+				break;
+			case 'I':
 				((Admin) Persona1).setpasswd(Funciones_data_user.PidePassword());
 				break;
-			case "Fecha contratacion":
+			case 'J':
 				((Admin) Persona1).setAniocon(Funciones_fecha.fecha_cont(Persona1.getFechanaix(),Persona1.getedad()));
 				break;
 			}
-			
 		}
 		if (Persona1 instanceof Normal){
 			
-			String[] opcion = { Languages.lenguajes.getProperty("dni"), Languages.lenguajes.getProperty("nom"), Languages.lenguajes.getProperty("direccion"),Languages.lenguajes.getProperty("sexe"),
-					Languages.lenguajes.getProperty("fecha_naix"), Languages.lenguajes.getProperty("email"), Languages.lenguajes.getProperty("username"), Languages.lenguajes.getProperty("comments")};
-			e = funciones.combo_box(opcion, Languages.lenguajes.getProperty("cambio"),Languages.lenguajes.getProperty("cambio2") );
-			switch (e) {
-			case "DNI":
+			String[] opcion = {"A)" + Languages.lenguajes.getProperty("dni"), "B)"+ Languages.lenguajes.getProperty("direccion"), 
+					"C) " + Languages.lenguajes.getProperty("nom"), "D)" + Languages.lenguajes.getProperty("fecha_naix"), 
+					"E) " + Languages.lenguajes.getProperty("sexe"), "F) " + Languages.lenguajes.getProperty("username"),
+					"G) " + Languages.lenguajes.getProperty("email"), "H) " + Languages.lenguajes.getProperty("comments")};
+			
+			
+			
+			
+			e = funciones.combo_box(opcion, Languages.lenguajes.getProperty("cambio"),Languages.lenguajes.getProperty("cambio2"));
+			c=e.charAt(0);
+			switch (c) {
+			case 'A':
 				Persona1.setdni(Funciones_data_user.PideDNI());
 				break;
-				//Nombres 3 idiomas
-			case "Nombre":
-				Persona1.setnom(Funciones_data_user.PideNom());
-				break;
-			case "Name":
-				Persona1.setnom(Funciones_data_user.PideNom());
-				break;
-			case "Nom":
-				Persona1.setnom(Funciones_data_user.PideNom());
-				break;
-				//Direccion 3 idiomas
-			case "Direccion":
+			case 'B':
 				Persona1.setadreca(Funciones_data_user.PideDireccion());
 				break;
-			case "Address":
-				Persona1.setadreca(Funciones_data_user.PideDireccion());
+			case 'C':
+				Persona1.setnom(Funciones_data_user.PideNom());
 				break;
-			case "Direccio":
-				Persona1.setadreca(Funciones_data_user.PideDireccion());
-				break;
-				//Sexo 3 idiomas
-			case "Sexo":
-				Persona1.setsexe(Funciones_data_user.Pidesexe());
-				break;
-			case "Sexe":
-				Persona1.setsexe(Funciones_data_user.Pidesexe());
-				break;
-			case "Gender":
-				Persona1.setsexe(Funciones_data_user.Pidesexe());
-				break;
-				//Fecha 3 idiomas
-			case "Fecha nacimiento":
+			case 'D':
 				Persona1.setFechanac(Funciones_fecha.fecha_naix());
 				break;
-			case "Data naiximent":
-				Persona1.setFechanac(Funciones_fecha.fecha_naix());
+			case 'E':
+				Persona1.setsexe(Funciones_data_user.Pidesexe());
 				break;
-			case "Date of birth":
-				Persona1.setFechanac(Funciones_fecha.fecha_naix());
-				break;
-				//Email 3 idiomas
-			case "Email":	
-				((Normal) Persona1).setemail(Funciones_data_user.Pideemail());
-				break;
-			case "Correu electronic":	
-				((Normal) Persona1).setemail(Funciones_data_user.Pideemail());
-				break;
-			case "Correo electronico":	
-				((Normal) Persona1).setemail(Funciones_data_user.Pideemail());
-				break;
-				//Nombre usuario 3 idiomas
-			case "Nombre usuario":
+			case 'F':
 				((Normal) Persona1).setusername(Funciones_data_user.Pideusername());
 				break;
-			case "Nom usuari":
-				((Normal) Persona1).setusername(Funciones_data_user.Pideusername());
+			case 'G':
+				((Normal) Persona1).setemail(Funciones_data_user.Pideemail());
 				break;
-			case "User name":
-				((Normal) Persona1).setusername(Funciones_data_user.Pideusername());
-				break;
-				//Comentarios 3 idiomas
-			case "Numero comentarios":
+			case 'H':
 				((Normal) Persona1).setComments(Funciones_data_user.Pidecomments());
 				break;
-			case "Nombre comentaris":
-				((Normal) Persona1).setComments(Funciones_data_user.Pidecomments());
-				break;
-			case "Number of comments":
-				((Normal) Persona1).setComments(Funciones_data_user.Pidecomments());
-				break;
-			}
-			
+				}
 		}
 		return Persona1;
+		
 	}
-
 
 	public static Persona Delete_Generic(Persona Persona1){
 		Persona1=null;
 		return Persona1;
+	}
+	
+	public static Persona Create_DNI_Generic (int i){
+		Persona Persona1=null;
+		if(i==0){
+			Persona1 = new Client();
+			Persona1.setdni(Funciones_data_user.PideDNI());
+		}
+		if (i==1){
+			Persona1 = new Admin();
+			Persona1.setdni(Funciones_data_user.PideDNI());
+		}
+		
+		if (i==2){
+			Persona1 = new Normal();
+			Persona1.setdni(Funciones_data_user.PideDNI());
+		}
+		return Persona1;
+
 	}
 }

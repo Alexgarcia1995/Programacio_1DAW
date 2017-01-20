@@ -41,11 +41,9 @@
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="modules.user.classes.Client"/>
 <fullyQualifiedTypeName name="modules.user.classes.Normal"/>
-<fullyQualifiedTypeName name="modules.user.utils.Funciones_data_user"/>
 <fullyQualifiedTypeName name="modules.user.classes.Admin"/>
 <fullyQualifiedTypeName name="classes.Settings"/>
 <fullyQualifiedTypeName name="modules.user.classes.Persona"/>
-<fullyQualifiedTypeName name="modules.user.classes.Singleton"/>
 <fullyQualifiedTypeName name="modules.user.utils.Funciones_find"/>
 <fullyQualifiedTypeName name="modules.user.utils.Funciones_Ejer_Genericos"/>
 <fullyQualifiedTypeName name="modules.user.utils.CRUD.Funciones_create"/>
@@ -56,8 +54,10 @@
 <fullyQualifiedTypeName name="modules.user.utils.CRUD.Funciones_update"/>
 <fullyQualifiedTypeName name="modules.user.utils.CRUD.Funciones_delete"/>
 <fullyQualifiedTypeName name="modules.user.classes.Order.Ordershopping"/>
-<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
 <fullyQualifiedTypeName name="classes.Languages"/>
-<fullyQualifiedTypeName name="modules.user.utils.Funciones_Ejer_Dummies"/>
 <fullyQualifiedTypeName name="modules.user.utils.CRUD_Dummies.Funciones_create_dummies"/>
+<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+<fullyQualifiedTypeName name="modules.user.classes.Singleton"/>
+<fullyQualifiedTypeName name="modules.user.utils.Funciones_Ejer_Dummies"/>
+<fullyQualifiedTypeName name="modules.user.utils.Funciones_data_user"/>
 </qualifiedTypeNameHistroy>

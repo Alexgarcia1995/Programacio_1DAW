@@ -69,10 +69,6 @@ public class Normal extends Persona{
 		cad = cad + (Languages.lenguajes.getProperty("puntos")+" = " + this.getPoints() + "\n");
 		return cad;
 	}
-	@Override
-	public int compareTo(Persona o) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+	
 }
 

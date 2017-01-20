@@ -1,5 +1,7 @@
 package modules.user.classes;
 
+import javax.swing.JOptionPane;
+
 import classes.Clase_Fecha;
 import classes.Settings;
 import modules.user.utils.Funciones_fecha;
@@ -82,11 +84,15 @@ public abstract class Persona implements Comparable<Persona> {
 		this.fechanac = fechanac;
 	}
 	public int compareTo(Persona param) {
-		if(this.getdni().compareTo(param.getdni())>0)
-			return 1;
-		if(this.getdni().compareTo(param.getdni())<0)
-			return -1;
-		return 0;
+		int i;
+	if(this.getdni().compareTo(param.getdni())>0){
+			i= 1;}
+	else if(this.getdni().compareTo(param.getdni())<0){
+			i= -1;}
+	else{
+		i= 0;}
+	JOptionPane.showMessageDialog(null, i);
+	return i;
 	  }
 	
 	public boolean equals(Object param){
