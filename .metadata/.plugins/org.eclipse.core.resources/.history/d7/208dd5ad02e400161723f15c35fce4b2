@@ -1,0 +1,7 @@
+package modules.user.utils.Generics;
+
+public class Save {
+	public static void save_on_demand_admin(){
+		
+	}
+}

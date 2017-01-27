@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Documents_Framework_Alejandro_Garcia/Framework_Alejandro_Garcia&apos; to &apos;Framework_Alejandro_Garcia1&apos;" description="Rename resource &apos;Framework_Alejandro_Garcia&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Framework_Alejandro_Garcia" name="Framework_Alejandro_Garcia1" stamp="1485430240180" updateReferences="true"/>
+</session>

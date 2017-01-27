@@ -2,23 +2,47 @@ package modules.user.classes;
 
 import javax.swing.JOptionPane;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
 import classes.Clase_Fecha;
 import classes.Languages;
 import classes.Settings;
 import modules.user.utils.Funciones_data_user;
 import modules.user.utils.Funciones_fecha;
 import utils.formatos;
-
+@XStreamAlias("Admin")
 public class Admin extends Persona {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	//private String tipo = "Administrador";
+	
+	@XStreamAlias("email")
 	private String email;
+	
+	@XStreamAlias("avatar")
 	private String avatar;
+	
+	@XStreamAlias("username")
 	private String username;
+	
+	@XStreamAlias("passwd")
 	private String passwd;
+	
+	@XStreamAlias("permiso")
 	private String permiso = "Lectura, Escritura y Ejecucion";
+	
+	@XStreamAlias("aniocont")
 	private String aniocont;
+	
+	@XStreamAlias("antiguedad")
 	private int antiguedad;
+	
+	@XStreamAlias("salario")
 	private String salario;
+	
+	@XStreamAlias("aniocon")
 	private Clase_Fecha aniocon;
 
 

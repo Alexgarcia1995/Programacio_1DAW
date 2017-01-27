@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\Alejandro\Documents\Framework_Alejandro_Garcia_old"/>
+		<item value="C:\Users\Alejandro\Downloads\Framework_Alejandro_Garcia_old"/>
+		<item value="C:\Users\Alejandro\Downloads\Framework_Alejandro_Garcia_old\Framework_Alejandro_Garcia_old"/>
+		<item value="C:\Users\Alejandro\Downloads\Framework_Alejandro_Garcia_old\Framework_Alejandro_Garcia"/>
+		<item value="C:\Users\Alejandro\Documents\Framework_Alejandro_Garcia"/>
 		<item value="C:\Users\Alejandro\Documents\Framework Angel\src\framework"/>
 	</list>
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\Alejandro\Downloads\Framework2"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
 	<section name="ResourceNavigator">
 		<item value="Aggregate for window 1474638156260" key="ResourceWorkingSetFilter.STORE_WORKING_SET"/>
 		<item value="1" key="ResourceViewer.STORE_SORT_TYPE"/>

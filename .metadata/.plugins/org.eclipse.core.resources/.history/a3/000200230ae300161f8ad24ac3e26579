@@ -1,0 +1,17 @@
+package modules.user.utils.Generics;
+
+import classes.Settings;
+import modules.user.classes.Singleton;
+import modules.user.utils.admin.utils.open_auto;
+import modules.user.utils.client.utils.open_auto_client;
+
+public class Open {
+
+	public static void Open_auto(){
+		if(Settings.Formatfitx=="xml"){
+			Singleton.useradmin=open_auto.openxml();
+			Singleton.userclient=open_auto_client.openxml();
+			Singleton.useradmin=open_auto.openxml();
+		}
+	}
+}

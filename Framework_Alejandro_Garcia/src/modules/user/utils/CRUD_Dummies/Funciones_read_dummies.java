@@ -10,9 +10,9 @@ import utils.funciones;
 
 public class Funciones_read_dummies {
 
-	public static void read_admin(Persona p1){
+	public static void read_admin(){
 		int menu=0, location=-1;
-		
+		Persona p1;
 		if(Singleton.useradmin.isEmpty()){
 			JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_vac"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
 		}
@@ -43,9 +43,9 @@ public class Funciones_read_dummies {
 		}
 	}
 	
-	public static void read_client(Persona p1){
+	public static void read_client(){
 		int menu=0, location=-1;
-		
+		Persona p1;
 		if(Singleton.userclient.isEmpty()){
 			JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_vac"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
 		}
@@ -76,9 +76,9 @@ public class Funciones_read_dummies {
 		}
 	}
 	
-	public static void read_normal(Persona p1){
+	public static void read_normal(){
 		int menu=0, location=-1;
-		
+		Persona p1;
 		if(Singleton.usernormal.isEmpty()){
 			JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_vac"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
 		}

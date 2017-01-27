@@ -9,13 +9,27 @@ import java.util.GregorianCalendar;
 
 import javax.swing.JOptionPane;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
 import modules.user.utils.Funciones_fecha;
 import utils.formatos;
-public class Clase_Fecha {
+
+@XStreamAlias("Clase_Fecha")
+public class Clase_Fecha implements Serializable {
+/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+@XStreamAlias("Persona")
 private String fecha;
+@XStreamAlias("dia")
 private int dia;
+@XStreamAlias("mes")
 private int mes;
+@XStreamAlias("anio")
 private int anio;
+@XStreamAlias("format")
 private SimpleDateFormat format=new SimpleDateFormat(Funciones_fecha.formato);
 
 public String getFecha() {

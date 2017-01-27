@@ -1,0 +1,22 @@
+package modules.user.utils.Generics;
+
+import classes.Settings;
+import modules.user.classes.Singleton;
+import modules.user.utils.admin.utils.save_on_demand;
+import modules.user.utils.client.utils.open_on_demand_client;
+
+public class Save {
+	public static void save_on_demand_admin(){
+		if(Settings.Formatfitx=="xml"){
+			save_on_demand.save_xml();
+		}
+		else if(Settings.Formatfitx=="json"){
+			save_on_demand.save_json();
+		}
+		else if(Settings.Formatfitx=="txt"){
+			save_on_demand.save_xml();
+		}
+	}
+	
+	public static void save_auto_admin()
+}

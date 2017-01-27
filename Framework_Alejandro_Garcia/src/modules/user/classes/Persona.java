@@ -1,19 +1,45 @@
 package modules.user.classes;
 
+import java.io.Serializable;
+
 import javax.swing.JOptionPane;
+
+import com.thoughtworks.xstream.annotations.XStreamAlias;
 
 import classes.Clase_Fecha;
 import classes.Settings;
 import modules.user.utils.Funciones_fecha;
 
-public abstract class Persona implements Comparable<Persona> {
+@XStreamAlias("Persona")
+
+
+public abstract class Persona implements Comparable<Persona>, Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
 	// Atributs
+	@XStreamAlias("dni")
 	private String dni;
+	
+	@XStreamAlias("nom")
 	private String nom;
+	
+	@XStreamAlias("adreca")
 	private String adreca;
+	
+	@XStreamAlias("edad")
 	private int edad;
+	
+	@XStreamAlias("sexe")
 	private String sexe;
+	
+	@XStreamAlias("fecha_naix")
 	private String fecha_naix;
+	
+	@XStreamAlias("fechanac")
 	private Clase_Fecha fechanac;
 
 

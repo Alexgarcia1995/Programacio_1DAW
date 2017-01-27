@@ -1,8 +1,10 @@
 package classes;
 
+import utils.funciones;
+
 public class Settings {
 	public static String currency_config;
-	public static String date_config,decimals_config;
+	public static String date_config,decimals_config,Formatfitx;
 	public static boolean dummies;
 	
 	
@@ -20,6 +22,7 @@ public class Settings {
 		date_config = "dd/mm/yyyy";
 		currency_config = "€";
 		decimals_config = ".#";
+		Formatfitx="xml";
 	}
 	
 	public static String getDate_config() {
@@ -43,6 +46,25 @@ public class Settings {
 	}
 	public static void setDummies(boolean dummies) {
 		Settings.dummies = dummies;
+	}
+	
+	public static void Formatfitx(){
+		int menu=0;
+    	String [] option={"xml", "json", "txt", "Exit"};
+		menu=funciones.menu(option, "Formato",  "Formato");
+		switch (menu){
+		case 0:
+			Formatfitx="xml";
+			break;
+		case 1:
+			Formatfitx="json";
+			break;
+		case 2:
+			Formatfitx="txt";
+			break;
+		case 3:
+			break;
+		}
 	}
 	@Override
 	public String toString() {

@@ -1,20 +1,47 @@
 package modules.user.classes;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
 import classes.Clase_Fecha;
 import classes.Languages;
 import modules.user.utils.Funciones_data_user;
 import modules.user.utils.Funciones_fecha;
 
+@XStreamAlias("Client")
 public class Client extends Persona {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	@XStreamAlias("tipo")
 	private String tipo="Cliente";
+	
+	@XStreamAlias("email")
 	private String email;
+	
+	@XStreamAlias("avatar")
 	private String avatar;
+	
+	@XStreamAlias("username")
 	private String username;
+	
+	@XStreamAlias("passwd")
 	private String passwd;
+	
+	@XStreamAlias("fecha_alta")
 	private String fecha_alta;
+	
+	@XStreamAlias("antig_alta")
 	private int antig_alta;
+	
+	@XStreamAlias("compras")
 	private int compras;
+	
+	@XStreamAlias("descuentos")
 	private int descuentos;
+	
+	@XStreamAlias("fechaalta")
 	private Clase_Fecha fechaalta;
 	
 	

@@ -1,0 +1,28 @@
+package modules.user.utils.Generics;
+
+import classes.Settings;
+import modules.user.classes.Singleton;
+import modules.user.utils.admin.utils.open_auto;
+import modules.user.utils.client.utils.open_auto_client;
+import modules.user.utils.normal.utils.open_auto_normal;
+
+public class Open {
+
+	public static void Open_auto(){
+		if(Settings.Formatfitx=="xml"){
+			Singleton.useradmin=open_auto.openxml();
+			Singleton.userclient=open_auto_client.openxml();
+			Singleton.usernormal=open_auto_normal.openxml_normal();
+		}
+		else if(Settings.Formatfitx=="json"){
+			Singleton.useradmin=open_auto.openjson();
+			Singleton.userclient=open_auto_client.openxml();
+			Singleton.usernormal=open_auto_normal.openxml_normal();
+		}
+		else if(Settings.Formatfitx=="xml"){
+			Singleton.useradmin=open_auto.openxml();
+			Singleton.userclient=open_auto_client.openxml();
+			Singleton.usernormal=open_auto_normal.openxml_normal();
+		}
+	}
+}

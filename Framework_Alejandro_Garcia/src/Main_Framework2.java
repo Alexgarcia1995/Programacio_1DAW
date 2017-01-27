@@ -12,6 +12,9 @@ import modules.user.utils.CRUD.Funciones_delete;
 import modules.user.utils.CRUD.Funciones_order;
 import modules.user.utils.CRUD.Funciones_read;
 import modules.user.utils.CRUD.Funciones_update;
+import modules.user.utils.Generics.Open;
+import modules.user.utils.Generics.Save;
+import modules.user.utils.admin.utils.open_auto;
 import modules.user.classes.*;
 import  utils.*;
 
@@ -42,8 +45,10 @@ public class Main_Framework2 {
 			if(Settings.dummies==true){
 				Main_Dummies.main(null);
 			}
+			Open.Open_auto();
 			String[] principal={lenguajes.getProperty("menu_p"),lenguajes.getProperty("opciones"),lenguajes.getProperty("exit")};
-			String[] option = {lenguajes.getProperty("create"), lenguajes.getProperty("read"), lenguajes.getProperty("update"), lenguajes.getProperty("delete"),"Order",lenguajes.getProperty("exit") };
+			String[] option = {lenguajes.getProperty("create"), lenguajes.getProperty("read"), lenguajes.getProperty("update"), lenguajes.getProperty("delete"),"Order"
+					,"Open","Save",lenguajes.getProperty("exit") };
 			String[] option1 = {lenguajes.getProperty("client"), lenguajes.getProperty("admin"), lenguajes.getProperty("normal"),lenguajes.getProperty("exit")};
 			
 		menprin= funciones.menu(principal,lenguajes.getProperty("menu"),lenguajes.getProperty("menu"));
@@ -72,9 +77,15 @@ public class Main_Framework2 {
 					case 4:
 						Funciones_order.order_client();
 						break;
+					case 5:
+						Open.Open_client();
+						break;
+					case 6:
+						Save.save_on_demand_client();
+						break;
 					}
-					
-				} while (men != 5);
+				} while (men != 7);
+				Save.save_auto_client();
 				break;
 			// Admins
 			case 1:
@@ -96,8 +107,16 @@ public class Main_Framework2 {
 					case 4:
 						Funciones_order.order_admin();
 						break;
+					case 5:
+						Open.Open_auto();
+						break;
+					case 6:
+						Save.save_on_demand_admin();;
+						break;
 					}
-				} while (men != 5);
+				} while (men != 7);
+	
+				Save.save_auto_admin();
 				break;
 				//Normal
 			case 2:
@@ -148,8 +167,14 @@ public class Main_Framework2 {
 				case 4:
 					formatos.Dummies();
 					break;
+				case 5:
+					Open.Open_normal();
+					break;
+				case 6:
+					Save.save_on_demand_normal();
 				}
-			} while (men != 5);
+			} while (men != 7);
+			Save.save_auto_normal();
 			break;
 			
 			

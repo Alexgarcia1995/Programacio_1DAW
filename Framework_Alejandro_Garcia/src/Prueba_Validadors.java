@@ -1,5 +1,14 @@
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+
 import javax.swing.JOptionPane;
+
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.reflect.TypeToken;
 
 import classes.Clase_Fecha;
 import classes.Languages;
@@ -16,16 +25,12 @@ import modules.user.utils.CRUD.Funciones_create;
 import modules.user.utils.CRUD.Funciones_delete;
 import modules.user.utils.CRUD.Funciones_read;
 import modules.user.utils.CRUD.Funciones_update;
+import modules.user.utils.CRUD_Dummies.Funciones_create_dummies;
 import utils.Validate;
 import utils.formatos;
 import utils.funciones;
 
 public class Prueba_Validadors {
 
-	public static void main(String[] args) {
-	
-		Persona p=new Client();
-		Funciones_Ejer_Dummies.Update_Generic(p);
-}
 }
 		

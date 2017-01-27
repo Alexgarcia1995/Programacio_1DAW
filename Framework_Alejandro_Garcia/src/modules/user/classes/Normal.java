@@ -4,6 +4,12 @@ import classes.Languages;
 import modules.user.utils.Funciones_data_user;
 
 public class Normal extends Persona{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	
 	private String email;
 	private String username;
 	private int comments;
