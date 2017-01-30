@@ -8,9 +8,9 @@ import modules.user.utils.Funciones_Ejer_Genericos;
 import modules.user.utils.Funciones_find;
 
 public class Funciones_update {
-	public static void update_admin (Persona a1) {
+	public static void update_admin () {
 		int location = -1;
-		
+		Persona a1;
 		if(Singleton.useradmin.isEmpty()){
 			JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_vac"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
 		}else{
@@ -31,9 +31,9 @@ public class Funciones_update {
 	
 	
 	
-	public static void update_client (Persona a1) {
+	public static void update_client () {
 		int location = -1;
-		
+		Persona a1;
 		if(Singleton.userclient.isEmpty()){
 			JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_vac"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
 		}else{
@@ -53,9 +53,9 @@ public class Funciones_update {
 	
 	
 	
-	public static void update_normal (Persona a1) {
+	public static void update_normal () {
 		int location = -1;
-		
+		Persona a1;
 		if(Singleton.usernormal.isEmpty()){
 			JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_vac"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
 		}else{

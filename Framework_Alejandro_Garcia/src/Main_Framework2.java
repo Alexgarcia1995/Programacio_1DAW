@@ -25,16 +25,12 @@ public class Main_Framework2 {
 
 	public static void main(String[] args) {
 		int men = 0, men1 = 0;
-		String cad = "";
-		Persona p=null;
-		Persona p1=null;
-		Persona p2=null;
 		
 		settings=new Settings();
-		Singleton.useradmin = new ArrayList <Admin> ();
+		/*Singleton.useradmin = new ArrayList <Admin> ();
 		Singleton.userclient = new ArrayList <Client> ();
 		Singleton.usernormal = new ArrayList <Normal> ();
-	
+	*/
 
 		int menprin=0;
 		
@@ -63,16 +59,16 @@ public class Main_Framework2 {
 					men = funciones.menu(option, lenguajes.getProperty("options"), lenguajes.getProperty("opciones"));
 					switch (men) {
 					case 0:
-						Funciones_create.create_client(p1);
+						Funciones_create.create_client();
 						break;
 					case 1:
-						Funciones_read.read_client(p1);
+						Funciones_read.read_client();
 						break;
 					case 2:
-						Funciones_update.update_client(p1);
+						Funciones_update.update_client();
 						break;
 					case 3:
-						Funciones_delete.delete_client(p1);
+						Funciones_delete.delete_client();
 						break;
 					case 4:
 						Funciones_order.order_client();
@@ -93,16 +89,16 @@ public class Main_Framework2 {
 					men = funciones.menu(option, lenguajes.getProperty("options"), lenguajes.getProperty("opciones"));
 					switch (men) {
 					case 0:
-						Funciones_create.create_admin(p);
+						Funciones_create.create_admin();
 						break;
 					case 1:
-						Funciones_read.read_admin(p);
+						Funciones_read.read_admin();
 						break;
 					case 2:
-						Funciones_update.update_admin(p);
+						Funciones_update.update_admin();
 						break;
 					case 3:
-						Funciones_delete.delete_admin(p);
+						Funciones_delete.delete_admin();
 						break;
 					case 4:
 						Funciones_order.order_admin();
@@ -124,16 +120,16 @@ public class Main_Framework2 {
 					men = funciones.menu(option, lenguajes.getProperty("options"), lenguajes.getProperty("opciones"));
 					switch (men) {
 					case 0:
-						Funciones_create.create_normal(p2);
+						Funciones_create.create_normal();
 						break;
 					case 1:
-						Funciones_read.read_normal(p2);
+						Funciones_read.read_normal();
 						break;
 					case 2:
-						Funciones_update.update_normal(p2);
+						Funciones_update.update_normal();
 						break;
 					case 3:
-						Funciones_delete.delete_normal(p2);
+						Funciones_delete.delete_normal();
 						break;
 					case 4:
 						Funciones_order.order_normal();
@@ -149,7 +145,8 @@ public class Main_Framework2 {
 		
 		case 1:
 			do {
-				String[] option2= {lenguajes.getProperty("fecha"), lenguajes.getProperty("moneda"), lenguajes.getProperty("decimales"), lenguajes.getProperty("lenguajes"),"Dummies",lenguajes.getProperty("exit")};
+				String[] option2= {lenguajes.getProperty("fecha"), lenguajes.getProperty("moneda"), lenguajes.getProperty("decimales"), 
+						lenguajes.getProperty("lenguajes"),"Dummies","Formato",lenguajes.getProperty("exit")};
 				men = funciones.menu(option2, lenguajes.getProperty("formato"), lenguajes.getProperty("formato2"));
 				switch (men) {
 				case 0:
@@ -168,15 +165,11 @@ public class Main_Framework2 {
 					formatos.Dummies();
 					break;
 				case 5:
-					Open.Open_normal();
+					Settings.Formatfitx();
 					break;
-				case 6:
-					Save.save_on_demand_normal();
 				}
-			} while (men != 7);
-			Save.save_auto_normal();
+			} while (men != 6);
 			break;
-			
 			
 		case 2:
 			System.exit(0);

@@ -1,30 +1,58 @@
 package classes;
 
+import java.io.Serializable;
+import java.util.ArrayList;
+
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
+import modules.user.classes.*;
+import modules.user.classes.Singleton;
+import modules.user.utils.Generics.Open;
 import utils.funciones;
 
-public class Settings {
+@XStreamAlias("Settings")
+public class Settings implements Serializable {
+	private static final long serialVersionUID = 1L;
+	
+	@XStreamAlias("currency_config")
 	public static String currency_config;
-	public static String date_config,decimals_config,Formatfitx;
+	@XStreamAlias("date_config")
+	public static String date_config;
+	@XStreamAlias("decimals_config")
+	public static String decimals_config;
+	@XStreamAlias("Formatfitx")
+	public static String Formatfitx;
+	@XStreamAlias("Lang")
+	public static String Lang;
+	@XStreamAlias("dummies")
 	public static boolean dummies;
+	@XStreamAlias("instance")
+	public static Settings instance;
 	
 	
-
-
-
-	/*public Settings(int date_config, String language_config, char currency_config, int decimals_config) {
-		super();
-		this.date_config = date_config;// dd/mm/yyyy dd-mm-yyyy
-		this.currency_config = currency_config;
-		this.decimals_config = decimals_config;
-	}*/
 	public Settings() {
 		super();
+		Lang="Ingles";
 		date_config = "dd/mm/yyyy";
 		currency_config = "€";
 		decimals_config = ".#";
 		Formatfitx="xml";
 	}
-	
+	public static Settings GetInstance(){
+		if(instance==null){
+			instance = new Settings();
+			Lang=Languages.lenguajes.getIdioma();
+			
+			Singleton.useradmin = new ArrayList <Admin> ();
+			Singleton.userclient = new ArrayList <Client> ();
+			Singleton.usernormal = new ArrayList <Normal> ();
+			
+			Open.Open_auto();
+			
+			
+		}
+		return instance;
+	}
 	public static String getDate_config() {
 		return date_config;
 	}
@@ -47,7 +75,12 @@ public class Settings {
 	public static void setDummies(boolean dummies) {
 		Settings.dummies = dummies;
 	}
-	
+	public static String getLang() {
+		return Lang;
+	}
+	public static void setLang(String lang) {
+		Lang = lang;
+	}
 	public static void Formatfitx(){
 		int menu=0;
     	String [] option={"xml", "json", "txt", "Exit"};

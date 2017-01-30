@@ -35,24 +35,23 @@ public class Main_Dummies {
 	
 	public static void main(String[] args) {
 		int men = 0, men1 = 0;
-		String cad = "";
 		
 		settings=new Settings();
-		Singleton.useradmin = new ArrayList <Admin> ();
+		/*Singleton.useradmin = new ArrayList <Admin> ();
 		Singleton.userclient = new ArrayList <Client> ();
 		Singleton.usernormal = new ArrayList <Normal> ();
-
+	*/
 		Persona p1=null;
 		int menprin=0;
 		
 		//Singleton.useradmin = open_auto.openjson();
 		do{
 			
-			/*if(Settings.dummies==false){
+			if(Settings.dummies==false){
 				Main_Framework2.main(null);
 			}
-			*/
-			//Open.Open_auto();
+			
+			Open.Open_auto();
 			String[] principal={lenguajes.getProperty("menu_p"),lenguajes.getProperty("opciones"),lenguajes.getProperty("exit")};
 			String[] option = {lenguajes.getProperty("create"), lenguajes.getProperty("read"), lenguajes.getProperty("update"), lenguajes.getProperty("delete"),"Order"
 					,"Open","Save",lenguajes.getProperty("exit") };
@@ -93,7 +92,7 @@ public class Main_Dummies {
 						break;
 					}
 				} while (men != 7);
-			//	Save.save_auto_client();
+				Save.save_auto_client();
 				break;
 			// Admins
 			case 1:
@@ -125,7 +124,7 @@ public class Main_Dummies {
 					}
 				} while (men != 7);
 				//save_auto.savejson2();
-				//Save.save_auto_admin();
+				Save.save_auto_admin();
 				break;
 				//Normal
 			case 2:
@@ -154,7 +153,7 @@ public class Main_Dummies {
 						Save.save_on_demand_normal();
 					}
 				} while (men != 7);
-				//Save.save_auto_normal();
+				Save.save_auto_normal();
 				break;
 			}
 		} while (men1 != 3) ;

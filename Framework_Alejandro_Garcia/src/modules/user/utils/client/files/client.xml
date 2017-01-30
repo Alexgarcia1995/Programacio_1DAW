@@ -4,8 +4,9 @@
     <dni>73099940Y</dni>
     <nom>Pepe</nom>
     <adreca>Avda. Diputacion 68B</adreca>
-    <edad>0</edad>
+    <edad>22</edad>
     <sexe>H</sexe>
+    <fecha__naix>14/9/1995</fecha__naix>
     <fechanac>
       <Persona>14/9/1995</Persona>
       <dia>14</dia>
@@ -5450,9 +5451,10 @@
     <avatar>asdasdas</avatar>
     <username>pepe1995</username>
     <passwd>pepe123@</passwd>
-    <antig__alta>0</antig__alta>
+    <fecha__alta>1/2/2014</fecha__alta>
+    <antig__alta>3</antig__alta>
     <compras>20</compras>
-    <descuentos>0</descuentos>
+    <descuentos>20</descuentos>
     <fechaalta>
       <Persona>1/2/2014</Persona>
       <dia>1</dia>
@@ -5613,8 +5615,9 @@
     <dni>12345678Z</dni>
     <nom>Alex</nom>
     <adreca>Avda. Diputacion 68B</adreca>
-    <edad>0</edad>
+    <edad>47</edad>
     <sexe>H</sexe>
+    <fecha__naix>14/9/1970</fecha__naix>
     <fechanac>
       <Persona>14/9/1970</Persona>
       <dia>14</dia>
@@ -5775,9 +5778,10 @@
     <avatar>asdasdas</avatar>
     <username>alex</username>
     <passwd>alex123@</passwd>
-    <antig__alta>0</antig__alta>
+    <fecha__alta>1/2/2000</fecha__alta>
+    <antig__alta>17</antig__alta>
     <compras>20</compras>
-    <descuentos>0</descuentos>
+    <descuentos>20</descuentos>
     <fechaalta>
       <Persona>1/2/2000</Persona>
       <dia>1</dia>
