@@ -3,106 +3,118 @@ package classes;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+import org.apache.batik.apps.rasterizer.Main;
+
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
 import modules.user.classes.*;
-import modules.user.classes.Singleton;
 import modules.user.utils.Generics.Open;
+import utils.formatos;
 import utils.funciones;
+import utils.open_config;
 
 @XStreamAlias("Settings")
 public class Settings implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@XStreamAlias("currency_config")
-	public static String currency_config;
+	public  String currency_config;
 	@XStreamAlias("date_config")
-	public static String date_config;
+	public  String date_config;
 	@XStreamAlias("decimals_config")
-	public static String decimals_config;
-	@XStreamAlias("Formatfitx")
-	public static String Formatfitx;
-	@XStreamAlias("Lang")
-	public static String Lang;
+	public  String decimals_config;
+	@XStreamAlias("formatfitx")
+	public  String formatfitx;
+	@XStreamAlias("lang")
+	public String lang;
 	@XStreamAlias("dummies")
-	public static boolean dummies;
+	public  boolean dummies;
 	@XStreamAlias("instance")
 	public static Settings instance;
 	
-	
 	public Settings() {
-		super();
-		Lang="Ingles";
+		lang=Languages.idioma;
 		date_config = "dd/mm/yyyy";
 		currency_config = "€";
 		decimals_config = ".#";
-		Formatfitx="xml";
+		formatfitx="xml";
 	}
+	
 	public static Settings GetInstance(){
-		if(instance==null){
+		if (instance == null){
 			instance = new Settings();
-			Lang=Languages.lenguajes.getIdioma();
+		
+				
+			instance.setDate_config(formatos.formato);
+			instance.setCurrency_config(formatos.moneda);
+			instance.setDecimals_config(formatos.decimal);
+			instance.setFormatfitx(formatos.Formatfitx);
+			instance.setDummies(formatos.bool);
+			instance.setLang(Languages.idioma);
 			
-			Singleton.useradmin = new ArrayList <Admin> ();
+			instance=open_config.openjson();	
+			/*Singleton.useradmin = new ArrayList <Admin> ();
 			Singleton.userclient = new ArrayList <Client> ();
 			Singleton.usernormal = new ArrayList <Normal> ();
+		*/
 			
-			Open.Open_auto();
 			
-			
+		}
+		else{
+			instance=open_config.openjson();
 		}
 		return instance;
 	}
-	public static String getDate_config() {
+	public  String getDate_config() {
 		return date_config;
 	}
-	public static void setDate_config(String date_configs) {
+	public  void setDate_config(String date_configs) {
 		date_config = date_configs;
 	}
 	
-	public static String getCurrency_config() {
+	public  String getCurrency_config() {
 		return currency_config;
 	}
-	public static void setCurrency_config(String currency_configs) {
+	public  void setCurrency_config(String currency_configs) {
 		currency_config = currency_configs;
 	}
-	public static String getDecimals_config() {
+	public  String getDecimals_config() {
 		return decimals_config;
 	}
-	public static void setDecimals_config(String decimals_configs) {
+	public  void setDecimals_config(String decimals_configs) {
 		decimals_config = decimals_configs;
 	}
-	public static void setDummies(boolean dummies) {
-		Settings.dummies = dummies;
+	public  void setDummies(boolean dummies) {
+		this.dummies = dummies;
 	}
-	public static String getLang() {
-		return Lang;
+	public String getLang() {
+		return lang;
 	}
-	public static void setLang(String lang) {
-		Lang = lang;
+	public void setLang(String langs) {
+		lang = langs;
 	}
-	public static void Formatfitx(){
-		int menu=0;
-    	String [] option={"xml", "json", "txt", "Exit"};
-		menu=funciones.menu(option, "Formato",  "Formato");
-		switch (menu){
-		case 0:
-			Formatfitx="xml";
-			break;
-		case 1:
-			Formatfitx="json";
-			break;
-		case 2:
-			Formatfitx="txt";
-			break;
-		case 3:
-			break;
-		}
+	
+	public String getFormatfitx() {
+		return formatfitx;
 	}
-	@Override
-	public String toString() {
-		return "Config [date_config=" + date_config + " currency_config="
-				+ currency_config + ", decimals_config=" + decimals_config + "]";
+	public void setFormatfitx(String formatfitx1) {
+		formatfitx = formatfitx1;
 	}
+	
+
+	public String toString () {
+		String string = null;
+		string= (getDate_config()+"\n");
+		string= string+(getCurrency_config()+"\n");
+		string= string+(getDecimals_config()+"\n");
+		string= string+(getFormatfitx()+"\n");
+		string= string+(dummies+"\n");
+		string= string +(getLang()+"\n");
+		//string= string + getLang().getIdioma();
+		//string.append(Language_general.getInstance().getProperty("toStringfile")+this.getFile()+"\n");
+		//string.append(Language_general.getInstance().getProperty("toStringtheme")+this.getTheme()+"\n");
+		return string;
+	}
+	
 	
 }

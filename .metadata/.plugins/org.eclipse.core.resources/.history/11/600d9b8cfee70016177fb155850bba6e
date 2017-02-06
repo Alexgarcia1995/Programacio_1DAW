@@ -1,0 +1,20 @@
+package classes;
+
+import java.util.ArrayList;
+
+public class Singleton_app {
+
+	public static ArrayList<Settings> Setting;
+	
+	public static void create_settings(){
+		Settings set=null;
+		
+		set.date_config=Settings.date_config;
+		set.currency_config=Settings.currency_config;
+		set.Lang=Settings.Lang;
+		set.decimals_config=Settings.decimals_config;
+		set.dummies=Settings.dummies;
+		
+		Singleton_app.Setting.add(set);
+	}
+}

@@ -4,6 +4,7 @@ import modules.user.classes.Admin;
 import modules.user.classes.Client;
 import modules.user.classes.Normal;
 import modules.user.classes.Singleton;
+import utils.funciones;
 
 public class Funciones_find {
 
@@ -31,5 +32,90 @@ public class Funciones_find {
 			}
 			return -1;
 		}
+		
+		
+		
+		public static String[] vector_admin () {
+			Admin a1 = null;
+			String s = "";
+			int arraylist =Singleton.useradmin.size();
+			String [] user = new String[arraylist];
+			for (int i = 0; i<arraylist; i++) {
+				a1 = (Admin) Singleton.useradmin.get(i);
+				s=a1.getdni()+"-----"+a1.getnom();
+				user[i] = s;
+			}
+			
+			return user;
+		}
+		
+		public static String[] vector_client () {
+			Client a1 = null;
+			String s = "";
+			int arraylist =Singleton.userclient.size();
+			String [] user = new String[arraylist];
+			for (int i = 0; i<arraylist; i++) {
+				a1 = (Client) Singleton.userclient.get(i);
+				s=a1.getdni()+"-----"+a1.getnom();
+				user[i] = s;
+			}
+			
+			return user;
+		}
+		
+		public static String[] vector_normal () {
+			Normal a1 = null;
+			String s = "";
+			int arraylist =Singleton.usernormal.size();
+			String [] user = new String[arraylist];
+			for (int i = 0; i<arraylist; i++) {
+				a1 = (Normal) Singleton.usernormal.get(i);
+				s=a1.getdni()+"-----"+a1.getnom();
+				user[i] = s;
+			}
+			
+			return user;
+		}
+		
+		public static Admin IDadmin () {
+			Admin a1 = null;
+			String ID = "";
+			String [] admin = vector_admin ();
+			String search = funciones.combo_box(admin,"select_user","asktitle");
+			if (search != ""){
+				for (int i = 0; i<9; i++) {
+					ID += search.charAt(i);
+				}
+				a1 = new Admin (ID);
+			}
+			return a1;		
+		}
+		
+		public static Client IDClient () {
+			Client c1 = null;
+			String ID = "";
+			String [] client = vector_client ();
+			String search = funciones.combo_box(client,"select_user","asktitle");
+			if (search != ""){
+				for (int i = 0; i<9; i++) {
+					ID += search.charAt(i);
+				}
+				c1 = new Client (ID);
+			}
+			return c1;		
+		}
+		
+		public static Normal IDNormal () {
+			Normal u1 = null;
+			String ID = "";
+			String [] normal = vector_normal ();
+			String search = funciones.combo_box(normal,"select_user","asktitle");
+			if (search != ""){
+				for (int i = 0; i<9; i++) {
+					ID += search.charAt(i);
+				}
+				u1 = new Normal (ID);
+			}
+			return u1;		
+		}
 	}
-

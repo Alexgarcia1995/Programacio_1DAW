@@ -22,8 +22,8 @@ public static String formato="dd/mm/yyyy";
 		boolean result = false;
 
 		do {
-			fecha_naixe = funciones.ped_string(Languages.lenguajes.getProperty("fecha_naix")+"("+Settings.getDate_config()+")", Languages.lenguajes.getProperty("fecha_naix"));
-			fnac = new Clase_Fecha(fecha_naixe,Settings.getDate_config());
+			fecha_naixe = funciones.ped_string(Languages.lenguajes.getProperty("fecha_naix")+"("+Settings.GetInstance().date_config+")", Languages.lenguajes.getProperty("fecha_naix"));
+			fnac = new Clase_Fecha(fecha_naixe,Settings.GetInstance().date_config);
 			result = fnac.ValidaFecha();
 			edad = fnac.RestaFechas2();
 			if (edad < 18) {
@@ -35,11 +35,11 @@ public static String formato="dd/mm/yyyy";
 
 	}
 
-	public static int Edad(String fecha_naix) {
+	public static int Edad(Clase_Fecha fecha_naix) {
 		int edad;
 		Clase_Fecha edad1=null;
 
-		edad1 = new Clase_Fecha(fecha_naix,Settings.getDate_config());
+		edad1 = new Clase_Fecha(fecha_naix.toStringFecha(Settings.GetInstance().date_config),Settings.GetInstance().date_config);
 		edad = edad1.RestaFechas2();
 		return edad;
 	}
@@ -47,7 +47,7 @@ public static String formato="dd/mm/yyyy";
 	public static int Antiguedad(String fcont) {
 		int edad;
 		Clase_Fecha edad1=null;
-		edad1 = new Clase_Fecha(fcont,Settings.getDate_config());
+		edad1 = new Clase_Fecha(fcont,Settings.GetInstance().date_config);
 		edad = edad1.RestaFechas();
 		return edad;
 	}
@@ -62,9 +62,9 @@ public static String formato="dd/mm/yyyy";
 		boolean result1 = false;
 
 		do {
-			fecha_cont = funciones.ped_string(Languages.lenguajes.getProperty("fecha_cont")+"("+Settings.getDate_config()+")", Languages.lenguajes.getProperty("fecha_cont"));
-			fcont = new Clase_Fecha(fecha_cont,Settings.getDate_config());
-			result = Validate.Validafecha(fecha_cont,Settings.getDate_config());
+			fecha_cont = funciones.ped_string(Languages.lenguajes.getProperty("fecha_cont")+"("+Settings.instance.date_config+")", Languages.lenguajes.getProperty("fecha_cont"));
+			fcont = new Clase_Fecha(fecha_cont,Settings.GetInstance().date_config);
+			result = Validate.Validafecha(fecha_cont,Settings.GetInstance().date_config);
 			antig = fcont.RestaFechas();
 			diferencia = fcont.comparaFechas(fnac);
 			actual=fcont.resta_anyoactual(fcont.getAnio());
@@ -103,7 +103,7 @@ public static String formato="dd/mm/yyyy";
 	public static int Antiguedad_alta(String falta) {
 		int edad;
 		Clase_Fecha edad1=null;
-		edad1 = new Clase_Fecha(falta,Settings.getDate_config());
+		edad1 = new Clase_Fecha(falta,Settings.GetInstance().date_config);
 		edad = edad1.RestaFechas();
 		return edad;
 	}
@@ -118,9 +118,9 @@ public static String formato="dd/mm/yyyy";
 		boolean result1 = false;
 
 		do {
-			fecha_alta = funciones.ped_string(Languages.lenguajes.getProperty("fecha_alta")+"("+Settings.getDate_config()+")", Languages.lenguajes.getProperty("fecha_alta"));
-			falta = new Clase_Fecha(fecha_alta,Settings.getDate_config());
-			result = Validate.Validafecha(fecha_alta,Settings.getDate_config());
+			fecha_alta = funciones.ped_string(Languages.lenguajes.getProperty("fecha_alta")+"("+Settings.GetInstance().date_config+")", Languages.lenguajes.getProperty("fecha_alta"));
+			falta = new Clase_Fecha(fecha_alta,Settings.GetInstance().date_config);
+			result = Validate.Validafecha(fecha_alta,Settings.GetInstance().date_config);
 			antig = falta.RestaFechas();
 			diferencia = falta.comparaFechas(fnac);
 			actual=falta.resta_anyoactual(falta.getAnio());

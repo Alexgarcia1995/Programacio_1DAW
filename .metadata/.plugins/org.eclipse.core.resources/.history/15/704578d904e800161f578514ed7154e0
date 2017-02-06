@@ -1,0 +1,14 @@
+package classes;
+
+import java.util.ArrayList;
+
+public class Singleton_app {
+
+	public static ArrayList<Settings> Setting;
+	
+	public static void create_settings(Settings set){
+		
+		
+		Singleton_app.Setting.add(set);
+	}
+}

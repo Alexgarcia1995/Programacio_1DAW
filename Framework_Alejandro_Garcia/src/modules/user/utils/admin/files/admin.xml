@@ -6,7 +6,7 @@
     <adreca>Avda. Diputacion 68B</adreca>
     <edad>22</edad>
     <sexe>H</sexe>
-    <fecha__naix>14/9/1995</fecha__naix>
+    <fecha__naix>1995-9-14</fecha__naix>
     <fechanac>
       <Persona>14/9/1995</Persona>
       <dia>14</dia>
@@ -16,7 +16,7 @@
         <java.text.DateFormat>
           <default>
             <calendar>
-              <time>-1039140912412</time>
+              <time>-1039403837049</time>
               <timezone>Europe/Paris</timezone>
             </calendar>
             <numberFormat class="java.text.DecimalFormat" serialization="custom">
@@ -88,7 +88,7 @@
         <java.text.SimpleDateFormat>
           <default>
             <serialVersionOnStream>1</serialVersionOnStream>
-            <defaultCenturyStart>1937-01-26 21:44:47.588 CET</defaultCenturyStart>
+            <defaultCenturyStart>1937-01-23 20:42:42.951 CET</defaultCenturyStart>
             <formatData serialization="custom">
               <java.text.DateFormatSymbols>
                 <default>
@@ -5451,9 +5451,9 @@
     <username>pepe1995</username>
     <passwd>pepe123@</passwd>
     <permiso>Lectura, Escritura y Ejecucion</permiso>
-    <aniocont>1/2/2014</aniocont>
+    <aniocont>2014-2-1</aniocont>
     <antiguedad>3</antiguedad>
-    <salario>1150,5</salario>
+    <salario>977,967</salario>
     <aniocon>
       <Persona>1/2/2014</Persona>
       <dia>1</dia>
@@ -5463,7 +5463,7 @@
         <java.text.DateFormat>
           <default>
             <calendar>
-              <time>-1039140912412</time>
+              <time>-1039403837049</time>
               <timezone>Europe/Paris</timezone>
             </calendar>
             <numberFormat class="java.text.DecimalFormat" serialization="custom">
@@ -5535,7 +5535,7 @@
         <java.text.SimpleDateFormat>
           <default>
             <serialVersionOnStream>1</serialVersionOnStream>
-            <defaultCenturyStart>1937-01-26 21:44:47.588 CET</defaultCenturyStart>
+            <defaultCenturyStart>1937-01-23 20:42:42.951 CET</defaultCenturyStart>
             <formatData serialization="custom">
               <java.text.DateFormatSymbols>
                 <default>
@@ -5616,7 +5616,7 @@
     <adreca>Avda. Diputacion 68B</adreca>
     <edad>47</edad>
     <sexe>H</sexe>
-    <fecha__naix>14/9/1970</fecha__naix>
+    <fecha__naix>1970-9-14</fecha__naix>
     <fechanac>
       <Persona>14/9/1970</Persona>
       <dia>14</dia>
@@ -5626,7 +5626,7 @@
         <java.text.DateFormat>
           <default>
             <calendar>
-              <time>-1039140912412</time>
+              <time>-1039403837049</time>
               <timezone>Europe/Paris</timezone>
             </calendar>
             <numberFormat class="java.text.DecimalFormat" serialization="custom">
@@ -5698,7 +5698,7 @@
         <java.text.SimpleDateFormat>
           <default>
             <serialVersionOnStream>1</serialVersionOnStream>
-            <defaultCenturyStart>1937-01-26 21:44:47.588 CET</defaultCenturyStart>
+            <defaultCenturyStart>1937-01-23 20:42:42.951 CET</defaultCenturyStart>
             <formatData serialization="custom">
               <java.text.DateFormatSymbols>
                 <default>
@@ -5777,9 +5777,9 @@
     <username>alex</username>
     <passwd>alex123@</passwd>
     <permiso>Lectura, Escritura y Ejecucion</permiso>
-    <aniocont>1/2/2014</aniocont>
+    <aniocont>2014-2-1</aniocont>
     <antiguedad>3</antiguedad>
-    <salario>1150,5</salario>
+    <salario>977,967</salario>
     <aniocon>
       <Persona>1/2/2014</Persona>
       <dia>1</dia>
@@ -5789,7 +5789,7 @@
         <java.text.DateFormat>
           <default>
             <calendar>
-              <time>-1039140912412</time>
+              <time>-1039403837049</time>
               <timezone>Europe/Paris</timezone>
             </calendar>
             <numberFormat class="java.text.DecimalFormat" serialization="custom">
@@ -5861,7 +5861,7 @@
         <java.text.SimpleDateFormat>
           <default>
             <serialVersionOnStream>1</serialVersionOnStream>
-            <defaultCenturyStart>1937-01-26 21:44:47.588 CET</defaultCenturyStart>
+            <defaultCenturyStart>1937-01-23 20:42:42.951 CET</defaultCenturyStart>
             <formatData serialization="custom">
               <java.text.DateFormatSymbols>
                 <default>

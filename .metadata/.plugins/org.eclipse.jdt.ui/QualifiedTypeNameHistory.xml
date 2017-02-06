@@ -1,25 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
-<fullyQualifiedTypeName name="java.io.FileInputStream"/>
-<fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
-<fullyQualifiedTypeName name="java.io.ByteArrayOutputStream"/>
-<fullyQualifiedTypeName name="java.io.OutputStreamWriter"/>
-<fullyQualifiedTypeName name="java.io.OutputStream"/>
-<fullyQualifiedTypeName name="com.thoughtworks.xstream.XStream"/>
-<fullyQualifiedTypeName name="javax.swing.JFileChooser"/>
-<fullyQualifiedTypeName name="java.io.File"/>
-<fullyQualifiedTypeName name="java.io.FileWriter"/>
-<fullyQualifiedTypeName name="com.thoughtworks.xstream.annotations.Annotations"/>
 <fullyQualifiedTypeName name="com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver"/>
 <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
 <fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
 <fullyQualifiedTypeName name="javax.swing.filechooser.FileNameExtensionFilter"/>
 <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
 <fullyQualifiedTypeName name="modules.user.classes.Client"/>
-<fullyQualifiedTypeName name="modules.user.classes.Normal"/>
 <fullyQualifiedTypeName name="modules.user.utils.normal.utils.open_on_demand"/>
-<fullyQualifiedTypeName name="classes.Settings"/>
 <fullyQualifiedTypeName name="modules.user.utils.client.utils.open_auto_client"/>
 <fullyQualifiedTypeName name="modules.user.utils.normal.utils.open_auto_normal"/>
 <fullyQualifiedTypeName name="modules.user.utils.admin.utils.open_on_demand"/>
@@ -31,9 +18,7 @@
 <fullyQualifiedTypeName name="java.awt.HeadlessException"/>
 <fullyQualifiedTypeName name="modules.user.utils.client.utils.save_on_demand_client"/>
 <fullyQualifiedTypeName name="modules.user.utils.normal.utils.save_on_demand_normal"/>
-<fullyQualifiedTypeName name="modules.user.utils.client.utils.save_auto_client"/>
 <fullyQualifiedTypeName name="modules.user.utils.normal.utils.save_auto_normal"/>
-<fullyQualifiedTypeName name="modules.user.utils.Generics.Save"/>
 <fullyQualifiedTypeName name="com.google.gson.JsonParser"/>
 <fullyQualifiedTypeName name="java.awt.Window.Type"/>
 <fullyQualifiedTypeName name="com.google.gson.reflect.TypeToken"/>
@@ -42,7 +27,6 @@
 <fullyQualifiedTypeName name="com.google.gson.stream.JsonReader"/>
 <fullyQualifiedTypeName name="java.io.FileReader"/>
 <fullyQualifiedTypeName name="org.xml.sax.helpers.XMLReaderAdapter"/>
-<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
 <fullyQualifiedTypeName name="org.codehaus.jettison.json.JSONObject"/>
 <fullyQualifiedTypeName name="org.codehaus.jettison.json.JSONArray"/>
 <fullyQualifiedTypeName name="java.io.BufferedReader"/>
@@ -54,10 +38,26 @@
 <fullyQualifiedTypeName name="com.google.gson.Gson"/>
 <fullyQualifiedTypeName name="com.google.gson.JsonElement"/>
 <fullyQualifiedTypeName name="modules.user.utils.admin.utils.save_on_demand"/>
-<fullyQualifiedTypeName name="classes.Languages"/>
-<fullyQualifiedTypeName name="modules.user.classes.Singleton"/>
 <fullyQualifiedTypeName name="modules.user.classes.Admin"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="modules.user.utils.Generics.Open"/>
 <fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="utils.save_config"/>
+<fullyQualifiedTypeName name="classes.Singleton_app"/>
+<fullyQualifiedTypeName name="org.apache.commons.io.output.ThresholdingOutputStream"/>
+<fullyQualifiedTypeName name="utils.open_config"/>
+<fullyQualifiedTypeName name="classes.Languages"/>
+<fullyQualifiedTypeName name="org.apache.batik.apps.rasterizer.Main"/>
+<fullyQualifiedTypeName name="org.apache.batik.css.engine.value.css2.SrcManager"/>
+<fullyQualifiedTypeName name="Main_Framework2"/>
+<fullyQualifiedTypeName name="Main_Dummies"/>
+<fullyQualifiedTypeName name="modules.user.utils.Generics.Open"/>
+<fullyQualifiedTypeName name="utils.formatos"/>
+<fullyQualifiedTypeName name="modules.user.utils.client.utils.save_auto_client"/>
+<fullyQualifiedTypeName name="modules.user.utils.Generics.Save"/>
+<fullyQualifiedTypeName name="classes.Settings"/>
+<fullyQualifiedTypeName name="modules.user.classes.Order.Orderdatebirthday"/>
+<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+<fullyQualifiedTypeName name="modules.user.classes.Normal"/>
+<fullyQualifiedTypeName name="modules.user.classes.Singleton"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="utils.funciones"/>
 </qualifiedTypeNameHistroy>

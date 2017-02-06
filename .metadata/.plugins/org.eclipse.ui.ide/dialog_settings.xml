@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\Alejandro\Downloads\Programacio_1DAW-984360212f5b97cca9ceff2a94bc75acc5c47fb7-984360212f5b97cca9ceff2a94bc75acc5c47fb7\Framework_Alejandro_Garcia_2"/>
+		<item value="C:\Users\Alejandro\Downloads\Programacio_1DAW-984360212f5b97cca9ceff2a94bc75acc5c47fb7-984360212f5b97cca9ceff2a94bc75acc5c47fb7\Framework_Alejandro_Garcia"/>
 		<item value="C:\Users\Alejandro\Documents\Framework_Alejandro_Garcia_old"/>
 		<item value="C:\Users\Alejandro\Downloads\Framework_Alejandro_Garcia_old"/>
 		<item value="C:\Users\Alejandro\Downloads\Framework_Alejandro_Garcia_old\Framework_Alejandro_Garcia_old"/>
@@ -22,11 +24,11 @@
 	<section name="ResourceNavigator">
 		<item value="Aggregate for window 1474638156260" key="ResourceWorkingSetFilter.STORE_WORKING_SET"/>
 		<item value="1" key="ResourceViewer.STORE_SORT_TYPE"/>
+		<item value="false" key="LINK_NAVIGATOR_TO_EDITOR"/>
 	</section>
 	<section name="NewWizardAction">
 		<item value="org.eclipse.jdt.ui.wizards.JavaProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
-			<item value="org.eclipse.ui.Basic"/>
 			<item value="org.eclipse.jdt.ui.java"/>
 		</list>
 	</section>

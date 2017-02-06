@@ -94,7 +94,7 @@ public class Admin extends Persona {
 	}
 	
 	public String getAniocont() {
-		this.aniocont=this.aniocon.toStringFecha(Settings.getDate_config());
+		this.aniocont=this.aniocon.toStringFecha(Settings.instance.date_config);
 		return aniocont;
 	}
 
@@ -108,7 +108,7 @@ public class Admin extends Persona {
 	}
 
 	public String getSalario() {
-		this.salario=Funciones_data_user.Salario(this.getAntiguedad(),Settings.getCurrency_config(),Settings.getDecimals_config());
+		this.salario=Funciones_data_user.Salario(this.getAntiguedad(),Settings.GetInstance().getCurrency_config(),Settings.GetInstance().getDecimals_config());
 		return salario;
 }
 	public Clase_Fecha getAniocon() {
@@ -133,7 +133,7 @@ public class Admin extends Persona {
 		cad = cad + (Languages.lenguajes.getProperty("contraseña")+" = " + this.getpasswd() + "\n");
 		cad = cad + (Languages.lenguajes.getProperty("fecha_cont")+" = " + this.getAniocont() + "\n");
 		cad = cad + (Languages.lenguajes.getProperty("antig")+" = " + this.getAntiguedad() + "\n");
-		cad = cad + (Languages.lenguajes.getProperty("salario")+" = " + this.getSalario() + Settings.getCurrency_config()+ "\n");
+		cad = cad + (Languages.lenguajes.getProperty("salario")+" = " + this.getSalario() + Settings.GetInstance().getCurrency_config()+ "\n");
 		cad = cad + ("Permisos del usuario = " + this.getpermiso() + "\n");
 		//cad = cad + ("Tipo = " + this.gettipo() + "\n");
 		//cad = cad + ("Avatar = " + this.getavatar() + "\n");

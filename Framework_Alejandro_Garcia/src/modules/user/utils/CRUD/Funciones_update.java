@@ -6,6 +6,7 @@ import classes.Languages;
 import modules.user.classes.*;
 import modules.user.utils.Funciones_Ejer_Genericos;
 import modules.user.utils.Funciones_find;
+import modules.user.utils.Generics.Save;
 
 public class Funciones_update {
 	public static void update_admin () {
@@ -38,7 +39,7 @@ public class Funciones_update {
 			JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_vac"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
 		}else{
 			location = -1;
-			a1=Funciones_Ejer_Genericos.Create_DNI_Generic(1);
+			a1=Funciones_Ejer_Genericos.Create_DNI_Generic(0);
 			location=Funciones_find.find_client((Client) a1);
 			if(location != -1){
 				a1=Singleton.userclient.get(location);
@@ -66,6 +67,7 @@ public class Funciones_update {
 				a1=Singleton.usernormal.get(location);
 				Funciones_Ejer_Genericos.Update_Generic(a1);
 				Singleton.usernormal.set(location, (Normal) a1);
+				Save.save_auto_normal();
 			}
 			else {
 				JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_act"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);

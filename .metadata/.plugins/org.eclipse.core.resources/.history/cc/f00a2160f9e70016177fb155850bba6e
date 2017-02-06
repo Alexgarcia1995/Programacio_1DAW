@@ -1,0 +1,12 @@
+package classes;
+
+import java.util.ArrayList;
+
+public class Singleton_app {
+
+	public static ArrayList<Settings> Settings;
+	
+	public static void create_settings(){
+		
+	}
+}

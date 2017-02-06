@@ -1,19 +1,27 @@
 package modules.user.classes;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
 import classes.Languages;
+import classes.Settings;
 import modules.user.utils.Funciones_data_user;
 
+@XStreamAlias("Normal")
 public class Normal extends Persona{
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	
+	@XStreamAlias("email")
 	private String email;
+	@XStreamAlias("username")
 	private String username;
+	@XStreamAlias("comments")
 	private int comments;
+	@XStreamAlias("points")
 	private int points;
+	@XStreamAlias("karma")
 	private String karma;
 	
 	
@@ -66,7 +74,7 @@ public class Normal extends Persona{
 		cad = cad + (Languages.lenguajes.getProperty("nom")+" = "+ this.getnom() + "\n");
 		cad = cad + (Languages.lenguajes.getProperty("direccion")+" = "+ this.getadreca() + "\n");
 		cad = cad + (Languages.lenguajes.getProperty("edad")+" = " + this.getedad() + "\n");
-		cad = cad + (Languages.lenguajes.getProperty("fecha_naix")+" = " + this.getFechanaix() + "\n");
+		cad = cad + (Languages.lenguajes.getProperty("fecha_naix")+" = " + this.getFechanac().toStringFecha(Settings.GetInstance().date_config) + "\n");
 		cad = cad + (Languages.lenguajes.getProperty("sexe")+" = " + this.getsexe() + "\n");
 		cad = cad + (Languages.lenguajes.getProperty("email")+" = "+ this.getemail() + "\n");
 		cad = cad + (Languages.lenguajes.getProperty("username")+" = " + this.getusername() + "\n");

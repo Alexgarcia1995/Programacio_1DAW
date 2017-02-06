@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
   <Client>
-    <dni>73099940Y</dni>
-    <nom>Pepe</nom>
+    <dni>12345678Z</dni>
+    <nom>Alex</nom>
     <adreca>Avda. Diputacion 68B</adreca>
-    <edad>22</edad>
+    <edad>47</edad>
     <sexe>H</sexe>
-    <fecha__naix>14/9/1995</fecha__naix>
+    <fecha__naix>1970-9-14</fecha__naix>
     <fechanac>
-      <Persona>14/9/1995</Persona>
+      <Persona>14/9/1970</Persona>
       <dia>14</dia>
       <mes>9</mes>
-      <anio>1995</anio>
+      <anio>1970</anio>
       <format serialization="custom">
         <java.text.DateFormat>
           <default>
             <calendar>
-              <time>-1039085160272</time>
+              <time>-1038539458819</time>
               <timezone>Europe/Paris</timezone>
             </calendar>
             <numberFormat class="java.text.DecimalFormat" serialization="custom">
@@ -88,7 +88,7 @@
         <java.text.SimpleDateFormat>
           <default>
             <serialVersionOnStream>1</serialVersionOnStream>
-            <defaultCenturyStart>1937-01-27 13:13:59.728 CET</defaultCenturyStart>
+            <defaultCenturyStart>1937-02-02 20:49:01.181 CET</defaultCenturyStart>
             <formatData serialization="custom">
               <java.text.DateFormatSymbols>
                 <default>
@@ -5447,24 +5447,24 @@
       </format>
     </fechanac>
     <tipo>Cliente</tipo>
-    <email>pepe@gmail.com</email>
+    <email>alex@gmail.com</email>
     <avatar>asdasdas</avatar>
-    <username>pepe1995</username>
-    <passwd>pepe123@</passwd>
-    <fecha__alta>1/2/2014</fecha__alta>
-    <antig__alta>3</antig__alta>
+    <username>alex</username>
+    <passwd>alex123@</passwd>
+    <fecha__alta>2000-2-1</fecha__alta>
+    <antig__alta>17</antig__alta>
     <compras>20</compras>
     <descuentos>20</descuentos>
     <fechaalta>
-      <Persona>1/2/2014</Persona>
+      <Persona>1/2/2000</Persona>
       <dia>1</dia>
       <mes>2</mes>
-      <anio>2014</anio>
+      <anio>2000</anio>
       <format serialization="custom">
         <java.text.DateFormat>
           <default>
             <calendar>
-              <time>-1039085160272</time>
+              <time>-1038539458819</time>
               <timezone>Europe/Paris</timezone>
             </calendar>
             <numberFormat class="java.text.DecimalFormat" serialization="custom">
@@ -5536,7 +5536,7 @@
         <java.text.SimpleDateFormat>
           <default>
             <serialVersionOnStream>1</serialVersionOnStream>
-            <defaultCenturyStart>1937-01-27 13:13:59.728 CET</defaultCenturyStart>
+            <defaultCenturyStart>1937-02-02 20:49:01.181 CET</defaultCenturyStart>
             <formatData serialization="custom">
               <java.text.DateFormatSymbols>
                 <default>
@@ -5612,22 +5612,22 @@
     </fechaalta>
   </Client>
   <Client>
-    <dni>12345678Z</dni>
-    <nom>Alex</nom>
+    <dni>73099940Y</dni>
+    <nom>Pepe</nom>
     <adreca>Avda. Diputacion 68B</adreca>
-    <edad>47</edad>
+    <edad>22</edad>
     <sexe>H</sexe>
-    <fecha__naix>14/9/1970</fecha__naix>
+    <fecha__naix>1995-9-14</fecha__naix>
     <fechanac>
-      <Persona>14/9/1970</Persona>
+      <Persona>14/9/1995</Persona>
       <dia>14</dia>
       <mes>9</mes>
-      <anio>1970</anio>
+      <anio>1995</anio>
       <format serialization="custom">
         <java.text.DateFormat>
           <default>
             <calendar>
-              <time>-1039085160272</time>
+              <time>-1038539458820</time>
               <timezone>Europe/Paris</timezone>
             </calendar>
             <numberFormat class="java.text.DecimalFormat" serialization="custom">
@@ -5699,7 +5699,7 @@
         <java.text.SimpleDateFormat>
           <default>
             <serialVersionOnStream>1</serialVersionOnStream>
-            <defaultCenturyStart>1937-01-27 13:13:59.728 CET</defaultCenturyStart>
+            <defaultCenturyStart>1937-02-02 20:49:01.180 CET</defaultCenturyStart>
             <formatData serialization="custom">
               <java.text.DateFormatSymbols>
                 <default>
@@ -5774,24 +5774,24 @@
       </format>
     </fechanac>
     <tipo>Cliente</tipo>
-    <email>alex@gmail.com</email>
+    <email>pepe@gmail.com</email>
     <avatar>asdasdas</avatar>
-    <username>alex</username>
-    <passwd>alex123@</passwd>
-    <fecha__alta>1/2/2000</fecha__alta>
-    <antig__alta>17</antig__alta>
+    <username>pepe1995</username>
+    <passwd>pepe123@</passwd>
+    <fecha__alta>2014-2-1</fecha__alta>
+    <antig__alta>3</antig__alta>
     <compras>20</compras>
     <descuentos>20</descuentos>
     <fechaalta>
-      <Persona>1/2/2000</Persona>
+      <Persona>1/2/2014</Persona>
       <dia>1</dia>
       <mes>2</mes>
-      <anio>2000</anio>
+      <anio>2014</anio>
       <format serialization="custom">
         <java.text.DateFormat>
           <default>
             <calendar>
-              <time>-1039085160271</time>
+              <time>-1038539458820</time>
               <timezone>Europe/Paris</timezone>
             </calendar>
             <numberFormat class="java.text.DecimalFormat" serialization="custom">
@@ -5863,7 +5863,7 @@
         <java.text.SimpleDateFormat>
           <default>
             <serialVersionOnStream>1</serialVersionOnStream>
-            <defaultCenturyStart>1937-01-27 13:13:59.729 CET</defaultCenturyStart>
+            <defaultCenturyStart>1937-02-02 20:49:01.180 CET</defaultCenturyStart>
             <formatData serialization="custom">
               <java.text.DateFormatSymbols>
                 <default>

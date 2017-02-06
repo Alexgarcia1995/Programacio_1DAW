@@ -28,20 +28,23 @@ public class Funciones_read {
 				}
 				break;
 			case 1:
-				location=-1;
-				p1=Funciones_Ejer_Genericos.Create_DNI_Generic(1);
-				location=Funciones_find.find_admin((Admin) p1);
-				if (location != -1){
-					//p1=Singleton.useradmin.get(location);
-					JOptionPane.showMessageDialog(null, Singleton.useradmin.get(location).toString());
-				}
-				else{
-					JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_lec"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
+				location = -1;
+				p1 = Funciones_find.IDadmin();
+				if (p1 == null) {
+					JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_vac"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
+				}else{
+					location = Funciones_find.find_admin((Admin) p1);
+					if (location != -1) {
+						p1 = Singleton.useradmin.get(location);
+						JOptionPane.showMessageDialog(null, ((Admin)p1).toString());
+					}else {
+						//JOptionPane.showMessageDialog(null, Language_user.getInstance().getProperty("usererror"), Language_user.getInstance().getProperty("errortitle"), JOptionPane.ERROR_MESSAGE);
+					}
 				}
 				break;
 			}
+			}
 		}
-	}
 	
 	public static void read_client(){
 		int menu=0, location=-1;
@@ -61,17 +64,19 @@ public class Funciones_read {
 				}
 				break;
 			case 1:
-				location=-1;
-				p1=Funciones_Ejer_Genericos.Create_DNI_Generic(0);
-				location=Funciones_find.find_admin((Admin) p1);
-				if (location != -1){
-					//p1=Singleton.useradmin.get(location);
-					JOptionPane.showMessageDialog(null, Singleton.userclient.get(location).toString());
+				location = -1;
+				p1 = Funciones_find.IDClient();
+				if (p1 == null) {
+					JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_vac"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
+				}else{
+					location = Funciones_find.find_client((Client) p1);
+					if (location != -1) {
+						p1 = Singleton.userclient.get(location);
+						JOptionPane.showMessageDialog(null, ((Client) p1).toString());
+					}else {
+						JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_vac"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
+					}
 				}
-				else{
-					JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_lec"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
-				}
-				break;
 			}
 		}
 	}
@@ -89,21 +94,23 @@ public class Funciones_read {
 			case 0:
 				for (int i=0; i<Singleton.usernormal.size();i++){
 					String cad="";
-					cad=cad +(Singleton.usernormal.get(i).toString());
+					cad=Singleton.usernormal.get(i).toString();
 					JOptionPane.showMessageDialog(null, cad);
 				}
 				break;
-			case 1:
-				location=-1;
-				p1=Funciones_Ejer_Genericos.Create_DNI_Generic(2);
-				location=Funciones_find.find_user((Normal) p1);
-				if (location != -1){
-					//p1=Singleton.useradmin.get(location);
-					JOptionPane.showMessageDialog(null, Singleton.usernormal.get(location).toString());
+			case 1:location = -1;
+			p1 = Funciones_find.IDNormal();
+			if (p1 == null) {
+				JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_vac"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
+			}else{
+				location = Funciones_find.find_user((Normal) p1);
+				if (location != -1) {
+					p1 = Singleton.usernormal.get(location);
+					JOptionPane.showMessageDialog(null, ((Normal) p1).toString());
+				}else {
+					JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_vac"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
 				}
-				else{
-					JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_lec"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
-				}
+			}
 				break;
 			}
 		}

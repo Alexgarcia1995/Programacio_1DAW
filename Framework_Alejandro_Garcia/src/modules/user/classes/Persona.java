@@ -80,7 +80,7 @@ public abstract class Persona implements Comparable<Persona>, Serializable {
 	}
 
 	public int getedad() {
-		this.edad=Funciones_fecha.Edad(getFechanaix());
+		this.edad=Funciones_fecha.Edad(getFechanac());
 		return edad;
 	}
 
@@ -94,7 +94,7 @@ public abstract class Persona implements Comparable<Persona>, Serializable {
 	}
 	
 	public String getFechanaix() {
-		this.fecha_naix=this.fechanac.toStringFecha(Settings.getDate_config());
+		this.fecha_naix=this.fechanac.toStringFecha(Settings.GetInstance().date_config);
 		return fecha_naix;
 	}
 

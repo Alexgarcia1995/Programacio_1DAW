@@ -20,43 +20,35 @@ import  utils.*;
 
 public class Main_Framework2 {
 	
-	public static Settings settings=null;
-	public static Languages lenguajes=Languages.lenguajes;
 
 	public static void main(String[] args) {
 		int men = 0, men1 = 0;
-		
-		settings=new Settings();
-		/*Singleton.useradmin = new ArrayList <Admin> ();
-		Singleton.userclient = new ArrayList <Client> ();
-		Singleton.usernormal = new ArrayList <Normal> ();
-	*/
-
 		int menprin=0;
 		
 		
 		
 		
 		do{
-			if(Settings.dummies==true){
+			Settings.GetInstance();
+			if (Settings.GetInstance().dummies==true){
 				Main_Dummies.main(null);
 			}
-			Open.Open_auto();
-			String[] principal={lenguajes.getProperty("menu_p"),lenguajes.getProperty("opciones"),lenguajes.getProperty("exit")};
-			String[] option = {lenguajes.getProperty("create"), lenguajes.getProperty("read"), lenguajes.getProperty("update"), lenguajes.getProperty("delete"),"Order"
-					,"Open","Save",lenguajes.getProperty("exit") };
-			String[] option1 = {lenguajes.getProperty("client"), lenguajes.getProperty("admin"), lenguajes.getProperty("normal"),lenguajes.getProperty("exit")};
+			String[] principal={Languages.lenguajes.getProperty("menu_p"),Languages.lenguajes.getProperty("opciones"),Languages.lenguajes.getProperty("exit")};
+			String[] option = {Languages.lenguajes.getProperty("create"), Languages.lenguajes.getProperty("read"), Languages.lenguajes.getProperty("update"), Languages.lenguajes.getProperty("delete"),"Order"
+					,"Open","Save",Languages.lenguajes.getProperty("exit") };
+			String[] option1 = {Languages.lenguajes.getProperty("client"), Languages.lenguajes.getProperty("admin"), Languages.lenguajes.getProperty("normal"),Languages.lenguajes.getProperty("exit")};
 			
-		menprin= funciones.menu(principal,lenguajes.getProperty("menu"),lenguajes.getProperty("menu"));
+		menprin= funciones.menu(principal,Languages.lenguajes.getProperty("menu"),Languages.lenguajes.getProperty("menu"));
 		switch(menprin){
 		case 0:
 		do{
-			men1 = funciones.menu(option1, lenguajes.getProperty("crear"), lenguajes.getProperty("opciones"));
+			Open.Open_auto();
+			men1 = funciones.menu(option1, Languages.lenguajes.getProperty("crear"), Languages.lenguajes.getProperty("opciones"));
 			switch (men1) {
 			// Cliente
 			case 0:
 				do {
-					men = funciones.menu(option, lenguajes.getProperty("options"), lenguajes.getProperty("opciones"));
+					men = funciones.menu(option, Languages.lenguajes.getProperty("options"), Languages.lenguajes.getProperty("opciones"));
 					switch (men) {
 					case 0:
 						Funciones_create.create_client();
@@ -86,7 +78,7 @@ public class Main_Framework2 {
 			// Admins
 			case 1:
 				do {
-					men = funciones.menu(option, lenguajes.getProperty("options"), lenguajes.getProperty("opciones"));
+					men = funciones.menu(option, Languages.lenguajes.getProperty("options"), Languages.lenguajes.getProperty("opciones"));
 					switch (men) {
 					case 0:
 						Funciones_create.create_admin();
@@ -104,7 +96,7 @@ public class Main_Framework2 {
 						Funciones_order.order_admin();
 						break;
 					case 5:
-						Open.Open_auto();
+						Open.Open_admin();
 						break;
 					case 6:
 						Save.save_on_demand_admin();;
@@ -117,7 +109,7 @@ public class Main_Framework2 {
 				//Normal
 			case 2:
 				do {
-					men = funciones.menu(option, lenguajes.getProperty("options"), lenguajes.getProperty("opciones"));
+					men = funciones.menu(option, Languages.lenguajes.getProperty("options"), Languages.lenguajes.getProperty("opciones"));
 					switch (men) {
 					case 0:
 						Funciones_create.create_normal();
@@ -134,8 +126,14 @@ public class Main_Framework2 {
 					case 4:
 						Funciones_order.order_normal();
 						break;
+					case 5:
+						Open.Open_normal();
+						break;
+					case 6:
+						Save.save_on_demand_normal();
+						break;
 					}
-				} while (men != 5);
+				} while (men != 7);
 				break;
 				
 			}
@@ -145,9 +143,9 @@ public class Main_Framework2 {
 		
 		case 1:
 			do {
-				String[] option2= {lenguajes.getProperty("fecha"), lenguajes.getProperty("moneda"), lenguajes.getProperty("decimales"), 
-						lenguajes.getProperty("lenguajes"),"Dummies","Formato",lenguajes.getProperty("exit")};
-				men = funciones.menu(option2, lenguajes.getProperty("formato"), lenguajes.getProperty("formato2"));
+				String[] option2= {Languages.lenguajes.getProperty("fecha"), Languages.lenguajes.getProperty("moneda"), Languages.lenguajes.getProperty("decimales"), 
+						Languages.lenguajes.getProperty("lenguajes"),"Dummies","Formato",Languages.lenguajes.getProperty("exit")};
+				men = funciones.menu(option2, Languages.lenguajes.getProperty("formato"), Languages.lenguajes.getProperty("formato2"));
 				switch (men) {
 				case 0:
 					formatos.Formatfecha();
@@ -159,16 +157,17 @@ public class Main_Framework2 {
 					formatos.Formatdecimal();
 					break;
 				case 3:
-					Languages.Lengua(lenguajes);
+					Languages.Lengua(Languages.lenguajes);
 					break;
 				case 4:
 					formatos.Dummies();
 					break;
 				case 5:
-					Settings.Formatfitx();
+					formatos.Formatfitx();
 					break;
 				}
 			} while (men != 6);
+			save_config.savejson();
 			break;
 			
 		case 2:

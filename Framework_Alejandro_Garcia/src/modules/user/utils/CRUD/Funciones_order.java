@@ -8,6 +8,8 @@ import classes.Languages;
 import modules.user.classes.*;
 import utils.funciones;
 import modules.user.classes.Order.*;
+import modules.user.utils.Generics.Save;
+import modules.user.utils.client.utils.save_auto_client;
 public class Funciones_order {
 	public static void order_admin () {
 		String [] options = { "A)" + Languages.lenguajes.getProperty("dni"), "B) "+ Languages.lenguajes.getProperty("dni"), 
@@ -83,6 +85,7 @@ public class Funciones_order {
 					Collections.sort(Singleton.userclient, new Ordershopping());
 					break;
 			}
+			Save.save_auto_client();
 		}
 	}
 	public static void order_normal() {
@@ -100,18 +103,23 @@ public class Funciones_order {
 			switch (order) {
 				case 'A':
 					Collections.sort(Singleton.usernormal);
+					//Save.save_auto_normal();
 					break;
 				case 'B':
 					Collections.sort(Singleton.usernormal, new Orderuser_normal());
+					//Save.save_auto_normal();
 					break;
 				case 'C':
 					Collections.sort(Singleton.usernormal, new Ordername());
+					//Save.save_auto_normal();
 					break;
 				case 'D':
 					Collections.sort(Singleton.usernormal, new Orderdatebirthday());
+					//Save.save_auto_normal();
 					break;
 				case 'E':
 					Collections.sort(Singleton.usernormal, new Orderage());
+					//Save.save_auto_normal();
 					break;
 				
 			}

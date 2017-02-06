@@ -7,8 +7,8 @@ import utils.funciones;
 
 public class Languages extends Properties {
 	private static final long serialVersionUID = 1L;
-	private String idioma;
-	public static Languages lenguajes=new Languages("Espanol");
+	static String idioma="Espanol";
+	public static Languages lenguajes=null;
 	
 	public Languages (String idioma){
 	    switch(idioma){
@@ -27,8 +27,8 @@ public class Languages extends Properties {
 		return idioma;
 	}
 
-	public void setIdioma(String idioma) {
-		this.idioma = idioma;
+	public void setIdioma(String idiomas) {
+		idioma = idiomas;
 		switch(idioma){
 		case "Ingles":
 	        getProperties("english.properties");
@@ -57,12 +57,15 @@ public class Languages extends Properties {
 		switch (menu){
 		case 0:
 			lang.setIdioma("Ingles");
+			Settings.GetInstance().setLang(idioma);
 			break;
 		case 1:
 			lang.setIdioma("Espanol");
+			Settings.GetInstance().setLang(idioma);
 			break;
 		case 2:
 			lang.setIdioma("Catala");
+			Settings.GetInstance().setLang(idioma);
 			break;
 		case 3:
 			break;

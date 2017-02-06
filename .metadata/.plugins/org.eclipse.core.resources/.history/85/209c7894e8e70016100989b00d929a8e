@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<string>toStringlanguage null
+toStringformatdate dd/mm/yyyy
+toStringcurrency €
+toStringdecimal .#
+toStringdecimal xml
+</string>

@@ -1,0 +1,17 @@
+package modules.user.classes.Order;
+
+import java.util.Comparator;
+
+import modules.user.classes.Persona;
+
+public class Orderage implements Comparator <Persona>{
+
+	public int compare (Persona u1, Persona u2) {
+		int n;
+		if(u1.getedad()>u2.getedad())
+			n=1;
+		if(u1.getedad()<u2.getedad())
+			n= -1;
+		return n;
+	}
+}

@@ -10,6 +10,7 @@ import modules.user.classes.Persona;
 import modules.user.classes.Singleton;
 import modules.user.utils.Funciones_Ejer_Genericos;
 import modules.user.utils.Funciones_find;
+import modules.user.utils.Generics.Save;
 
 public class Funciones_create {
 public static void create_admin(){
@@ -34,6 +35,7 @@ public static void create_client(){
 	} else {
 		p1 = Funciones_Ejer_Genericos.Create_Generic(0);
 		Singleton.userclient.add((Client) p1);
+		
 }
 }
 public static void create_normal(){
@@ -46,6 +48,7 @@ public static void create_normal(){
 	} else {
 		p1 = Funciones_Ejer_Genericos.Create_Generic(2);
 		Singleton.usernormal.add((Normal) p1);
+		Save.save_auto_normal();
 }
 }
 }

@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-  <modules.user.classes.Normal>
+  <Normal>
     <dni>73099940Y</dni>
-    <nom>Pepe</nom>
-    <adreca>Avda. Diputacion 68B</adreca>
-    <edad>22</edad>
+    <nom>pepe</nom>
+    <adreca>pepe</adreca>
+    <edad>0</edad>
     <sexe>H</sexe>
-    <fecha__naix>14/9/1995</fecha__naix>
     <fechanac>
-      <Persona>14/9/1995</Persona>
+      <Persona>14/10/1980</Persona>
       <dia>14</dia>
-      <mes>9</mes>
-      <anio>1995</anio>
+      <mes>10</mes>
+      <anio>1980</anio>
       <format serialization="custom">
         <java.text.DateFormat>
           <default>
             <calendar>
-              <time>-1039251643379</time>
+              <time>316653000000</time>
               <timezone>Europe/Paris</timezone>
             </calendar>
             <numberFormat class="java.text.DecimalFormat" serialization="custom">
@@ -88,7 +87,7 @@
         <java.text.SimpleDateFormat>
           <default>
             <serialVersionOnStream>1</serialVersionOnStream>
-            <defaultCenturyStart>1937-01-25 14:59:16.621 CET</defaultCenturyStart>
+            <defaultCenturyStart>1937-02-05 18:51:44.848 CET</defaultCenturyStart>
             <formatData serialization="custom">
               <java.text.DateFormatSymbols>
                 <default>
@@ -5446,29 +5445,27 @@
         </java.text.SimpleDateFormat>
       </format>
     </fechanac>
-    <email>pepe@gmail.com</email>
-    <username>pepe1995</username>
-    <comments>20</comments>
-    <points>100</points>
-    <karma>Medium</karma>
-  </modules.user.classes.Normal>
-  <modules.user.classes.Normal>
+    <email>pepe@gmial.com</email>
+    <username>peep</username>
+    <comments>52</comments>
+    <points>0</points>
+  </Normal>
+  <Normal>
     <dni>12345678Z</dni>
-    <nom>Alex</nom>
-    <adreca>Avda. Diputacion 68B</adreca>
-    <edad>47</edad>
+    <nom>z</nom>
+    <adreca>z</adreca>
+    <edad>0</edad>
     <sexe>H</sexe>
-    <fecha__naix>14/9/1970</fecha__naix>
     <fechanac>
-      <Persona>14/9/1970</Persona>
+      <Persona>14/10/1970</Persona>
       <dia>14</dia>
-      <mes>9</mes>
+      <mes>10</mes>
       <anio>1970</anio>
       <format serialization="custom">
         <java.text.DateFormat>
           <default>
             <calendar>
-              <time>-1039251643379</time>
+              <time>1120200000</time>
               <timezone>Europe/Paris</timezone>
             </calendar>
             <numberFormat class="java.text.DecimalFormat" serialization="custom">
@@ -5528,7 +5525,7 @@
                         <exponentialSeparator>E</exponentialSeparator>
                         <infinity>∞</infinity>
                         <intlCurrencySymbol>EUR</intlCurrencySymbol>
-                        <locale reference="../../../../../../../../../../../../modules.user.classes.Normal/fechanac/format/java.text.DateFormat/default/numberFormat/java.text.DecimalFormat/default/symbols/java.text.DecimalFormatSymbols/default/locale"/>
+                        <locale reference="../../../../../../../../../../../../Normal/fechanac/format/java.text.DateFormat/default/numberFormat/java.text.DecimalFormat/default/symbols/java.text.DecimalFormatSymbols/default/locale"/>
                       </default>
                     </java.text.DecimalFormatSymbols>
                   </symbols>
@@ -5540,7 +5537,7 @@
         <java.text.SimpleDateFormat>
           <default>
             <serialVersionOnStream>1</serialVersionOnStream>
-            <defaultCenturyStart>1937-01-25 14:59:16.621 CET</defaultCenturyStart>
+            <defaultCenturyStart>1937-02-05 18:52:11.87 CET</defaultCenturyStart>
             <formatData serialization="custom">
               <java.text.DateFormatSymbols>
                 <default>
@@ -5553,7 +5550,7 @@
                     <string>anno Dómini</string>
                   </eras>
                   <localPatternChars>GyMdkHmsSEDFwWahKzZ</localPatternChars>
-                  <locale reference="../../../../../../../../../modules.user.classes.Normal/fechanac/format/java.text.DateFormat/default/numberFormat/java.text.DecimalFormat/default/symbols/java.text.DecimalFormatSymbols/default/locale"/>
+                  <locale reference="../../../../../../../../../Normal/fechanac/format/java.text.DateFormat/default/numberFormat/java.text.DecimalFormat/default/symbols/java.text.DecimalFormatSymbols/default/locale"/>
                   <months>
                     <string>enero</string>
                     <string>febrero</string>
@@ -5604,20 +5601,19 @@
                     <string>viernes</string>
                     <string>sábado</string>
                   </weekdays>
-                  <zoneStrings reference="../../../../../../../../../modules.user.classes.Normal/fechanac/format/java.text.SimpleDateFormat/default/formatData/java.text.DateFormatSymbols/default/zoneStrings"/>
+                  <zoneStrings reference="../../../../../../../../../Normal/fechanac/format/java.text.SimpleDateFormat/default/formatData/java.text.DateFormatSymbols/default/zoneStrings"/>
                 </default>
               </java.text.DateFormatSymbols>
             </formatData>
-            <locale reference="../../../../../../modules.user.classes.Normal/fechanac/format/java.text.DateFormat/default/numberFormat/java.text.DecimalFormat/default/symbols/java.text.DecimalFormatSymbols/default/locale"/>
+            <locale reference="../../../../../../Normal/fechanac/format/java.text.DateFormat/default/numberFormat/java.text.DecimalFormat/default/symbols/java.text.DecimalFormatSymbols/default/locale"/>
             <pattern>dd/mm/yyyy</pattern>
           </default>
         </java.text.SimpleDateFormat>
       </format>
     </fechanac>
-    <email>alex@gmail.com</email>
-    <username>alex</username>
-    <comments>20</comments>
-    <points>100</points>
-    <karma>Medium</karma>
-  </modules.user.classes.Normal>
+    <email>pepe@gmail.com</email>
+    <username>z</username>
+    <comments>52</comments>
+    <points>0</points>
+  </Normal>
 </list>

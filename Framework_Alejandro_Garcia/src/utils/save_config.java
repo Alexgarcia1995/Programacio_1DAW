@@ -19,6 +19,9 @@ import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.annotations.Annotations;
 import com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver;
 
+import classes.Languages;
+import classes.Settings;
+import classes.Singleton_app;
 import modules.user.classes.Admin;
 import modules.user.classes.Singleton;
 
@@ -32,17 +35,15 @@ public static void savexml() {
 			e1.printStackTrace();
 		}
 
-		
-		if (Singleton.useradmin.size()>0){
 			try{
 				OutputStream os= new ByteArrayOutputStream();
 				OutputStreamWriter osw= new OutputStreamWriter(os);
 				XStream xstream= new XStream();
 				
-				Annotations.configureAliases(xstream, Admin.class);
+				Annotations.configureAliases(xstream, Settings.class);
 				
 				  String header = "<?xml version=\"1.0\" encoding=\"" + "UTF-8" + "\"?>\n";
-				  xstream.toXML(Singleton.useradmin,osw);
+				  xstream.toXML(Singleton_app.Setting,osw);
 				  StringBuffer xml= new StringBuffer();
 				  xml.append(header);
 	              xml.append(os.toString());
@@ -57,36 +58,36 @@ public static void savexml() {
 				JOptionPane.showMessageDialog(null, "Error al grabar el XML","Error", JOptionPane.ERROR_MESSAGE);
 			}
 		}
-		
-		
-	}
 
 
 public static void savejson(){
-	String PATH;
-	  try {
-    	  XStream xstream = new XStream(new JettisonMappedXmlDriver());
-          xstream.setMode(XStream.NO_REFERENCES);
-		  xstream.alias("Admin", Admin.class);
-		 
-			PATH = new java.io.File(".").getCanonicalPath()+ "/src/utils/Files/config.xml";
-
-
-            
-                Gson gson = new Gson();
-	            String json = gson.toJson(Singleton.useradmin.toString());
-	            FileWriter fileXml = new FileWriter(PATH);
-                fileXml.write(json);
-                fileXml.close(); 
-                
-                JOptionPane.showMessageDialog(null, "Archivo JSON guardado con exito", "Archivo JSON", JOptionPane.INFORMATION_MESSAGE);
-          
-    } catch (Exception e) {
-    	JOptionPane.showMessageDialog(null, "Error al grabar el JSON", "Error", JOptionPane.ERROR_MESSAGE);
+	String PATH = null;
+    
+    try {
+        PATH = new java.io.File(".").getCanonicalPath()
+                + "/src/utils/Files/config.json";
+    } catch (IOException e) {
+        e.printStackTrace();
     }
+    
+    try {
+	    XStream xstreamjson = new XStream(new JettisonMappedXmlDriver());
+	    xstreamjson.setMode(XStream.NO_REFERENCES);
+	    xstreamjson.alias("Settings", Settings.class);
+	    Gson gson = new Gson();
+	    String json = gson.toJson(Settings.instance);
+	    FileWriter fileXml = new FileWriter(PATH);
+	    fileXml.write(json.toString());
+	    fileXml.close();
 
 
+	    
+    } catch (Exception e) {
+     	JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error"), Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
+    }
 }
+	
+
 
 
 
@@ -101,7 +102,7 @@ public static void savetxt(){
              
              FileOutputStream fo=new FileOutputStream(f);
 				ObjectOutputStream o=new ObjectOutputStream(fo);
-				o.writeObject(Singleton.useradmin);
+				o.writeObject(Singleton_app.Setting);
 				o.close();
              JOptionPane.showMessageDialog(null, "Archivo TXT guardado con exito", "Archivo TXT", JOptionPane.INFORMATION_MESSAGE);
          
@@ -111,41 +112,4 @@ public static void savetxt(){
 }
 
 
-
-
-
-/*public static void savejson2(){
-	String PATH;
-	Admin es;
-	  try {
-    	  XStream xstream = new XStream(new JettisonMappedXmlDriver());
-          xstream.setMode(XStream.NO_REFERENCES);
-		  xstream.alias("Admin", Admin.class);
-		 
-          PATH = new java.io.File(".").getCanonicalPath()+ "/src/modules/user/utils/admin/files/admin.json";
-
-          
-  
-          
-                Gson gson=new Gson();
-                FileWriter fileXml = new FileWriter(PATH);
-            
-                for (int i=0;i<Singleton.useradmin.size();i++){
-                es=Singleton.useradmin.get(i);
-                String pepe=es.toString();
-                JsonElement elemento
-                String alex=gson.
-               // gson.toJson(es.toString(), fileXml);
-                fileXml.write(alex);
-                }
-                fileXml.close(); 
-                
-                JOptionPane.showMessageDialog(null, "Archivo JSON guardado con exito", "Archivo JSON", JOptionPane.INFORMATION_MESSAGE);
-          
-    } catch (Exception e) {
-    	JOptionPane.showMessageDialog(null, "Error al grabar el JSON", "Error", JOptionPane.ERROR_MESSAGE);
-    }
-
-
-}*/
 }

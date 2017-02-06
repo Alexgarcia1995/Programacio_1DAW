@@ -4,6 +4,7 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 
 import classes.Clase_Fecha;
 import classes.Languages;
+import classes.Settings;
 import modules.user.utils.Funciones_data_user;
 import modules.user.utils.Funciones_fecha;
 
@@ -90,7 +91,7 @@ public class Client extends Persona {
 	}
 
 	public String getFecha_alta() {
-		this.fecha_alta=this.fechaalta.toStringFecha(Funciones_fecha.formato);
+		this.fecha_alta=this.fechaalta.toStringFecha(Settings.GetInstance().date_config);
 		return fecha_alta;
 	}
 
@@ -100,7 +101,7 @@ public class Client extends Persona {
 	}
 	
 	public int getAntig_alta() {
-		this.antig_alta=Funciones_fecha.Antiguedad(getFecha_alta());
+		this.antig_alta=Funciones_fecha.Antiguedad_alta(getFecha_alta());
 		return antig_alta;
 	}
 	

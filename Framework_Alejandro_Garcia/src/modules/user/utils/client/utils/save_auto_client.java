@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
+import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
@@ -30,8 +31,32 @@ public static void savexml() {
 			e1.printStackTrace();
 		}
 
-		
-		if (Singleton.userclient.size()>0){
+        if (Singleton.userclient.isEmpty()){
+            Singleton.userclient=new ArrayList<Client>();
+        	try{
+				OutputStream os= new ByteArrayOutputStream();
+				OutputStreamWriter osw= new OutputStreamWriter(os);
+				XStream xstream= new XStream();
+				
+				Annotations.configureAliases(xstream, Client.class);
+				
+				  String header = "<?xml version=\"1.0\" encoding=\"" + "UTF-8" + "\"?>\n";
+				  xstream.toXML(Singleton.userclient,osw);
+				  StringBuffer xml= new StringBuffer();
+				  xml.append(header);
+	              xml.append(os.toString());
+	             
+	              FileWriter fileXml = new FileWriter(PATH);
+	               fileXml.write(xml.toString());
+	               fileXml.close();
+	               osw.close();
+	               os.close();
+				  
+			}catch (IOException e){
+				JOptionPane.showMessageDialog(null, "Error al grabar el XML","Error", JOptionPane.ERROR_MESSAGE);
+			}
+        }
+        else {
 			try{
 				OutputStream os= new ByteArrayOutputStream();
 				OutputStreamWriter osw= new OutputStreamWriter(os);
@@ -89,7 +114,30 @@ public static void savejson(){
 
 public static void savetxt(){
 	 String PATH = null;
-     try {
+    
+	 if (Singleton.userclient.isEmpty()){
+
+		 try {
+	 
+         File f;
+         Singleton.userclient=new ArrayList<Client>();
+         PATH = new java.io.File(".").getCanonicalPath()+ "/src/modules/user/utils/client/files/client.txt";
+             f = new File(PATH);
+             
+             FileOutputStream fo=new FileOutputStream(f);
+				ObjectOutputStream o=new ObjectOutputStream(fo);
+				o.writeObject(Singleton.userclient);
+				o.close();
+             JOptionPane.showMessageDialog(null, "Archivo TXT guardado con exito", "Archivo TXT", JOptionPane.INFORMATION_MESSAGE);
+         
+     } catch (Exception e) {
+     	JOptionPane.showMessageDialog(null, "Error al grabar el TXT", "Error", JOptionPane.ERROR_MESSAGE);
+     }
+	 }
+	 
+	 else{
+		 try {
+	 
          File f;
         
          PATH = new java.io.File(".").getCanonicalPath()+ "/src/modules/user/utils/client/files/client.txt";
@@ -104,5 +152,6 @@ public static void savetxt(){
      } catch (Exception e) {
      	JOptionPane.showMessageDialog(null, "Error al grabar el TXT", "Error", JOptionPane.ERROR_MESSAGE);
      }
+	 }
 }
 }
