@@ -8,30 +8,15 @@ import com.google.gson.JsonArray;
 import classes.Languages;
 import classes.Settings;
 import classes.Singleton_app;
-import modules.user.classes.Admin;
-import modules.user.classes.Client;
-import modules.user.classes.Normal;
-import modules.user.classes.Persona;
-import modules.user.classes.Singleton;
+import modules.user.Model.BLL.BLL_dummies.CRUD_Dummies.*;
+import modules.user.Model.Functions.Generics.*;
+import modules.user.Model.classes.*;
+import modules.user.Model.classes.Singleton;
 import utils.formatos;
 import utils.funciones;
 import utils.open_config;
 import utils.save_config;
-import modules.user.utils.CRUD_Dummies.*;
-import modules.user.utils.Generics.Open;
-import modules.user.utils.Generics.Save;
-import modules.user.utils.admin.utils.open_auto;
-import modules.user.utils.admin.utils.open_on_demand;
-import modules.user.utils.admin.utils.save_auto;
-import modules.user.utils.admin.utils.save_on_demand;
-import modules.user.utils.client.utils.open_auto_client;
-import modules.user.utils.client.utils.open_on_demand_client;
-import modules.user.utils.client.utils.save_auto_client;
-import modules.user.utils.client.utils.save_on_demand_client;
-import modules.user.utils.normal.utils.open_auto_normal;
-import modules.user.utils.normal.utils.open_on_demand_normal;
-import modules.user.utils.normal.utils.save_auto_normal;
-import modules.user.utils.normal.utils.save_on_demand_normal;
+
 public class Main_Dummies {
 	
 	
@@ -52,7 +37,12 @@ public class Main_Dummies {
 		menprin= funciones.menu(principal, Languages.lenguajes.getProperty("menu") + "("+ Languages.lenguajes.getProperty("dummies")+")",Languages.lenguajes.getProperty("menu_p"));
 		switch(menprin){
 		case 0:
-		do{
+		do{	
+			Open.Open_auto();
+			/*Singleton.usernormal=new ArrayList<Normal>();
+			Singleton.useradmin=new ArrayList<Admin>();
+			Singleton.userclient=new ArrayList<Client>();
+			*/
 			men1 = funciones.menu(option1, Languages.lenguajes.getProperty("crear"), Languages.lenguajes.getProperty("opciones"));
 			switch (men1) {
 			// Cliente
@@ -83,7 +73,7 @@ public class Main_Dummies {
 						break;
 					}
 				} while (men != 7);
-				Save.save_auto_client();
+				//Save.save_auto_client();
 				break;
 			// Admins
 			case 1:
@@ -114,7 +104,6 @@ public class Main_Dummies {
 						break;
 					}
 				} while (men != 7);
-				//save_auto.savejson2();
 				Save.save_auto_admin();
 				break;
 				//Normal

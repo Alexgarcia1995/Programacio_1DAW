@@ -21,8 +21,8 @@ import com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver;
 import classes.Languages;
 import classes.Settings;
 import classes.Singleton_app;
-import modules.user.classes.Admin;
-import modules.user.classes.Singleton;
+import modules.user.Model.classes.*;
+
 
 public class open_config {
 

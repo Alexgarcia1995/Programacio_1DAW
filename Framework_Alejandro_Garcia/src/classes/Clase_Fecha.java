@@ -10,8 +10,6 @@ import java.util.GregorianCalendar;
 import javax.swing.JOptionPane;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
-
-import modules.user.utils.Funciones_fecha;
 import utils.formatos;
 
 @XStreamAlias("Clase_Fecha")

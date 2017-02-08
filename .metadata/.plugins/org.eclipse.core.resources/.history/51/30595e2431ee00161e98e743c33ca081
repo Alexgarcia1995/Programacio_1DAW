@@ -1,0 +1,21 @@
+
+
+import javax.swing.JOptionPane;
+
+import modules.user.Model.BLL.BLL_dummies.Funciones_data_dummies;
+import utils.funciones;
+
+public class Prueba_Validadors {
+	public static void main(String[] args) {
+		String n=Funciones_data_dummies.datebirthday();
+		
+		JOptionPane.showMessageDialog(null, n);
+		
+		
+		String j=Funciones_data_dummies.datecontract();
+		JOptionPane.showMessageDialog(null, j);
+
+		
+	}
+}
+		

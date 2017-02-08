@@ -1,0 +1,4 @@
+1486482124137	Move 'CRUD' to 'BLL_user'
+1486482138384	Move 'CRUD_Dummies' to 'BLL_dummies'
+1486482170396	Move 6 resources to 'Functions'
+1486482672070	Move 'classes' to 'Model'

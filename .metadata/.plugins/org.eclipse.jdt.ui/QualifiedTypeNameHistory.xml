@@ -1,21 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver"/>
-<fullyQualifiedTypeName name="java.io.FileOutputStream"/>
-<fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
-<fullyQualifiedTypeName name="javax.swing.filechooser.FileNameExtensionFilter"/>
-<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
-<fullyQualifiedTypeName name="modules.user.classes.Client"/>
-<fullyQualifiedTypeName name="modules.user.utils.normal.utils.open_on_demand"/>
-<fullyQualifiedTypeName name="modules.user.utils.client.utils.open_auto_client"/>
-<fullyQualifiedTypeName name="modules.user.utils.normal.utils.open_auto_normal"/>
-<fullyQualifiedTypeName name="modules.user.utils.admin.utils.open_on_demand"/>
-<fullyQualifiedTypeName name="modules.user.utils.client.utils.open_on_demand_client"/>
-<fullyQualifiedTypeName name="modules.user.utils.normal.utils.open_on_demand_normal"/>
-<fullyQualifiedTypeName name="modules.user.Main_Dummies"/>
-<fullyQualifiedTypeName name="classes.Persona"/>
-<fullyQualifiedTypeName name="java.io.IOException"/>
-<fullyQualifiedTypeName name="java.awt.HeadlessException"/>
 <fullyQualifiedTypeName name="modules.user.utils.client.utils.save_on_demand_client"/>
 <fullyQualifiedTypeName name="modules.user.utils.normal.utils.save_on_demand_normal"/>
 <fullyQualifiedTypeName name="modules.user.utils.normal.utils.save_auto_normal"/>
@@ -49,15 +33,31 @@
 <fullyQualifiedTypeName name="org.apache.batik.css.engine.value.css2.SrcManager"/>
 <fullyQualifiedTypeName name="Main_Framework2"/>
 <fullyQualifiedTypeName name="Main_Dummies"/>
-<fullyQualifiedTypeName name="modules.user.utils.Generics.Open"/>
 <fullyQualifiedTypeName name="utils.formatos"/>
 <fullyQualifiedTypeName name="modules.user.utils.client.utils.save_auto_client"/>
 <fullyQualifiedTypeName name="modules.user.utils.Generics.Save"/>
 <fullyQualifiedTypeName name="classes.Settings"/>
 <fullyQualifiedTypeName name="modules.user.classes.Order.Orderdatebirthday"/>
-<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
 <fullyQualifiedTypeName name="modules.user.classes.Normal"/>
 <fullyQualifiedTypeName name="modules.user.classes.Singleton"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="utils.funciones"/>
+<fullyQualifiedTypeName name="modules.user.utils.Generics.Open"/>
+<fullyQualifiedTypeName name="modules.user.Model.classes.Persona"/>
+<fullyQualifiedTypeName name="modules.user.Model.Functions.Funciones_Ejer_Dummies"/>
+<fullyQualifiedTypeName name="modules.user.Model.BLL.BLL_dummies.Funciones_Ejer_Dummies"/>
+<fullyQualifiedTypeName name="modules.user.Model.BLL.BLL_user.Funciones_Ejer_Genericos"/>
+<fullyQualifiedTypeName name="modules.user.Model.classes.Order.Orderuser_admin"/>
+<fullyQualifiedTypeName name="modules.user.Model.Functions.Generics.Save"/>
+<fullyQualifiedTypeName name="modules.user.Model.BLL.BLL_dummies.CRUD_Dummies.Funciones_create_dummies"/>
+<fullyQualifiedTypeName name="modules.user.Model.Functions.Generics.Open"/>
+<fullyQualifiedTypeName name="modules.user.Model.classes.Singleton"/>
+<fullyQualifiedTypeName name="modules.user.Model.classes.Admin"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="modules.user.Model.Functions.Funciones_fecha"/>
+<fullyQualifiedTypeName name="modules.user.Model.Functions.Funciones_data_user"/>
+<fullyQualifiedTypeName name="modules.user.Model.Functions.Funciones_find"/>
+<fullyQualifiedTypeName name="classes.Clase_Fecha"/>
+<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+<fullyQualifiedTypeName name="modules.user.Model.BLL.BLL_dummies.Funciones_data_dummies"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
 </qualifiedTypeNameHistroy>

@@ -6,16 +6,9 @@ import javax.swing.JOptionPane;
 
 import classes.Languages;
 import classes.Settings;
-import modules.user.utils.*;
-import modules.user.utils.CRUD.Funciones_create;
-import modules.user.utils.CRUD.Funciones_delete;
-import modules.user.utils.CRUD.Funciones_order;
-import modules.user.utils.CRUD.Funciones_read;
-import modules.user.utils.CRUD.Funciones_update;
-import modules.user.utils.Generics.Open;
-import modules.user.utils.Generics.Save;
-import modules.user.utils.admin.utils.open_auto;
+import modules.user.Model.Functions.Generics.*;
 import modules.user.classes.*;
+import modules.user.Model.BLL.BLL_user.CRUD.*;
 import  utils.*;
 
 public class Main_Framework2 {

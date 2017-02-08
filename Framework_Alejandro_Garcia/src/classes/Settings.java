@@ -7,8 +7,7 @@ import org.apache.batik.apps.rasterizer.Main;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
-import modules.user.classes.*;
-import modules.user.utils.Generics.Open;
+import modules.user.Model.Functions.Generics.*;
 import utils.formatos;
 import utils.funciones;
 import utils.open_config;
