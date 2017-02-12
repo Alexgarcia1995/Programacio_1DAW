@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
   <Normal>
-    <dni>73930180S</dni>
-    <nom>daniel</nom>
-    <adreca>aliaga</adreca>
+    <dni>12345678Z</dni>
+    <nom>Alex</nom>
+    <adreca>alex</adreca>
     <edad>22</edad>
     <sexe>H</sexe>
     <fechanac>
-      <Persona>14/9/1995</Persona>
-      <dia>14</dia>
-      <mes>9</mes>
+      <Persona>1995/10/10</Persona>
+      <dia>10</dia>
+      <mes>10</mes>
       <anio>1995</anio>
       <format serialization="custom">
         <java.text.DateFormat>
           <default>
             <calendar>
-              <time>-1038034321343</time>
+              <time>789693000000</time>
               <timezone>Europe/Paris</timezone>
             </calendar>
             <numberFormat class="java.text.DecimalFormat" serialization="custom">
@@ -87,7 +87,7 @@
         <java.text.SimpleDateFormat>
           <default>
             <serialVersionOnStream>1</serialVersionOnStream>
-            <defaultCenturyStart>1937-02-08 17:07:58.657 CET</defaultCenturyStart>
+            <defaultCenturyStart>1937-02-10 15:51:20.400 CET</defaultCenturyStart>
             <formatData serialization="custom">
               <java.text.DateFormatSymbols>
                 <default>
@@ -5440,33 +5440,33 @@
               </java.text.DateFormatSymbols>
             </formatData>
             <locale reference="../../../java.text.DateFormat/default/numberFormat/java.text.DecimalFormat/default/symbols/java.text.DecimalFormatSymbols/default/locale"/>
-            <pattern>dd/mm/yyyy</pattern>
+            <pattern>yyyy/mm/dd</pattern>
           </default>
         </java.text.SimpleDateFormat>
       </format>
     </fechanac>
-    <email>josep@gmail.com</email>
-    <username>vicent</username>
-    <comments>20</comments>
-    <points>100</points>
-    <karma>Medium</karma>
+    <email>alex@gmail.com</email>
+    <username>alex</username>
+    <comments>50</comments>
+    <points>150</points>
+    <karma>High</karma>
   </Normal>
   <Normal>
-    <dni>85952289J</dni>
-    <nom>vicent</nom>
-    <adreca>conesa</adreca>
-    <edad>22</edad>
+    <dni>73099940Y</dni>
+    <nom>pepe</nom>
+    <adreca>pepe</adreca>
+    <edad>37</edad>
     <sexe>H</sexe>
     <fechanac>
-      <Persona>14/9/1995</Persona>
-      <dia>14</dia>
-      <mes>9</mes>
-      <anio>1995</anio>
+      <Persona>1980/10/10</Persona>
+      <dia>10</dia>
+      <mes>10</mes>
+      <anio>1980</anio>
       <format serialization="custom">
         <java.text.DateFormat>
           <default>
             <calendar>
-              <time>-1038034321343</time>
+              <time>316307400000</time>
               <timezone>Europe/Paris</timezone>
             </calendar>
             <numberFormat class="java.text.DecimalFormat" serialization="custom">
@@ -5538,7 +5538,7 @@
         <java.text.SimpleDateFormat>
           <default>
             <serialVersionOnStream>1</serialVersionOnStream>
-            <defaultCenturyStart>1937-02-08 17:07:58.657 CET</defaultCenturyStart>
+            <defaultCenturyStart>1937-02-10 15:51:49.116 CET</defaultCenturyStart>
             <formatData serialization="custom">
               <java.text.DateFormatSymbols>
                 <default>
@@ -5607,15 +5607,181 @@
               </java.text.DateFormatSymbols>
             </formatData>
             <locale reference="../../../../../../Normal/fechanac/format/java.text.DateFormat/default/numberFormat/java.text.DecimalFormat/default/symbols/java.text.DecimalFormatSymbols/default/locale"/>
-            <pattern>dd/mm/yyyy</pattern>
+            <pattern>yyyy/mm/dd</pattern>
           </default>
         </java.text.SimpleDateFormat>
       </format>
     </fechanac>
-    <email>daniel@gmail.com</email>
-    <username>sara</username>
-    <comments>20</comments>
-    <points>100</points>
-    <karma>Medium</karma>
+    <email>pepep@gmail.com</email>
+    <username>pepe</username>
+    <comments>12</comments>
+    <points>60</points>
+    <karma>Low</karma>
+  </Normal>
+  <Normal>
+    <dni>68007362L</dni>
+    <nom>paco</nom>
+    <adreca>paco</adreca>
+    <edad>0</edad>
+    <sexe>H</sexe>
+    <fechanac>
+      <Persona>1990/10/10</Persona>
+      <dia>10</dia>
+      <mes>10</mes>
+      <anio>1990</anio>
+      <format serialization="custom">
+        <java.text.DateFormat>
+          <default>
+            <calendar>
+              <time>631926600000</time>
+              <timezone>Europe/Paris</timezone>
+            </calendar>
+            <numberFormat class="java.text.DecimalFormat" serialization="custom">
+              <java.text.NumberFormat>
+                <default>
+                  <groupingUsed>false</groupingUsed>
+                  <maxFractionDigits>0</maxFractionDigits>
+                  <maxIntegerDigits>127</maxIntegerDigits>
+                  <maximumFractionDigits>0</maximumFractionDigits>
+                  <maximumIntegerDigits>309</maximumIntegerDigits>
+                  <minFractionDigits>0</minFractionDigits>
+                  <minIntegerDigits>1</minIntegerDigits>
+                  <minimumFractionDigits>0</minimumFractionDigits>
+                  <minimumIntegerDigits>1</minimumIntegerDigits>
+                  <parseIntegerOnly>true</parseIntegerOnly>
+                  <serialVersionOnStream>1</serialVersionOnStream>
+                </default>
+              </java.text.NumberFormat>
+              <java.text.DecimalFormat>
+                <default>
+                  <decimalSeparatorAlwaysShown>false</decimalSeparatorAlwaysShown>
+                  <groupingSize>3</groupingSize>
+                  <maximumFractionDigits>0</maximumFractionDigits>
+                  <maximumIntegerDigits>2147483647</maximumIntegerDigits>
+                  <minExponentDigits>0</minExponentDigits>
+                  <minimumFractionDigits>0</minimumFractionDigits>
+                  <minimumIntegerDigits>1</minimumIntegerDigits>
+                  <multiplier>1</multiplier>
+                  <parseBigDecimal>false</parseBigDecimal>
+                  <serialVersionOnStream>4</serialVersionOnStream>
+                  <useExponentialNotation>false</useExponentialNotation>
+                  <negPrefixPattern>&apos;-</negPrefixPattern>
+                  <negSuffixPattern></negSuffixPattern>
+                  <negativePrefix>-</negativePrefix>
+                  <negativeSuffix></negativeSuffix>
+                  <posPrefixPattern></posPrefixPattern>
+                  <posSuffixPattern></posSuffixPattern>
+                  <positivePrefix></positivePrefix>
+                  <positiveSuffix></positiveSuffix>
+                  <roundingMode>HALF_EVEN</roundingMode>
+                  <symbols serialization="custom">
+                    <java.text.DecimalFormatSymbols>
+                      <default>
+                        <decimalSeparator>,</decimalSeparator>
+                        <digit>#</digit>
+                        <exponential>E</exponential>
+                        <groupingSeparator>.</groupingSeparator>
+                        <minusSign>-</minusSign>
+                        <monetarySeparator>,</monetarySeparator>
+                        <patternSeparator>;</patternSeparator>
+                        <perMill>‰</perMill>
+                        <percent>%</percent>
+                        <serialVersionOnStream>3</serialVersionOnStream>
+                        <zeroDigit>0</zeroDigit>
+                        <NaN>�</NaN>
+                        <currencySymbol>€</currencySymbol>
+                        <exponentialSeparator>E</exponentialSeparator>
+                        <infinity>∞</infinity>
+                        <intlCurrencySymbol>EUR</intlCurrencySymbol>
+                        <locale reference="../../../../../../../../../../../../Normal/fechanac/format/java.text.DateFormat/default/numberFormat/java.text.DecimalFormat/default/symbols/java.text.DecimalFormatSymbols/default/locale"/>
+                      </default>
+                    </java.text.DecimalFormatSymbols>
+                  </symbols>
+                </default>
+              </java.text.DecimalFormat>
+            </numberFormat>
+          </default>
+        </java.text.DateFormat>
+        <java.text.SimpleDateFormat>
+          <default>
+            <serialVersionOnStream>1</serialVersionOnStream>
+            <defaultCenturyStart>1937-02-10 15:53:06.829 CET</defaultCenturyStart>
+            <formatData serialization="custom">
+              <java.text.DateFormatSymbols>
+                <default>
+                  <ampms>
+                    <string>AM</string>
+                    <string>PM</string>
+                  </ampms>
+                  <eras>
+                    <string>antes de Cristo</string>
+                    <string>anno Dómini</string>
+                  </eras>
+                  <localPatternChars>GyMdkHmsSEDFwWahKzZ</localPatternChars>
+                  <locale reference="../../../../../../../../../Normal/fechanac/format/java.text.DateFormat/default/numberFormat/java.text.DecimalFormat/default/symbols/java.text.DecimalFormatSymbols/default/locale"/>
+                  <months>
+                    <string>enero</string>
+                    <string>febrero</string>
+                    <string>marzo</string>
+                    <string>abril</string>
+                    <string>mayo</string>
+                    <string>junio</string>
+                    <string>julio</string>
+                    <string>agosto</string>
+                    <string>septiembre</string>
+                    <string>octubre</string>
+                    <string>noviembre</string>
+                    <string>diciembre</string>
+                    <string></string>
+                  </months>
+                  <shortMonths>
+                    <string>ene</string>
+                    <string>feb</string>
+                    <string>mar</string>
+                    <string>abr</string>
+                    <string>may</string>
+                    <string>jun</string>
+                    <string>jul</string>
+                    <string>ago</string>
+                    <string>sep</string>
+                    <string>oct</string>
+                    <string>nov</string>
+                    <string>dic</string>
+                    <string></string>
+                  </shortMonths>
+                  <shortWeekdays>
+                    <string></string>
+                    <string>dom</string>
+                    <string>lun</string>
+                    <string>mar</string>
+                    <string>mié</string>
+                    <string>jue</string>
+                    <string>vie</string>
+                    <string>sáb</string>
+                  </shortWeekdays>
+                  <weekdays>
+                    <string></string>
+                    <string>domingo</string>
+                    <string>lunes</string>
+                    <string>martes</string>
+                    <string>miércoles</string>
+                    <string>jueves</string>
+                    <string>viernes</string>
+                    <string>sábado</string>
+                  </weekdays>
+                  <zoneStrings reference="../../../../../../../../../Normal/fechanac/format/java.text.SimpleDateFormat/default/formatData/java.text.DateFormatSymbols/default/zoneStrings"/>
+                </default>
+              </java.text.DateFormatSymbols>
+            </formatData>
+            <locale reference="../../../../../../Normal/fechanac/format/java.text.DateFormat/default/numberFormat/java.text.DecimalFormat/default/symbols/java.text.DecimalFormatSymbols/default/locale"/>
+            <pattern>yyyy/mm/dd</pattern>
+          </default>
+        </java.text.SimpleDateFormat>
+      </format>
+    </fechanac>
+    <email>adad@gmail.com</email>
+    <username>paco</username>
+    <comments>52</comments>
+    <points>0</points>
   </Normal>
 </list>

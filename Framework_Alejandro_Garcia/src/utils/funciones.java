@@ -2,6 +2,8 @@ package utils;
 
 import javax.swing.JOptionPane;
 
+import classes.Languages;
+
 public class funciones {
 	public static int pednum (String title , String message){
 		int num=0;
@@ -108,4 +110,27 @@ public class funciones {
 		return option;
 	}
 
+	public static String[] Menu1(){
+		String[] principal={Languages.lenguajes.getProperty("menu_p"),Languages.lenguajes.getProperty("opciones"),
+				Languages.lenguajes.getProperty("exit")};
+		return principal;
+	}
+	
+	public static String[] Menu2(){
+		String[] option = {Languages.lenguajes.getProperty("create"), Languages.lenguajes.getProperty("read"), Languages.lenguajes.getProperty("update"), Languages.lenguajes.getProperty("delete"),
+				Languages.lenguajes.getProperty("orden"),Languages.lenguajes.getProperty("open"),Languages.lenguajes.getProperty("save"),
+				Languages.lenguajes.getProperty("exit") };
+		return option;
+	}
+	
+	public static String[] Menu3(){
+		String[] option1 = {Languages.lenguajes.getProperty("client"), Languages.lenguajes.getProperty("admin"), Languages.lenguajes.getProperty("normal"),Languages.lenguajes.getProperty("exit")};
+		return option1;
+	}
+	public static String[] Menu4(){
+		String[] option2= {Languages.lenguajes.getProperty("fecha"), Languages.lenguajes.getProperty("moneda"), Languages.lenguajes.getProperty("decimales"), 
+				Languages.lenguajes.getProperty("lenguajes"),"Dummies",Languages.lenguajes.getProperty("formato2"),
+				Languages.lenguajes.getProperty("theme"),Languages.lenguajes.getProperty("exit")};
+		return option2;
+	}
 }

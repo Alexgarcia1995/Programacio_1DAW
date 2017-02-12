@@ -6,7 +6,6 @@ import java.util.Locale;
 
 import classes.Languages;
 import classes.Settings;
-import modules.user.utils.Funciones_fecha;
 
 
 public class formatos {
@@ -15,7 +14,7 @@ public class formatos {
 	public static String formato="dd/mm/yyyy";
 	public static boolean bool=true;
 	public static String Formatfitx="xml";
-	
+	public static String Theme="GTK";
 	
 	
 	public static String format1d(double number){
@@ -35,7 +34,7 @@ public class formatos {
 
 	public static void Formatomoneda(){
 		int menu=0;
-    	String [] option={"Dolar", "Libra", "Euros", "Exit"};
+    	String [] option={"Dolar", "Pounds", "Euros", Languages.lenguajes.getProperty("exit")};
 		menu=funciones.menu(option, Languages.lenguajes.getProperty("moneda"),  Languages.lenguajes.getProperty("moneda"));
 		switch (menu){
 		case 0:
@@ -56,7 +55,7 @@ public class formatos {
 		}
 		public static void Formatdecimal(){
 			int menu=0;
-	    	String [] option={".#", ".##", ".###", "Exit"};
+	    	String [] option={".#", ".##", ".###",Languages.lenguajes.getProperty("exit")};
 			menu=funciones.menu(option, Languages.lenguajes.getProperty("decimales"),  Languages.lenguajes.getProperty("decimales"));
 			switch (menu){
 			case 0:
@@ -115,8 +114,8 @@ public class formatos {
 		}
 		public static void Dummies(){
 			int menu=0;
-    	String [] option={"Modo Normal","Modo Dummies"};
-		menu=funciones.menu(option, Languages.lenguajes.getProperty("fecha"),Languages.lenguajes.getProperty("fecha"));
+    	String [] option={Languages.lenguajes.getProperty("normal2"),Languages.lenguajes.getProperty("dummies2")};
+		menu=funciones.menu(option, Languages.lenguajes.getProperty("dummies"),Languages.lenguajes.getProperty("mode"));
 		switch (menu){
 		case 0:
 			bool=false;
@@ -130,8 +129,8 @@ public class formatos {
 		}
 		public static void Formatfitx(){
 			int menu=0;
-	    	String [] option={"xml", "json", "txt", "Exit"};
-			menu=funciones.menu(option, "Formato",  "Formato");
+	    	String [] option={"xml", "json", "txt", Languages.lenguajes.getProperty("exit")};
+			menu=funciones.menu(option,Languages.lenguajes.getProperty("formato2"),Languages.lenguajes.getProperty("formatfitx"));
 			switch (menu){
 			case 0:
 				Formatfitx="xml";
@@ -146,6 +145,32 @@ public class formatos {
 				Settings.instance.setFormatfitx(Formatfitx);
 				break;
 			case 3:
+				break;
+			}
+	}
+		
+		public static void FormatTheme(){
+			int menu=0;
+	    	String [] option={"GTK", "METAL", "MOTIF", "WINDOWS95",Languages.lenguajes.getProperty("exit")};
+			menu=funciones.menu(option,Languages.lenguajes.getProperty("theme"),Languages.lenguajes.getProperty("theme2"));
+			switch (menu){
+			case 0:
+				Theme = "GTK";
+				Settings.instance.setTheme(Theme);
+				break;
+			case 1:
+				Theme="METAL";
+				Settings.instance.setTheme(Theme);
+				break;
+			case 2:
+				Theme="MOTIF";
+				Settings.instance.setTheme(Theme);
+				break;
+			case 3:
+				Theme="WINDOWS95";
+				Settings.instance.setTheme(Theme);
+				break;
+			case 4:
 				break;
 			}
 	}

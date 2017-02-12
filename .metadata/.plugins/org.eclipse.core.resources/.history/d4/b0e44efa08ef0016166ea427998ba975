@@ -1,0 +1,108 @@
+//Menus
+crear:Que vols crear?
+options:Selecciona una opcio
+cambio:Que vols canviar?
+cambio2: Canvi
+menu_p:Menu principal
+dummies:Dummies
+dummies2:Mode Dummies
+normal2:Mode Normal
+menu:Menu
+read:Llegir
+orden:Orden
+orden2:Com desitges ordenar els usuaris?
+usuarios:Tots els usuaris
+us_dni:Llegir per DNI
+us_delete:Usuari esborrat
+mode:Como vols que funcione l'aplicacio?
+
+
+//Menu1
+create:Crear
+read:Llegir
+update:Actualitzar
+delete:Esborrar
+open:Obrir
+save:Guardar
+exit:Eixir
+
+//Menu2
+client:Client
+admin:Administrador
+normal:Usuari normal
+opciones:Opcions
+
+//Menu3
+formato:Quin format vols canviar?
+formato2:Format
+fecha:Data
+moneda:Moneda
+decimales:Decimals
+lenguajes:Llengua
+formatfitx:Quin format de fitxers vols utilitzar?
+theme:Tema
+theme2:Selecciona tema a utilitzar
+
+//Persona
+dni:DNI
+nom:Nom
+direccion:Direccio
+fecha_naix:Data naiximent
+edad:Edat
+sexe:Sexe
+
+//Funcions
+pidedni:Introduix un DNI valid (xxxxxxxxA)
+pidenom:Introduix el teu nom
+pidedireccion:Introduix la teua direccio
+pidefecha_naix:Introduix la teua data de naiximent
+pidesexe:Introduix el teu sexe (H/M)
+pideusername:Introduix el teu nom d'usuari
+pidecomments:Introduix nombre de comentaris
+pideemail:Introduix un correu electronic (example@example.com)
+
+//Normal
+username:Nom usuari
+comments:Nombre comentaris
+puntos:Punts
+email:Correu electronic
+
+//Admin
+contraseña:Contrasenya
+salario:Salari
+permisos:Permisos
+fecha_cont:Data contratacio
+antig:Antiguetat
+
+//Client
+fecha_alta:Data alta sistema
+antig_sis:Antiguetat sistema
+compras:Nº compres
+descuento:Descompte
+
+//Languages
+espanol:Espanyol
+ingles:Ingles
+catala:Catala
+
+//Errors
+error:Error
+error2:Error, no hi ha objecte per a llegir
+error_dni: Ja existeix un usuari amb aquest DNI
+error_eliminar: No hi ha cap usuari amb aquest DNI per eliminar
+error_act: No hi ha cap usuari amb aquest DNI per actualitzar
+error_lec: No hi ha cap usuari amb aquest DNI per llegir
+error_vac: No hi ha creat cap usuari
+error_edad:Tens que tindre 18 anys
+error_nom:Error, introduix un nom correcte
+error_direccio:Error, introduix una direccio correcta
+error_fechanaix:Error, introduix una data correcta
+error_sexe:Error, introduix un sexe correcte
+error_username:Error, introduix un nom d'usuario correcte
+error_comments:Error, introduix un nombre de comentaris
+error_email:Error, introduix un correu electronic correcte
+error_fecha1:La data no pot ser major a la data de naiximent
+error_fecha2:La data no pot ser menor a la data que complixes els 18
+error_fecha3:La data no pot ser posterior a la data actual
+error_fecha4:La data es igual a la data de naiximent
+error_fecha5:No hi pots cambiar la teua data de naiximent a una anterior als 18 anys

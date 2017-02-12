@@ -117,7 +117,6 @@ public abstract class Persona implements Comparable<Persona>, Serializable {
 			i= -1;}
 	else{
 		i= 0;}
-	JOptionPane.showMessageDialog(null, i);
 	return i;
 	  }
 	

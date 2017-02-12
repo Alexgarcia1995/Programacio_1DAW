@@ -1,5 +1,4 @@
 
-
 import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
@@ -7,7 +6,6 @@ import javax.swing.JOptionPane;
 import classes.Languages;
 import classes.Settings;
 import modules.user.Model.Functions.Generics.*;
-import modules.user.classes.*;
 import modules.user.Model.BLL.BLL_user.CRUD.*;
 import  utils.*;
 
@@ -26,10 +24,9 @@ public class Main_Framework2 {
 			if (Settings.GetInstance().dummies==true){
 				Main_Dummies.main(null);
 			}
-			String[] principal={Languages.lenguajes.getProperty("menu_p"),Languages.lenguajes.getProperty("opciones"),Languages.lenguajes.getProperty("exit")};
-			String[] option = {Languages.lenguajes.getProperty("create"), Languages.lenguajes.getProperty("read"), Languages.lenguajes.getProperty("update"), Languages.lenguajes.getProperty("delete"),"Order"
-					,"Open","Save",Languages.lenguajes.getProperty("exit") };
-			String[] option1 = {Languages.lenguajes.getProperty("client"), Languages.lenguajes.getProperty("admin"), Languages.lenguajes.getProperty("normal"),Languages.lenguajes.getProperty("exit")};
+			String[] principal=funciones.Menu1();
+			String[] option = funciones.Menu2();
+			String[] option1 = funciones.Menu3();
 			
 		menprin= funciones.menu(principal,Languages.lenguajes.getProperty("menu"),Languages.lenguajes.getProperty("menu"));
 		switch(menprin){
@@ -133,12 +130,10 @@ public class Main_Framework2 {
 		} while (men1 != 3) ;
 		break;
 		
-		
 		case 1:
 			do {
-				String[] option2= {Languages.lenguajes.getProperty("fecha"), Languages.lenguajes.getProperty("moneda"), Languages.lenguajes.getProperty("decimales"), 
-						Languages.lenguajes.getProperty("lenguajes"),"Dummies","Formato",Languages.lenguajes.getProperty("exit")};
-				men = funciones.menu(option2, Languages.lenguajes.getProperty("formato"), Languages.lenguajes.getProperty("formato2"));
+				String[] option2= funciones.Menu4();
+				men = funciones.menu(option2, Languages.lenguajes.getProperty("formato2"), Languages.lenguajes.getProperty("formato"));
 				switch (men) {
 				case 0:
 					formatos.Formatfecha();
@@ -158,8 +153,11 @@ public class Main_Framework2 {
 				case 5:
 					formatos.Formatfitx();
 					break;
+				case 6:
+					formatos.FormatTheme();
+					break;
 				}
-			} while (men != 6);
+			} while (men != 7);
 			save_config.savejson();
 			break;
 			

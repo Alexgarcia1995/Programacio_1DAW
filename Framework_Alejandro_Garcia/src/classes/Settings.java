@@ -8,6 +8,7 @@ import org.apache.batik.apps.rasterizer.Main;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
 import modules.user.Model.Functions.Generics.*;
+import utils.Themes;
 import utils.formatos;
 import utils.funciones;
 import utils.open_config;
@@ -28,6 +29,8 @@ public class Settings implements Serializable {
 	public String lang;
 	@XStreamAlias("dummies")
 	public  boolean dummies;
+	@XStreamAlias("theme")
+	public String theme;
 	@XStreamAlias("instance")
 	public static Settings instance;
 	
@@ -37,30 +40,29 @@ public class Settings implements Serializable {
 		currency_config = "€";
 		decimals_config = ".#";
 		formatfitx="xml";
+		theme="GTK";
 	}
 	
+
 	public static Settings GetInstance(){
 		if (instance == null){
 			instance = new Settings();
 		
-				
+		
 			instance.setDate_config(formatos.formato);
 			instance.setCurrency_config(formatos.moneda);
 			instance.setDecimals_config(formatos.decimal);
 			instance.setFormatfitx(formatos.Formatfitx);
 			instance.setDummies(formatos.bool);
 			instance.setLang(Languages.idioma);
-			
-			instance=open_config.openjson();	
-			/*Singleton.useradmin = new ArrayList <Admin> ();
-			Singleton.userclient = new ArrayList <Client> ();
-			Singleton.usernormal = new ArrayList <Normal> ();
-		*/
-			
-			
+			instance.setTheme(formatos.Theme);
+			instance=open_config.openjson();
+				
+			Themes.theme();
 		}
 		else{
 			instance=open_config.openjson();
+			Themes.theme();
 		}
 		return instance;
 	}
@@ -99,7 +101,13 @@ public class Settings implements Serializable {
 	public void setFormatfitx(String formatfitx1) {
 		formatfitx = formatfitx1;
 	}
-	
+	public String getTheme() {
+		return theme;
+	}
+
+	public void setTheme(String theme) {
+		this.theme = theme;
+	}
 
 	public String toString () {
 		String string = null;

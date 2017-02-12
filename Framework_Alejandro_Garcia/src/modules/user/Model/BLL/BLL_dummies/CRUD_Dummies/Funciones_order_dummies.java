@@ -20,7 +20,7 @@ public class Funciones_order_dummies {
 		if(Singleton.useradmin.isEmpty()){
 			JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error"),Languages.lenguajes.getProperty("error"),JOptionPane.ERROR_MESSAGE);
 		}else{
-			menu = funciones.combo_box(options, "Orden", "Orden");
+			menu = funciones.combo_box(options, Languages.lenguajes.getProperty("orden2"),Languages.lenguajes.getProperty("orden"));
 			order = menu.charAt(0);
 			switch (order) {
 				case 'A':
@@ -58,7 +58,7 @@ public class Funciones_order_dummies {
 		if(Singleton.userclient.isEmpty()){
 			JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error"),Languages.lenguajes.getProperty("error"),JOptionPane.ERROR_MESSAGE);
 		}else{
-			menu = funciones.combo_box(options, "Orden", "Orden");
+			menu = funciones.combo_box(options, Languages.lenguajes.getProperty("orden2"),Languages.lenguajes.getProperty("orden"));
 			order = menu.charAt(0);
 			switch (order) {
 				case 'A':
@@ -95,7 +95,7 @@ public class Funciones_order_dummies {
 		if(Singleton.usernormal.isEmpty()){
 			JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error"),Languages.lenguajes.getProperty("error"),JOptionPane.ERROR_MESSAGE);
 		}else{
-			menu = funciones.combo_box(options, "Orden", "Orden");
+			menu = funciones.combo_box(options, Languages.lenguajes.getProperty("orden2"),Languages.lenguajes.getProperty("orden"));
 			order = menu.charAt(0);
 			switch (order) {
 				case 'A':

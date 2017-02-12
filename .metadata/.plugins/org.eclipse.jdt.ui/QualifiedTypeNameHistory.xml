@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="modules.user.utils.client.utils.save_on_demand_client"/>
-<fullyQualifiedTypeName name="modules.user.utils.normal.utils.save_on_demand_normal"/>
 <fullyQualifiedTypeName name="modules.user.utils.normal.utils.save_auto_normal"/>
 <fullyQualifiedTypeName name="com.google.gson.JsonParser"/>
 <fullyQualifiedTypeName name="java.awt.Window.Type"/>
@@ -27,8 +25,6 @@
 <fullyQualifiedTypeName name="utils.save_config"/>
 <fullyQualifiedTypeName name="classes.Singleton_app"/>
 <fullyQualifiedTypeName name="org.apache.commons.io.output.ThresholdingOutputStream"/>
-<fullyQualifiedTypeName name="utils.open_config"/>
-<fullyQualifiedTypeName name="classes.Languages"/>
 <fullyQualifiedTypeName name="org.apache.batik.apps.rasterizer.Main"/>
 <fullyQualifiedTypeName name="org.apache.batik.css.engine.value.css2.SrcManager"/>
 <fullyQualifiedTypeName name="Main_Framework2"/>
@@ -36,11 +32,9 @@
 <fullyQualifiedTypeName name="utils.formatos"/>
 <fullyQualifiedTypeName name="modules.user.utils.client.utils.save_auto_client"/>
 <fullyQualifiedTypeName name="modules.user.utils.Generics.Save"/>
-<fullyQualifiedTypeName name="classes.Settings"/>
 <fullyQualifiedTypeName name="modules.user.classes.Order.Orderdatebirthday"/>
 <fullyQualifiedTypeName name="modules.user.classes.Normal"/>
 <fullyQualifiedTypeName name="modules.user.classes.Singleton"/>
-<fullyQualifiedTypeName name="utils.funciones"/>
 <fullyQualifiedTypeName name="modules.user.utils.Generics.Open"/>
 <fullyQualifiedTypeName name="modules.user.Model.classes.Persona"/>
 <fullyQualifiedTypeName name="modules.user.Model.Functions.Funciones_Ejer_Dummies"/>
@@ -57,7 +51,13 @@
 <fullyQualifiedTypeName name="modules.user.Model.Functions.Funciones_data_user"/>
 <fullyQualifiedTypeName name="modules.user.Model.Functions.Funciones_find"/>
 <fullyQualifiedTypeName name="classes.Clase_Fecha"/>
-<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
-<fullyQualifiedTypeName name="modules.user.Model.BLL.BLL_dummies.Funciones_data_dummies"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="modules.user.Model.BLL.BLL_dummies.Funciones_data_dummies"/>
+<fullyQualifiedTypeName name="javax.swing.UIManager"/>
+<fullyQualifiedTypeName name="utils.Themes"/>
+<fullyQualifiedTypeName name="classes.Settings"/>
+<fullyQualifiedTypeName name="classes.Languages"/>
+<fullyQualifiedTypeName name="utils.funciones"/>
+<fullyQualifiedTypeName name="utils.open_config"/>
+<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
 </qualifiedTypeNameHistroy>

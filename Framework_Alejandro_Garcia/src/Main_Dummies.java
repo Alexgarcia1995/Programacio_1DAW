@@ -7,7 +7,6 @@ import com.google.gson.JsonArray;
 
 import classes.Languages;
 import classes.Settings;
-import classes.Singleton_app;
 import modules.user.Model.BLL.BLL_dummies.CRUD_Dummies.*;
 import modules.user.Model.Functions.Generics.*;
 import modules.user.Model.classes.*;
@@ -21,7 +20,7 @@ public class Main_Dummies {
 	
 	
 	public static void main(String[] args) {
-		int men = 0, men1 = 0;
+		int men = 0, men1 = 0, men2=0;
 		int menprin=0;
 		
 		do{
@@ -29,20 +28,17 @@ public class Main_Dummies {
 			if (Settings.GetInstance().dummies==false){
 				Main_Framework2.main(null);
 			}
-			String[] principal={Languages.lenguajes.getProperty("menu_p"),Languages.lenguajes.getProperty("opciones"),Languages.lenguajes.getProperty("exit")};
-			String[] option = {Languages.lenguajes.getProperty("create"), Languages.lenguajes.getProperty("read"), Languages.lenguajes.getProperty("update"), Languages.lenguajes.getProperty("delete"),"Order"
-					,"Open","Save",Languages.lenguajes.getProperty("exit") };
-			String[] option1 = {Languages.lenguajes.getProperty("client"), Languages.lenguajes.getProperty("admin"), Languages.lenguajes.getProperty("normal"),Languages.lenguajes.getProperty("exit")};
+			String[] principal=funciones.Menu1();
+			
+			String[] option = funciones.Menu2();
+			
+			String[] option1 = funciones.Menu3();
 			
 		menprin= funciones.menu(principal, Languages.lenguajes.getProperty("menu") + "("+ Languages.lenguajes.getProperty("dummies")+")",Languages.lenguajes.getProperty("menu_p"));
 		switch(menprin){
 		case 0:
 		do{	
 			Open.Open_auto();
-			/*Singleton.usernormal=new ArrayList<Normal>();
-			Singleton.useradmin=new ArrayList<Admin>();
-			Singleton.userclient=new ArrayList<Client>();
-			*/
 			men1 = funciones.menu(option1, Languages.lenguajes.getProperty("crear"), Languages.lenguajes.getProperty("opciones"));
 			switch (men1) {
 			// Cliente
@@ -140,40 +136,53 @@ public class Main_Dummies {
 		break;
 		
 		case 1:
-			do {
-				String[] option2= {Languages.lenguajes.getProperty("fecha"), Languages.lenguajes.getProperty("moneda"), Languages.lenguajes.getProperty("decimales"), 
-						Languages.lenguajes.getProperty("lenguajes"),"Dummies","Formato",Languages.lenguajes.getProperty("exit")};
-				men = funciones.menu(option2, Languages.lenguajes.getProperty("formato"), Languages.lenguajes.getProperty("formato2"));
-				switch (men) {
-				case 0:
-					formatos.Formatfecha();
+			do{
+			String[]option3={"Modificar","Abrir","Guardar","Exit"};
+			men2 = funciones.menu(option3,Languages.lenguajes.getProperty("opciones"), Languages.lenguajes.getProperty("opciones"));
+				switch(men2){
+				case 0:	
+					do {
+						String[] option2= funciones.Menu4();
+						men = funciones.menu(option2, Languages.lenguajes.getProperty("formato2"), Languages.lenguajes.getProperty("formato"));
+						switch (men) {
+						case 0:
+							formatos.Formatfecha();
+							break;
+						case 1:
+							formatos.Formatomoneda();
+							break;
+						case 2:
+							formatos.Formatdecimal();
+							break;
+						case 3:
+							Languages.Lengua(Languages.lenguajes);
+							break;
+						case 4:
+							formatos.Dummies();
+							break;
+						case 5:
+							formatos.Formatfitx();
+							break;
+						case 6:
+							formatos.FormatTheme();
+							break;
+						}
+					} while (men != 7);
+					save_config.savejson();
 					break;
 				case 1:
-					formatos.Formatomoneda();
+					open_config.open_on_demand();
+					save_config.savejson();
 					break;
 				case 2:
-					formatos.Formatdecimal();
-					break;
-				case 3:
-					Languages.Lengua(Languages.lenguajes);
-					break;
-				case 4:
-					formatos.Dummies();
-					break;
-				case 5:
-					formatos.Formatfitx();
+					save_config.saveondemand();
 					break;
 				}
-			} while (men != 6);
-			save_config.savejson();
+			}while(men2!=3);
 			break;
-			
-			
 		case 2:
 			System.exit(0);
 		}
-		
-		
 }while(menprin != 2);
 	}
 }

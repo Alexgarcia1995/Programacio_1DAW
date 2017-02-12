@@ -1,0 +1,102 @@
+//Menus
+crear:What do you want to create?
+options:Choose an option
+cambio:What do you want to change?
+cambio2:Change
+menu_p:Main menu
+dummies:Dummies
+menu:Menu
+read:Read
+orden:Order
+usuarios:All users
+us_dni:Read by DNI
+us_delete:Deleted user
+
+
+//Menu1
+create:Create
+read:Read
+update:Update
+delete:Delete
+exit:Exit
+
+//Menu2
+client:Client
+admin:Administrator
+normal:Normal user
+opciones:Options
+
+//Menu3
+formato:Which format you want to change?
+formato2:Format
+fecha:Date
+moneda:Coin
+decimales:Decimals
+lenguajes:Language
+formatfitx:Which file format you want to use?
+theme:Theme
+theme2:Choose the theme you wish
+
+//Persona
+dni:DNI
+nom:Name
+direccion:Address
+fecha_naix:Date of birth
+edad:Age
+sexe:Gender
+
+//Funcions
+pidedni:Type a valid DNI (xxxxxxxxA)
+pidenom:Type your name
+pidedireccion:Type your address
+pidefecha_naix:Type your date of birth
+pidesexe:Type your gender (H/M)
+pideusername:Type your user name
+pidecomments:Type your number of comments
+pideemail:Type your email (example@example.com)
+
+//Normal
+username:User name
+comments:Number of comments
+puntos:Points
+email:Email
+
+//Admin
+contraseña:Password
+salario:Salary
+permisos:Permisos 
+fecha_cont:Date of contract
+antig:Antiquity
+
+//Client
+fecha_alta:Discharge date system 
+antig_sis:Antiquity system
+compras:Nº of buys
+descuento:Discount
+
+//Languages
+espanol:Spanish
+ingles:English
+catala:Catalan
+
+//Errors
+error:Error
+error_edad:You must be 18 years old
+error2:Error, there isn't an object to read
+error_dni: A user already exists with that DNI
+error_eliminar: There is no user with that DNI to delete
+error_act: There is no user with that DNI to update
+error_lec: There is no user with that DNI to read
+error_vac: There isn't user created
+error_nom:Error, type a valid name
+error_direccio:Error, type a valid address
+error_fechanaix:Error, type a valid date of birth
+error_sexe:Error, type a valid gender
+error_username:Error, type a valid user name
+error_comments:Error, type a number of comments
+error_email:Error, type a valid email
+error_fecha1:You can't introduce a date after your date of birth
+error_fecha2:You can't introduce a date before the date you were 18 years old
+error_fecha3:You can't introduce a date after the actual date
+error_fecha4:The date you introduce is equal to your date of birth
+error_fecha5:You can't change this date to a date before the date you were 18 years old

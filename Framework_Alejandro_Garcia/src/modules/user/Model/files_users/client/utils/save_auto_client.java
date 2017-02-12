@@ -125,9 +125,7 @@ public static void savetxt(){
              FileOutputStream fo=new FileOutputStream(f);
 				ObjectOutputStream o=new ObjectOutputStream(fo);
 				o.writeObject(Singleton.userclient);
-				o.close();
-             JOptionPane.showMessageDialog(null, "Archivo TXT guardado con exito", "Archivo TXT", JOptionPane.INFORMATION_MESSAGE);
-         
+				o.close();         
      } catch (Exception e) {
      	JOptionPane.showMessageDialog(null, "Error al grabar el TXT", "Error", JOptionPane.ERROR_MESSAGE);
      }
@@ -144,9 +142,7 @@ public static void savetxt(){
              FileOutputStream fo=new FileOutputStream(f);
 				ObjectOutputStream o=new ObjectOutputStream(fo);
 				o.writeObject(Singleton.userclient);
-				o.close();
-             JOptionPane.showMessageDialog(null, "Archivo TXT guardado con exito", "Archivo TXT", JOptionPane.INFORMATION_MESSAGE);
-         
+				o.close();         
      } catch (Exception e) {
      	JOptionPane.showMessageDialog(null, "Error al grabar el TXT", "Error", JOptionPane.ERROR_MESSAGE);
      }

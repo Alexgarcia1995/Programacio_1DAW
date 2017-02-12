@@ -49,8 +49,7 @@ public class save_on_demand {
 	                fileXml.close();
 	                osw.close();
 	                os.close();
-	                JOptionPane.showMessageDialog(null, "Archivo XML guardado con exito", "Archivo XML", JOptionPane.INFORMATION_MESSAGE);
-	            }
+	                }
 		    }catch (Exception e1){
 		    	JOptionPane.showMessageDialog(null, "Error al grabar el XML", "Error", JOptionPane.ERROR_MESSAGE);
 		    } 
@@ -103,7 +102,6 @@ public class save_on_demand {
 					ObjectOutputStream o=new ObjectOutputStream(fo);
 					o.writeObject(Singleton.useradmin);
 					o.close();
-	                JOptionPane.showMessageDialog(null, "Archivo TXT guardado con exito", "Archivo TXT", JOptionPane.INFORMATION_MESSAGE);
 	            }
 	        } catch (Exception e) {
 	        	JOptionPane.showMessageDialog(null, "Error al grabar el TXT", "Error", JOptionPane.ERROR_MESSAGE);

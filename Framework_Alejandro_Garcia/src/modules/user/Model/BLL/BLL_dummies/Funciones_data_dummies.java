@@ -7,6 +7,9 @@ import javax.swing.JOptionPane;
 import classes.Clase_Fecha;
 
 public class Funciones_data_dummies {
+	
+	public static int r=0;
+	
 	public static String dni(int dni) {
 		String dni2=String.valueOf(dni);
 		int dni1 = dni;
@@ -119,20 +122,23 @@ public class Funciones_data_dummies {
 		
 	}
 	
-	/*public static String datecontract (){
+	public static String datecontract (){
 		int day = (int) (Math.random() * (1 - 31) + 31);
 		int month = (int) (Math.random() * (1 - 12) + 12);
 		int year = Yearcont();
 		String string= day+"/"+month+"/"+year;
 		return string;
 	}
-	*/
+	
+	
 	public static int Yearbirth(){
 		int n=Year();
-		if(n<1950)
+		if(n<1950){
 		do{
 			n=Year();
 		}while(n<1950);
+		}
+		r=n;
 		return n;
 	}
 	
@@ -148,4 +154,32 @@ public class Funciones_data_dummies {
 		}while((year>(any.anyoactual()-18)));
 		return year;
 	}
+	
+	
+	public static int Yearcont(){
+		int n=Year2();
+		Clase_Fecha any=new Clase_Fecha();
+		if (n>any.anyoactual()){
+			do{
+			n=Year2();
+		}while(n>any.anyoactual());
+		}
+		
+		return n;
+	}
+	
+	public static int Year2(){
+		int year = 0;
+		int result=r+18;
+		do{
+		String [] years = {"19", "20"};
+		int year3 = (int) (Math.random() * (0 - 99) + 99);
+		int position = (int) (Math.random() * 222) % 2;
+		String year2 = years[position]+year3;
+		year=Integer.parseInt(year2);
+		}while(year<result);
+		return year;
+	}
+	
+	
 }

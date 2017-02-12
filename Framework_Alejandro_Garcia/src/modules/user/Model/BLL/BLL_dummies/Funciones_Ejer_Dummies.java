@@ -23,7 +23,7 @@ public class Funciones_Ejer_Dummies {
 			((Client) Persona1).setavatar(Funciones_data_dummies.avatar());
 			((Client) Persona1).setusername(Funciones_data_dummies.user());
 			((Client) Persona1).setpasswd(Funciones_data_dummies.pass());
-			((Client) Persona1).setFechaalta(Fecha2=new Clase_Fecha("01/02/2014","dd/mm/yyyy"));
+			((Client) Persona1).setFechaalta(Fecha2=new Clase_Fecha(Funciones_data_dummies.datecontract(),"dd/mm/yyyy"));
 			((Client) Persona1).setCompras(20);
 		}
 		if (i==1){
@@ -31,13 +31,13 @@ public class Funciones_Ejer_Dummies {
 			Persona1.setdni(Funciones_data_dummies.DNI());
 			Persona1.setnom(Funciones_data_dummies.name());
 			Persona1.setadreca(Funciones_data_dummies.Direccio());
-			Persona1.setFechanac(Fecha=new Clase_Fecha("14/09/1995","dd/mm/yyyy"));
+			Persona1.setFechanac(Fecha=new Clase_Fecha(Funciones_data_dummies.datebirthday(),"dd/mm/yyyy"));
 			Persona1.setsexe("H");
 			((Admin) Persona1).setemail(Funciones_data_dummies.email());
 			((Admin) Persona1).setavatar(Funciones_data_dummies.avatar());
 			((Admin) Persona1).setusername(Funciones_data_dummies.user());
 			((Admin) Persona1).setpasswd(Funciones_data_dummies.pass());
-			((Admin) Persona1).setAniocon(Fecha2=new Clase_Fecha("01/02/2014","dd/mm/yyyy"));
+			((Admin) Persona1).setAniocon(Fecha2=new Clase_Fecha(Funciones_data_dummies.datecontract(),"dd/mm/yyyy"));
 		}
 		
 		if (i==2){
@@ -45,7 +45,7 @@ public class Funciones_Ejer_Dummies {
 			Persona1.setdni(Funciones_data_dummies.DNI());
 			Persona1.setnom(Funciones_data_dummies.name());
 			Persona1.setadreca(Funciones_data_dummies.Direccio());
-			Persona1.setFechanac(Fecha=new Clase_Fecha("14/09/1995","dd/mm/yyyy"));
+			Persona1.setFechanac(Fecha=new Clase_Fecha(Funciones_data_dummies.datebirthday(),"dd/mm/yyyy"));
 			Persona1.setsexe("H");
 			((Normal) Persona1).setemail(Funciones_data_dummies.email());
 			((Normal) Persona1).setusername(Funciones_data_dummies.user());

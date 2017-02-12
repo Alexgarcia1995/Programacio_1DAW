@@ -17,7 +17,6 @@ public class Orderage implements Comparator <Persona>{
 		else {
 			n=0;
 		}
-		JOptionPane.showMessageDialog(null, n +" "+ u1.getedad() + " " + u2.getedad());
 		return n;
 	}
 }
