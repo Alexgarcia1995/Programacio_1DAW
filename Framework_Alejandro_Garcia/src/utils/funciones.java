@@ -3,6 +3,9 @@ package utils;
 import javax.swing.JOptionPane;
 
 import classes.Languages;
+import modules.user.Model.BLL.BLL_user.Funciones_Ejer_Genericos;
+import modules.user.Model.Functions.Funciones_data_user;
+import modules.user.Model.classes.*;
 
 public class funciones {
 	public static int pednum (String title , String message){
@@ -102,6 +105,7 @@ public class funciones {
 		men=JOptionPane.showOptionDialog(null, title , message, 0 , JOptionPane.QUESTION_MESSAGE, null, option, option [0]);
 		return men;
 	}
+	
 	public static String combo_box(String[] opcion, String message, String title){
 		String option="";
 		
@@ -127,10 +131,79 @@ public class funciones {
 		String[] option1 = {Languages.lenguajes.getProperty("client"), Languages.lenguajes.getProperty("admin"), Languages.lenguajes.getProperty("normal"),Languages.lenguajes.getProperty("exit")};
 		return option1;
 	}
+	
 	public static String[] Menu4(){
 		String[] option2= {Languages.lenguajes.getProperty("fecha"), Languages.lenguajes.getProperty("moneda"), Languages.lenguajes.getProperty("decimales"), 
 				Languages.lenguajes.getProperty("lenguajes"),"Dummies",Languages.lenguajes.getProperty("formato2"),
 				Languages.lenguajes.getProperty("theme"),Languages.lenguajes.getProperty("exit")};
 		return option2;
+	}
+
+
+
+	public static boolean Login(int opcion){
+		Client p1=null;
+		Admin p2=null;
+		boolean continuar=false;
+		String s1="", s2="",result="";
+		String s3="";
+		switch(opcion){
+		case 0:
+			s1=Funciones_data_user.Pideusername();
+			s2=Funciones_data_user.PidePassword();
+			result=s1+s2;
+			
+			for (int i=0;i<Singleton.userclient.size();i++){
+				p1=Singleton.userclient.get(i);
+				s3=p1.getusername()+p1.getpasswd();
+				if(s3.equals(result)){
+					i=Singleton.userclient.size();
+					JOptionPane.showMessageDialog(null, "Bienvenido"+p1.getusername());
+					continuar=true;
+				}
+				else{
+					continuar=false;
+				}
+			}
+			if(continuar==false){
+				JOptionPane.showMessageDialog(null, "No hay ningun usuario con ese nombre", "Error",JOptionPane.ERROR_MESSAGE);
+			}
+			break;
+		case 1:
+
+			s1=Funciones_data_user.Pideusername();
+			s2=Funciones_data_user.PidePassword();
+			result=s1+s2;
+			for (int i=0;i<Singleton.useradmin.size();i++){
+				p2=Singleton.useradmin.get(i);
+				s3=p2.getusername()+p2.getpasswd();
+				if(s3.equals(result)){
+					i=Singleton.useradmin.size();
+					JOptionPane.showMessageDialog(null, "Bienvenido"+p2.getusername());
+					continuar=true;
+				}
+				else{
+					JOptionPane.showMessageDialog(null, "No existe ningun usuario con ese nombre en el sistema","Error",JOptionPane.ERROR_MESSAGE);
+					continuar=false;
+				}
+			}
+			break;
+		}
+		return continuar;
+	}
+	
+	
+	
+	public static void Register_client(){
+		Persona p1=null;
+		p1=Funciones_Ejer_Genericos.Create_Generic(0);
+		Singleton.userclient.add((Client) p1);
+	}
+	
+	
+	public static void Register_admin(){
+		Persona p1=null;
+		p1=Funciones_Ejer_Genericos.Create_Generic(1);
+		Singleton.useradmin.add((Admin) p1);
 	}
 }

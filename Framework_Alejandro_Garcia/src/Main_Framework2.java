@@ -5,6 +5,7 @@ import javax.swing.JOptionPane;
 
 import classes.Languages;
 import classes.Settings;
+import classes.Singleton_Login;
 import modules.user.Model.Functions.Generics.*;
 import modules.user.Model.BLL.BLL_user.CRUD.*;
 import  utils.*;
@@ -15,7 +16,7 @@ public class Main_Framework2 {
 	public static void main(String[] args) {
 		int men = 0, men1 = 0;
 		int menprin=0;
-		
+		int menlog=0;
 		
 		
 		
@@ -27,7 +28,8 @@ public class Main_Framework2 {
 			String[] principal=funciones.Menu1();
 			String[] option = funciones.Menu2();
 			String[] option1 = funciones.Menu3();
-			
+			String[] login = {"Login","Register","Exit"};
+			boolean good=false;
 		menprin= funciones.menu(principal,Languages.lenguajes.getProperty("menu"),Languages.lenguajes.getProperty("menu"));
 		switch(menprin){
 		case 0:
@@ -37,36 +39,53 @@ public class Main_Framework2 {
 			switch (men1) {
 			// Cliente
 			case 0:
-				do {
-					men = funciones.menu(option, Languages.lenguajes.getProperty("options"), Languages.lenguajes.getProperty("opciones"));
-					switch (men) {
-					case 0:
-						Funciones_create.create_client();
-						break;
-					case 1:
-						Funciones_read.read_client();
-						break;
-					case 2:
-						Funciones_update.update_client();
-						break;
-					case 3:
-						Funciones_delete.delete_client();
-						break;
-					case 4:
-						Funciones_order.order_client();
-						break;
-					case 5:
-						Open.Open_client();
-						break;
-					case 6:
-						Save.save_on_demand_client();
+				Singleton_Login.type_user="Client";
+				do{	
+				menlog=funciones.menu(login, Languages.lenguajes.getProperty("crear"), Languages.lenguajes.getProperty("opciones"));
+				switch(menlog){
+				case 0:
+					good=signin_signup.Login();
+					if (good!=false){
+						do {
+							men = funciones.menu(option, Languages.lenguajes.getProperty("options"), Languages.lenguajes.getProperty("opciones"));
+							switch (men) {
+							case 0:
+								Funciones_create.create_client();
+								break;
+							case 1:
+								Funciones_read.read_client();
+								break;
+							case 2:
+								Funciones_update.update_client();
+								break;
+							case 3:
+								Funciones_delete.delete_client();
+								break;
+							case 4:
+								Funciones_order.order_client();
+								break;
+							case 5:
+								Open.Open_client();
+								break;
+							case 6:
+								Save.save_on_demand_client();
+								break;
+							}
+						} while (men != 7);
+						Save.save_auto_client();
 						break;
 					}
-				} while (men != 7);
-				Save.save_auto_client();
+					break;
+				case 1:
+					funciones.Register_client();
+					Save.save_auto_client();
+					break;
+				}
+				}while(menlog!=2);
 				break;
 			// Admins
 			case 1:
+				Singleton_Login.type_user="Admin";
 				do {
 					men = funciones.menu(option, Languages.lenguajes.getProperty("options"), Languages.lenguajes.getProperty("opciones"));
 					switch (men) {

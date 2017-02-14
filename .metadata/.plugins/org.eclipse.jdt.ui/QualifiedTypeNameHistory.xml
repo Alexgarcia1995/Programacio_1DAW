@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="modules.user.utils.normal.utils.save_auto_normal"/>
-<fullyQualifiedTypeName name="com.google.gson.JsonParser"/>
 <fullyQualifiedTypeName name="java.awt.Window.Type"/>
 <fullyQualifiedTypeName name="com.google.gson.reflect.TypeToken"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
@@ -36,20 +34,14 @@
 <fullyQualifiedTypeName name="modules.user.classes.Normal"/>
 <fullyQualifiedTypeName name="modules.user.classes.Singleton"/>
 <fullyQualifiedTypeName name="modules.user.utils.Generics.Open"/>
-<fullyQualifiedTypeName name="modules.user.Model.classes.Persona"/>
 <fullyQualifiedTypeName name="modules.user.Model.Functions.Funciones_Ejer_Dummies"/>
 <fullyQualifiedTypeName name="modules.user.Model.BLL.BLL_dummies.Funciones_Ejer_Dummies"/>
-<fullyQualifiedTypeName name="modules.user.Model.BLL.BLL_user.Funciones_Ejer_Genericos"/>
 <fullyQualifiedTypeName name="modules.user.Model.classes.Order.Orderuser_admin"/>
-<fullyQualifiedTypeName name="modules.user.Model.Functions.Generics.Save"/>
 <fullyQualifiedTypeName name="modules.user.Model.BLL.BLL_dummies.CRUD_Dummies.Funciones_create_dummies"/>
 <fullyQualifiedTypeName name="modules.user.Model.Functions.Generics.Open"/>
-<fullyQualifiedTypeName name="modules.user.Model.classes.Singleton"/>
 <fullyQualifiedTypeName name="modules.user.Model.classes.Admin"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="modules.user.Model.Functions.Funciones_fecha"/>
-<fullyQualifiedTypeName name="modules.user.Model.Functions.Funciones_data_user"/>
-<fullyQualifiedTypeName name="modules.user.Model.Functions.Funciones_find"/>
 <fullyQualifiedTypeName name="classes.Clase_Fecha"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="modules.user.Model.BLL.BLL_dummies.Funciones_data_dummies"/>
@@ -57,7 +49,15 @@
 <fullyQualifiedTypeName name="utils.Themes"/>
 <fullyQualifiedTypeName name="classes.Settings"/>
 <fullyQualifiedTypeName name="classes.Languages"/>
-<fullyQualifiedTypeName name="utils.funciones"/>
 <fullyQualifiedTypeName name="utils.open_config"/>
+<fullyQualifiedTypeName name="modules.user.Model.classes.Persona"/>
+<fullyQualifiedTypeName name="modules.user.Model.BLL.BLL_user.Funciones_Ejer_Genericos"/>
+<fullyQualifiedTypeName name="modules.user.Model.classes.Singleton"/>
+<fullyQualifiedTypeName name="utils.funciones"/>
+<fullyQualifiedTypeName name="modules.user.Model.Functions.Generics.Save"/>
+<fullyQualifiedTypeName name="utils.signin_signup"/>
+<fullyQualifiedTypeName name="modules.user.Model.Functions.Funciones_data_user"/>
+<fullyQualifiedTypeName name="modules.user.Model.Functions.Funciones_find"/>
+<fullyQualifiedTypeName name="classes.Singleton_Login"/>
 <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
 </qualifiedTypeNameHistroy>

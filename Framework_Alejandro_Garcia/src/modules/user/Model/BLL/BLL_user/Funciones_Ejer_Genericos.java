@@ -21,7 +21,7 @@ public class Funciones_Ejer_Genericos {
 			Persona1.setsexe(Funciones_data_user.Pidesexe());
 			((Client) Persona1).setemail(Funciones_data_user.Pideemail());
 			((Client) Persona1).setavatar(funciones.ped_string("Introduce tu avatar", "Avatar"));
-			((Client) Persona1).setusername(Funciones_data_user.Pideusername());
+			((Client) Persona1).setusername(Funciones_data_user.Pideusername2());
 			((Client) Persona1).setpasswd(Funciones_data_user.PidePassword());
 			((Client) Persona1).setFechaalta(Funciones_fecha.fecha_alta(Persona1.getFechanaix(),Persona1.getedad()));
 			((Client) Persona1).setCompras(Funciones_data_user.Pidecompras());
@@ -98,7 +98,7 @@ public class Funciones_Ejer_Genericos {
 			Persona1.setsexe(Funciones_data_user.Pidesexe());
 			break;
 		case 'F':
-			((Client) Persona1).setusername(Funciones_data_user.Pideusername());
+			((Client) Persona1).setusername(Funciones_data_user.Pideusername2());
 			break;
 		case 'G':
 			((Client) Persona1).setemail(Funciones_data_user.Pideemail());

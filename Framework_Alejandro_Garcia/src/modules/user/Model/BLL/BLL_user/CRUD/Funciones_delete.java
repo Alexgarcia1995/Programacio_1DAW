@@ -59,7 +59,7 @@ public class Funciones_delete {
 			case 1:
 				location=-1;
 				p1=Funciones_find.IDClient();
-				location=Funciones_find.find_admin((Admin) p1);
+				location=Funciones_find.find_client((Client) p1);
 				if(location != -1){
 					Singleton.userclient.remove(location);
 					JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("us_delete"));

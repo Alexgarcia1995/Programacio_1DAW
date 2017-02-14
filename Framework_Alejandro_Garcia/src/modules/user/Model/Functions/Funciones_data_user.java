@@ -1,7 +1,11 @@
 package modules.user.Model.Functions;
 
 import utils.funciones;
+
+import javax.swing.JOptionPane;
+
 import classes.Languages;
+import classes.Singleton_Login;
 import utils.Validate;
 import utils.formatos;
 
@@ -64,6 +68,26 @@ public class Funciones_data_user {
 			cad = funciones.ped_string(Languages.lenguajes.getProperty("pideusername"),Languages.lenguajes.getProperty("username"));
 			good = Validate.Validausername(cad);
 		} while (good == false);
+		return cad;
+	}
+	
+	public static String Pideusername2(){
+
+		String cad = "";
+		boolean good = false;
+		int valor=0;
+		do {
+			do{
+			cad = funciones.ped_string(Languages.lenguajes.getProperty("pideusername"),Languages.lenguajes.getProperty("username"));
+			good = Validate.Validausername(cad);
+			Singleton_Login.nom_user=cad;
+			valor=Funciones_find.find_nom_user();
+			}while (good == false);
+			if(valor != -1){
+				JOptionPane.showMessageDialog(null, "Error", "Error",JOptionPane.ERROR_MESSAGE);
+			}
+		} while (valor != -1);
+
 		return cad;
 	}
 

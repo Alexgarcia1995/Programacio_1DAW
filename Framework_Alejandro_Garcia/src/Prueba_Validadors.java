@@ -9,7 +9,9 @@ import utils.funciones;
 
 public class Prueba_Validadors {
 	public static void main(String[] args) {
-	
+		boolean good=funciones.Login(0);
+		
+		JOptionPane.showMessageDialog(null, good);
 	}
 }
 		

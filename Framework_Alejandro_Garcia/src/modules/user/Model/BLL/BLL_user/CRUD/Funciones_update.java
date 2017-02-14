@@ -38,10 +38,8 @@ public class Funciones_update {
 		if(Singleton.userclient.isEmpty()){
 			JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_vac"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
 		}else{
-			location = -1;
-			a1=Funciones_find.IDClient();
-			location=Funciones_find.find_client((Client) a1);
-			if(location != -1){
+			location = Funciones_find.find_nom_user();
+			if (location != -1) {
 				a1=Singleton.userclient.get(location);
 				Funciones_Ejer_Genericos.Update_Generic(a1);
 				Singleton.userclient.set(location, (Client) a1);

@@ -46,29 +46,13 @@ public class Funciones_read {
 		}
 	
 	public static void read_client(){
-		int menu=0, location=-1;
+		int location=-1;
 		Persona p1;
 		if(Singleton.userclient.isEmpty()){
 			JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_vac"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
 		}
 		else{
-			String option[]={Languages.lenguajes.getProperty("usuarios"), Languages.lenguajes.getProperty("us_dni")};
-			menu=funciones.menu(option, Languages.lenguajes.getProperty("read"), Languages.lenguajes.getProperty("read"));
-			switch(menu){
-			case 0:
-				for (int i=0; i<Singleton.userclient.size();i++){
-					String cad="";
-					cad=cad +(Singleton.userclient.get(i).toString());
-					JOptionPane.showMessageDialog(null, cad);
-				}
-				break;
-			case 1:
-				location = -1;
-				p1 = Funciones_find.IDClient();
-				if (p1 == null) {
-					JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_vac"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
-				}else{
-					location = Funciones_find.find_client((Client) p1);
+					location = Funciones_find.find_nom_user();
 					if (location != -1) {
 						p1 = Singleton.userclient.get(location);
 						JOptionPane.showMessageDialog(null, ((Client) p1).toString());
@@ -77,8 +61,6 @@ public class Funciones_read {
 					}
 				}
 			}
-		}
-	}
 	
 	public static void read_normal(){
 		int menu=0, location=-1;
@@ -97,7 +79,8 @@ public class Funciones_read {
 					JOptionPane.showMessageDialog(null, cad);
 				}
 				break;
-			case 1:location = -1;
+			case 1:
+			location = -1;
 			p1 = Funciones_find.IDNormal();
 			if (p1 == null) {
 				JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_vac"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
