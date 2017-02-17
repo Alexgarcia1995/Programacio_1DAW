@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
   <Client>
-    <dni>73099940Y</dni>
-    <nom>Alejandro</nom>
-    <adreca>asdasd</adreca>
-    <edad>22</edad>
+    <dni>12345678Z</dni>
+    <nom>alex</nom>
+    <adreca>alex</adreca>
+    <edad>47</edad>
     <sexe>H</sexe>
-    <fecha__naix>1995/10/10</fecha__naix>
+    <fecha__naix>1970/10/10</fecha__naix>
     <fechanac>
-      <Persona>1995/10/10</Persona>
+      <Persona>1970/10/10</Persona>
       <dia>10</dia>
       <mes>10</mes>
-      <anio>1995</anio>
+      <anio>1970</anio>
       <format serialization="custom">
         <java.text.DateFormat>
           <default>
             <calendar>
-              <time>-1037589965472</time>
+              <time>-1037258947137</time>
               <timezone>Europe/Paris</timezone>
             </calendar>
             <numberFormat class="java.text.DecimalFormat" serialization="custom">
@@ -88,7 +88,7 @@
         <java.text.SimpleDateFormat>
           <default>
             <serialVersionOnStream>1</serialVersionOnStream>
-            <defaultCenturyStart>1937-02-13 20:33:54.528 CET</defaultCenturyStart>
+            <defaultCenturyStart>1937-02-17 16:30:52.863 CET</defaultCenturyStart>
             <formatData serialization="custom">
               <java.text.DateFormatSymbols>
                 <default>
@@ -5448,23 +5448,23 @@
     </fechanac>
     <tipo>Cliente</tipo>
     <email>pepe@gmail.com</email>
-    <avatar>adsasdasda</avatar>
-    <username>alejandro</username>
-    <passwd>alex123</passwd>
-    <fecha__alta>2015/10/10</fecha__alta>
-    <antig__alta>2</antig__alta>
-    <compras>80</compras>
+    <avatar>epapsdasd</avatar>
+    <username>pepe</username>
+    <passwd>pepe1234</passwd>
+    <fecha__alta>2016/10/10</fecha__alta>
+    <antig__alta>1</antig__alta>
+    <compras>54</compras>
     <descuentos>20</descuentos>
     <fechaalta>
-      <Persona>2015/10/10</Persona>
+      <Persona>2016/10/10</Persona>
       <dia>10</dia>
       <mes>10</mes>
-      <anio>2015</anio>
+      <anio>2016</anio>
       <format serialization="custom">
         <java.text.DateFormat>
           <default>
             <calendar>
-              <time>-1037589934362</time>
+              <time>-1037258961496</time>
               <timezone>Europe/Paris</timezone>
             </calendar>
             <numberFormat class="java.text.DecimalFormat" serialization="custom">
@@ -5536,7 +5536,7 @@
         <java.text.SimpleDateFormat>
           <default>
             <serialVersionOnStream>1</serialVersionOnStream>
-            <defaultCenturyStart>1937-02-13 20:34:25.638 CET</defaultCenturyStart>
+            <defaultCenturyStart>1937-02-17 16:30:38.504 CET</defaultCenturyStart>
             <formatData serialization="custom">
               <java.text.DateFormatSymbols>
                 <default>
@@ -5612,11 +5612,11 @@
     </fechaalta>
   </Client>
   <Client>
-    <dni>12345678Z</dni>
-    <nom>alex</nom>
-    <adreca>alex</adreca>
+    <dni>73099940Y</dni>
+    <nom>pepe</nom>
+    <adreca>pepe</adreca>
     <edad>22</edad>
-    <sexe>h</sexe>
+    <sexe>H</sexe>
     <fecha__naix>1995/10/10</fecha__naix>
     <fechanac>
       <Persona>1995/10/10</Persona>
@@ -5627,7 +5627,7 @@
         <java.text.DateFormat>
           <default>
             <calendar>
-              <time>-1037589274208</time>
+              <time>-1037259190764</time>
               <timezone>Europe/Paris</timezone>
             </calendar>
             <numberFormat class="java.text.DecimalFormat" serialization="custom">
@@ -5699,7 +5699,7 @@
         <java.text.SimpleDateFormat>
           <default>
             <serialVersionOnStream>1</serialVersionOnStream>
-            <defaultCenturyStart>1937-02-13 20:45:25.792 CET</defaultCenturyStart>
+            <defaultCenturyStart>1937-02-17 16:26:49.236 CET</defaultCenturyStart>
             <formatData serialization="custom">
               <java.text.DateFormatSymbols>
                 <default>
@@ -11058,13 +11058,13 @@
       </format>
     </fechanac>
     <tipo>Cliente</tipo>
-    <email>peep@gmail.com</email>
-    <avatar>asdasd</avatar>
-    <username>pepe</username>
+    <email>pepe@gmail.cmo</email>
+    <avatar>asdasda</avatar>
+    <username>paco</username>
     <passwd>paco1234</passwd>
     <fecha__alta>2015/10/10</fecha__alta>
     <antig__alta>2</antig__alta>
-    <compras>50</compras>
+    <compras>54</compras>
     <descuentos>20</descuentos>
     <fechaalta>
       <Persona>2015/10/10</Persona>
@@ -11075,7 +11075,7 @@
         <java.text.DateFormat>
           <default>
             <calendar>
-              <time>-1037589225470</time>
+              <time>-1037259149552</time>
               <timezone>Europe/Paris</timezone>
             </calendar>
             <numberFormat class="java.text.DecimalFormat" serialization="custom">
@@ -11147,7 +11147,7 @@
         <java.text.SimpleDateFormat>
           <default>
             <serialVersionOnStream>1</serialVersionOnStream>
-            <defaultCenturyStart>1937-02-13 20:46:14.530 CET</defaultCenturyStart>
+            <defaultCenturyStart>1937-02-17 16:27:30.448 CET</defaultCenturyStart>
             <formatData serialization="custom">
               <java.text.DateFormatSymbols>
                 <default>

@@ -10,11 +10,12 @@ import modules.user.Model.classes.*;
 import utils.funciones;
 
 public class Funciones_Ejer_Genericos {
+	public static String valor;
 	public static Persona Create_Generic (int i){
 		Persona Persona1=null;
 		if(i==0){
 			Persona1 = new Client();
-			Persona1.setdni(Funciones_data_user.PideDNI());
+			Persona1.setdni(valor);
 			Persona1.setnom(Funciones_data_user.PideNom());
 			Persona1.setadreca(Funciones_data_user.PideDireccion());
 			Persona1.setFechanac(Funciones_fecha.fecha_naix());
@@ -28,7 +29,7 @@ public class Funciones_Ejer_Genericos {
 		}
 		if (i==1){
 			Persona1 = new Admin();
-			Persona1.setdni(Funciones_data_user.PideDNI());
+			Persona1.setdni(valor);
 			Persona1.setnom(Funciones_data_user.PideNom());
 			Persona1.setadreca(Funciones_data_user.PideDireccion());
 			Persona1.setFechanac(Funciones_fecha.fecha_naix());
@@ -42,7 +43,7 @@ public class Funciones_Ejer_Genericos {
 		
 		if (i==2){
 			Persona1 = new Normal();
-			Persona1.setdni(Funciones_data_user.PideDNI());
+			Persona1.setdni(valor);
 			Persona1.setnom(Funciones_data_user.PideNom());
 			Persona1.setadreca(Funciones_data_user.PideDireccion());
 			Persona1.setFechanac(Funciones_fecha.fecha_naix());
@@ -217,16 +218,19 @@ public class Funciones_Ejer_Genericos {
 		Persona Persona1=null;
 		if(i==0){
 			Persona1 = new Client();
-			Persona1.setdni(Funciones_data_user.PideDNI());
+			valor=Funciones_data_user.PideDNI();
+			Persona1.setdni(valor);
 		}
 		if (i==1){
 			Persona1 = new Admin();
-			Persona1.setdni(Funciones_data_user.PideDNI());
+			valor=Funciones_data_user.PideDNI();
+			Persona1.setdni(valor);
 		}
 		
 		if (i==2){
 			Persona1 = new Normal();
-			Persona1.setdni(Funciones_data_user.PideDNI());
+			valor=Funciones_data_user.PideDNI();
+			Persona1.setdni(valor);
 		}
 		return Persona1;
 

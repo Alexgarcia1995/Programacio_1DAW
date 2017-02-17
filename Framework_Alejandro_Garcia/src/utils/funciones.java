@@ -5,6 +5,7 @@ import javax.swing.JOptionPane;
 import classes.Languages;
 import modules.user.Model.BLL.BLL_user.Funciones_Ejer_Genericos;
 import modules.user.Model.Functions.Funciones_data_user;
+import modules.user.Model.Functions.Funciones_find;
 import modules.user.Model.classes.*;
 
 public class funciones {
@@ -138,72 +139,50 @@ public class funciones {
 				Languages.lenguajes.getProperty("theme"),Languages.lenguajes.getProperty("exit")};
 		return option2;
 	}
-
-
-
-	public static boolean Login(int opcion){
-		Client p1=null;
-		Admin p2=null;
-		boolean continuar=false;
-		String s1="", s2="",result="";
-		String s3="";
-		switch(opcion){
-		case 0:
-			s1=Funciones_data_user.Pideusername();
-			s2=Funciones_data_user.PidePassword();
-			result=s1+s2;
-			
-			for (int i=0;i<Singleton.userclient.size();i++){
-				p1=Singleton.userclient.get(i);
-				s3=p1.getusername()+p1.getpasswd();
-				if(s3.equals(result)){
-					i=Singleton.userclient.size();
-					JOptionPane.showMessageDialog(null, "Bienvenido"+p1.getusername());
-					continuar=true;
-				}
-				else{
-					continuar=false;
-				}
-			}
-			if(continuar==false){
-				JOptionPane.showMessageDialog(null, "No hay ningun usuario con ese nombre", "Error",JOptionPane.ERROR_MESSAGE);
-			}
-			break;
-		case 1:
-
-			s1=Funciones_data_user.Pideusername();
-			s2=Funciones_data_user.PidePassword();
-			result=s1+s2;
-			for (int i=0;i<Singleton.useradmin.size();i++){
-				p2=Singleton.useradmin.get(i);
-				s3=p2.getusername()+p2.getpasswd();
-				if(s3.equals(result)){
-					i=Singleton.useradmin.size();
-					JOptionPane.showMessageDialog(null, "Bienvenido"+p2.getusername());
-					continuar=true;
-				}
-				else{
-					JOptionPane.showMessageDialog(null, "No existe ningun usuario con ese nombre en el sistema","Error",JOptionPane.ERROR_MESSAGE);
-					continuar=false;
-				}
-			}
-			break;
-		}
-		return continuar;
+	
+	public static String[] Menu_client(){
+		String[] option = {Languages.lenguajes.getProperty("read"), Languages.lenguajes.getProperty("update"), Languages.lenguajes.getProperty("delete"),
+				Languages.lenguajes.getProperty("exit") };
+		return option;
 	}
-	
-	
-	
+	public static String[] Menu_normal(){
+		String[] option ={Languages.lenguajes.getProperty("create"),Languages.lenguajes.getProperty("read"),Languages.lenguajes.getProperty("exit")};
+		return option;
+	}
+
 	public static void Register_client(){
-		Persona p1=null;
-		p1=Funciones_Ejer_Genericos.Create_Generic(0);
-		Singleton.userclient.add((Client) p1);
-	}
+		int location=-1;
+		Persona p1;
+		do{
+		p1=Funciones_Ejer_Genericos.Create_DNI_Generic(0);
+		location=Funciones_find.find_client((Client) p1);
+		if (location != -1) {
+			JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_dni"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
+		} else {
+			p1 = Funciones_Ejer_Genericos.Create_Generic(0);
+			Singleton.userclient.add((Client) p1);
+		}
+	}while(location!=-1);
+}
 	
 	
 	public static void Register_admin(){
 		Persona p1=null;
-		p1=Funciones_Ejer_Genericos.Create_Generic(1);
-		Singleton.useradmin.add((Admin) p1);
+		int location=-1;
+		String contraseña=funciones.ped_string("Contraseña", "Contraseña superadmin");
+		String valor="admin";
+		if(valor.equals(contraseña)){
+		p1=Funciones_Ejer_Genericos.Create_DNI_Generic(1);
+		location=Funciones_find.find_admin((Admin) p1);
+		if (location != -1) {
+			JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_dni"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
+		} else {
+			p1 = Funciones_Ejer_Genericos.Create_Generic(1);
+			Singleton.useradmin.add((Admin) p1);
+	}
+		}
+		else {
+			JOptionPane.showMessageDialog(null,Languages.lenguajes.getProperty("error"),Languages.lenguajes.getProperty("error"),JOptionPane.ERROR_MESSAGE);
+		}
 	}
 }

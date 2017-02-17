@@ -2,10 +2,12 @@ package modules.user.Model.Functions.Generics;
 
 import javax.swing.JOptionPane;
 
+import classes.Languages;
 import classes.Settings;
 import modules.user.Model.classes.Singleton;
 import modules.user.Model.files_users.admin.utils.*;
 import modules.user.Model.files_users.normal.utils.*;
+import utils.funciones;
 import modules.user.Model.files_users.client.utils.*;
 
 public class Open {
@@ -83,6 +85,22 @@ public class Open {
 			break;
 		}
 
+	}
+	public static void open_on_demand_superadmin(){
+		int menu=0;
+		String[] menus={Languages.lenguajes.getProperty("open")+" "+Languages.lenguajes.getProperty("client"),
+				Languages.lenguajes.getProperty("open")+" "+Languages.lenguajes.getProperty("admin"),Languages.lenguajes.getProperty("exit")};
+		menu=funciones.menu(menus, Languages.lenguajes.getProperty("open"), Languages.lenguajes.getProperty("open"));
+		switch (menu){
+		case 0:
+			Open.Open_client();
+			break;
+		case 1:
+			Open.Open_admin();
+			break;
+		case 2:
+			break;
+		}
 	}
 	
 }

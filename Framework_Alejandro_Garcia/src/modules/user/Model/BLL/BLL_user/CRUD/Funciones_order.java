@@ -6,6 +6,7 @@ import javax.swing.JOptionPane;
 
 import classes.Languages;
 import utils.funciones;
+import modules.user.Model.Functions.Generics.Open;
 import modules.user.Model.Functions.Generics.Save;
 import modules.user.Model.classes.*;
 import modules.user.Model.classes.Order.*;
@@ -85,6 +86,23 @@ public class Funciones_order {
 					break;
 			}
 			Save.save_auto_client();
+		}
+	}
+	
+	public static void order_superadmin(){
+		int menu=0;
+		String[] menus={Languages.lenguajes.getProperty("orden")+" "+Languages.lenguajes.getProperty("client"),
+				Languages.lenguajes.getProperty("orden")+" "+Languages.lenguajes.getProperty("admin"),Languages.lenguajes.getProperty("exit")};
+		menu=funciones.menu(menus, Languages.lenguajes.getProperty("open"), Languages.lenguajes.getProperty("open"));
+		switch (menu){
+		case 0:
+			Funciones_order.order_client();
+			break;
+		case 1:
+			Funciones_order.order_admin();
+			break;
+		case 2:
+			break;
 		}
 	}
 	public static void order_normal() {

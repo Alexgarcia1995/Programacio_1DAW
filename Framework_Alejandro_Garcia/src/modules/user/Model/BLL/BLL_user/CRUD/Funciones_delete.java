@@ -14,29 +14,40 @@ public class Funciones_delete {
 		int location=-1;
 		Persona p1;
 		int men1=0;
-		if(Singleton.useradmin.isEmpty()){
-			JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_vac"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
-		}
-		else{
-			String [] opcion={Languages.lenguajes.getProperty("usuarios"),Languages.lenguajes.getProperty("dlt_dni")};
-			men1=funciones.menu(opcion, Languages.lenguajes.getProperty("delete"), Languages.lenguajes.getProperty("delete"));
-			switch(men1){
+		String [] menu={Languages.lenguajes.getProperty("delete")+" "+Languages.lenguajes.getProperty("client"),
+				Languages.lenguajes.getProperty("delete")+" "+Languages.lenguajes.getProperty("admin"),Languages.lenguajes.getProperty("exit")};
+		int menus = funciones.menu(menu, Languages.lenguajes.getProperty("crear"), Languages.lenguajes.getProperty("opciones"));
+		
+			switch(menus){
 			case 0:
-				Singleton.useradmin.clear();
-				JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("us_delete2"));
+				Funciones_delete.delete_client();
 				break;
 			case 1:
-				location=-1;
-				p1=Funciones_find.IDadmin();
-				location=Funciones_find.find_admin((Admin) p1);
-				if(location != -1){
-					Singleton.useradmin.remove(location);
-					JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("us_delete"));
+				if(Singleton.useradmin.isEmpty()){
+					JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_vac"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
 				}
 				else{
-					JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_eliminar"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
-				}
-				break;
+				String [] opcion={Languages.lenguajes.getProperty("usuarios"),Languages.lenguajes.getProperty("dlt_dni")};
+				men1=funciones.menu(opcion, Languages.lenguajes.getProperty("delete"), Languages.lenguajes.getProperty("delete"));
+				switch(men1){
+				case 0:
+					Singleton.useradmin.clear();
+					JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("us_delete2"));
+					break;
+				case 1:
+					location=-1;
+					p1=Funciones_find.IDadmin();
+					location=Funciones_find.find_admin((Admin) p1);
+					if(location != -1){
+						Singleton.useradmin.remove(location);
+						JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("us_delete"));
+					}
+					else{
+						JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_eliminar"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
+					}
+					break;	
+			}
+			
 			}
 		}
 	}
@@ -72,6 +83,23 @@ public class Funciones_delete {
 		}
 	}
 	
+	public static void delete_client2(){
+		int location=-1;
+		if(Singleton.userclient.isEmpty()){
+			JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_vac"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
+		}
+		else{
+		location=-1;
+		location=Funciones_find.find_nom_user();
+		if(location != -1){
+			Singleton.userclient.remove(location);
+			JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("us_delete"));
+		}
+		else{
+			JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_eliminar"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
+		}
+		}
+	}
 	
 	public static void delete_normal(){
 		int location=-1;

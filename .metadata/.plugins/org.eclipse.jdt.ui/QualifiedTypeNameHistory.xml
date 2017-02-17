@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.awt.Window.Type"/>
-<fullyQualifiedTypeName name="com.google.gson.reflect.TypeToken"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="modules.user.utils.admin.utils.open_auto"/>
 <fullyQualifiedTypeName name="com.google.gson.stream.JsonReader"/>
 <fullyQualifiedTypeName name="java.io.FileReader"/>
@@ -48,16 +45,19 @@
 <fullyQualifiedTypeName name="javax.swing.UIManager"/>
 <fullyQualifiedTypeName name="utils.Themes"/>
 <fullyQualifiedTypeName name="classes.Settings"/>
-<fullyQualifiedTypeName name="classes.Languages"/>
 <fullyQualifiedTypeName name="utils.open_config"/>
 <fullyQualifiedTypeName name="modules.user.Model.classes.Persona"/>
 <fullyQualifiedTypeName name="modules.user.Model.BLL.BLL_user.Funciones_Ejer_Genericos"/>
 <fullyQualifiedTypeName name="modules.user.Model.classes.Singleton"/>
-<fullyQualifiedTypeName name="utils.funciones"/>
-<fullyQualifiedTypeName name="modules.user.Model.Functions.Generics.Save"/>
 <fullyQualifiedTypeName name="utils.signin_signup"/>
 <fullyQualifiedTypeName name="modules.user.Model.Functions.Funciones_data_user"/>
 <fullyQualifiedTypeName name="modules.user.Model.Functions.Funciones_find"/>
 <fullyQualifiedTypeName name="classes.Singleton_Login"/>
+<fullyQualifiedTypeName name="modules.user.Model.BLL.BLL_user.CRUD.Funciones_create"/>
+<fullyQualifiedTypeName name="modules.user.Model.BLL.BLL_user.CRUD.Funciones_delete"/>
+<fullyQualifiedTypeName name="modules.user.Model.Functions.Generics.Save"/>
 <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+<fullyQualifiedTypeName name="classes.Languages"/>
+<fullyQualifiedTypeName name="utils.funciones"/>
+<fullyQualifiedTypeName name="modules.user.Model.Functions.signin_signup"/>
 </qualifiedTypeNameHistroy>

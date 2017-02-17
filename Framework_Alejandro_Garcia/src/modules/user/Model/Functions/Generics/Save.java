@@ -1,9 +1,11 @@
 package modules.user.Model.Functions.Generics;
 
+import classes.Languages;
 import classes.Settings;
 import modules.user.Model.classes.*;
 import modules.user.Model.files_users.admin.utils.*;
 import modules.user.Model.files_users.normal.utils.*;
+import utils.funciones;
 import modules.user.Model.files_users.client.utils.*;
 
 
@@ -41,6 +43,22 @@ public class Save {
 		}
 	}
 	
+	public static void save_on_demand_superadmin(){
+		int menu=0;
+		String[] menus={Languages.lenguajes.getProperty("save")+" "+Languages.lenguajes.getProperty("client"),
+				Languages.lenguajes.getProperty("save")+" "+Languages.lenguajes.getProperty("admin"),Languages.lenguajes.getProperty("exit")};
+		menu=funciones.menu(menus, Languages.lenguajes.getProperty("save"), Languages.lenguajes.getProperty("save"));
+		switch (menu){
+		case 0:
+			Save.save_on_demand_client();
+			break;
+		case 1:
+			Save.save_on_demand_admin();
+			break;
+		case 2:
+			break;
+		}
+	}
 	
 	public static void save_on_demand_client(){
 		String formato=Settings.instance.getFormatfitx();

@@ -26,7 +26,7 @@ public class Funciones_find {
 		
 		public static int find_user(Normal normal) { 
 			for (int i = 0; i<=(Singleton.usernormal.size()-1); i++){
-				if((Singleton.usernormal.get(i)).equals(normal) )
+				if((Singleton.usernormal.get(i)).equals(normal))
 					return i;
 			}
 			return -1;
