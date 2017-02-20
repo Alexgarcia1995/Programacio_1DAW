@@ -6,7 +6,7 @@
     <adreca>asdasd</adreca>
     <edad>22</edad>
     <sexe>H</sexe>
-    <fecha__naix>1995/10/10</fecha__naix>
+    <fecha__naix>10-10-1995</fecha__naix>
     <fechanac>
       <Persona>1995/10/10</Persona>
       <dia>10</dia>
@@ -5451,9 +5451,9 @@
     <username>pepe</username>
     <passwd>pepe1234</passwd>
     <permiso>Lectura, Escritura y Ejecucion</permiso>
-    <aniocont>2015/1/10</aniocont>
+    <aniocont>10-1-2015</aniocont>
     <antiguedad>2</antiguedad>
-    <salario>1231,1</salario>
+    <salario>977,97</salario>
     <aniocon>
       <Persona>2015/1/10</Persona>
       <dia>10</dia>
@@ -5616,7 +5616,7 @@
     <adreca>alex</adreca>
     <edad>27</edad>
     <sexe>H</sexe>
-    <fecha__naix>1990/10/10</fecha__naix>
+    <fecha__naix>10-10-1990</fecha__naix>
     <fechanac>
       <Persona>1990/10/10</Persona>
       <dia>10</dia>
@@ -11061,9 +11061,9 @@
     <username>alejandro</username>
     <passwd>alex1234</passwd>
     <permiso>Lectura, Escritura y Ejecucion</permiso>
-    <aniocont>2015/10/10</aniocont>
+    <aniocont>10-10-2015</aniocont>
     <antiguedad>2</antiguedad>
-    <salario>1231,1</salario>
+    <salario>977,97</salario>
     <aniocon>
       <Persona>2015/10/10</Persona>
       <dia>10</dia>

@@ -1,5 +1,6 @@
 package modules.user.Model.BLL.BLL_user;
 
+import modules.user.Model.BLL.BLL_user.CRUD.Funciones_update;
 import modules.user.Model.Functions.Funciones_data_user;
 import modules.user.Model.Functions.Funciones_fecha;
 
@@ -36,7 +37,7 @@ public class Funciones_Ejer_Genericos {
 			Persona1.setsexe(Funciones_data_user.Pidesexe());
 			((Admin) Persona1).setemail(Funciones_data_user.Pideemail());
 			((Admin) Persona1).setavatar(funciones.ped_string("Introduce tu avatar", "Avatar"));
-			((Admin) Persona1).setusername(Funciones_data_user.Pideusername());
+			((Admin) Persona1).setusername(Funciones_data_user.Pideusername2());
 			((Admin) Persona1).setpasswd(Funciones_data_user.PidePassword());
 			((Admin) Persona1).setAniocon(Funciones_fecha.fecha_cont(Persona1.getFechanaix(),Persona1.getedad()));
 		}
@@ -72,7 +73,8 @@ public class Funciones_Ejer_Genericos {
 	public static Persona Update_Generic(Persona Persona1){
 		String e;
 		char c;
-		if (Persona1 instanceof Client){String[] opcion = {"A)" + Languages.lenguajes.getProperty("dni"), "B)"+ Languages.lenguajes.getProperty("direccion"), 
+		if (Persona1 instanceof Client){
+			String[] opcion = {"A)" + Languages.lenguajes.getProperty("dni"), "B)"+ Languages.lenguajes.getProperty("direccion"), 
 				"C) " + Languages.lenguajes.getProperty("nom"), "D)" + Languages.lenguajes.getProperty("fecha_naix"), 
 				"E) " + Languages.lenguajes.getProperty("sexe"), "F) " + Languages.lenguajes.getProperty("username"),
 				"G) " + Languages.lenguajes.getProperty("email"), "H) Avatar","I) " + Languages.lenguajes.getProperty("contraseña"),
@@ -81,7 +83,7 @@ public class Funciones_Ejer_Genericos {
 		c=e.charAt(0);
 		switch (c) {
 		case 'A':
-			Persona1.setdni(Funciones_data_user.PideDNI());
+			Persona1.setdni(Funciones_update.update_dni_client());
 			break;
 		case 'B':
 			Persona1.setadreca(Funciones_data_user.PideDireccion());
@@ -153,7 +155,7 @@ public class Funciones_Ejer_Genericos {
 				Persona1.setsexe(Funciones_data_user.Pidesexe());
 				break;
 			case 'F':
-				((Admin) Persona1).setusername(Funciones_data_user.Pideusername());
+				((Admin) Persona1).setusername(Funciones_data_user.Pideusername2());
 				break;
 			case 'G':
 				((Admin) Persona1).setemail(Funciones_data_user.Pideemail());

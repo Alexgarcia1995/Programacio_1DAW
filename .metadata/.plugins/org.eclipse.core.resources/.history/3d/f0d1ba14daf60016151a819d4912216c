@@ -1,0 +1,180 @@
+package utils;
+
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.Locale;
+
+import classes.Languages;
+import classes.Settings;
+
+
+public class formatos {
+	public static String moneda="€";
+	public static String decimal=".#";
+	public static String formato="dd/mm/yyyy";
+	public static boolean bool=true;
+	public static String Formatfitx="xml";
+	public static String Theme="GTK";
+	
+	
+	public static String format1d(double number){
+		DecimalFormat format1 = new DecimalFormat(".#");
+		return format1.format(number);
+	}
+	
+	public static String format2d(double number){
+		DecimalFormat format1 = new DecimalFormat(".##");
+		return format1.format(number);
+	}
+	
+	public static String format3d(double number){
+		DecimalFormat format1 = new DecimalFormat(".###");
+		return format1.format(number);
+	}
+
+	public static void Formatomoneda(){
+		int menu=0;
+    	String [] option={"Dolar", "Pounds", "Euros", Languages.lenguajes.getProperty("exit")};
+		menu=funciones.menu(option, Languages.lenguajes.getProperty("moneda"),  Languages.lenguajes.getProperty("moneda"));
+		switch (menu){
+		case 0:
+			moneda="$";
+			Settings.GetInstance().setCurrency_config(moneda);
+			break;
+		case 1:
+			moneda="£";
+			Settings.GetInstance().setCurrency_config(moneda);
+			break;
+		case 2:
+			moneda="€";
+			Settings.GetInstance().setCurrency_config(moneda);
+			break;
+		case 3:
+			break;
+		}
+		}
+		public static void Formatdecimal(){
+			int menu=0;
+	    	String [] option={".#", ".##", ".###",Languages.lenguajes.getProperty("exit")};
+			menu=funciones.menu(option, Languages.lenguajes.getProperty("decimales"),  Languages.lenguajes.getProperty("decimales"));
+			switch (menu){
+			case 0:
+				decimal=".#";
+				Settings.GetInstance().setDecimals_config(decimal);
+				break;
+			case 1:
+				decimal=".##";
+				Settings.GetInstance().setDecimals_config(decimal);
+				break;
+			case 2:
+				decimal=".###";
+				Settings.GetInstance().setDecimals_config(decimal);
+				break;
+			case 3:
+				break;
+			}
+	}
+		public static String ValorDecimal(String format,double moneda){
+			String decimales="";
+			switch (format){
+			case ".#":
+				decimales=formatos.format1d(moneda);
+				break;
+			case ".##":
+				decimales=formatos.format2d(moneda);
+				break;
+			case ".###":
+				decimales=formatos.format3d(moneda);
+				break;
+			}
+			return decimales;
+	}
+		public static void Formatfecha(){
+			int menu=0;
+	    	String [] option={"dd/mm/yyyy", "dd-mm-yyyy", "yyyy/mm/dd", "yyyy-mm-dd" };
+			menu=funciones.menu(option, Languages.lenguajes.getProperty("fecha"),Languages.lenguajes.getProperty("fecha"));
+			switch (menu){
+			case 0:
+				formato="dd/mm/yyyy";
+				Settings.GetInstance().setDate_config(formato);
+				break;
+			case 1:
+				formato="dd-mm-yyyy";
+				Settings.GetInstance().setDate_config(formato);
+				break;
+			case 2:
+				formato="yyyy/mm/dd";
+				Settings.GetInstance().setDate_config(formato);
+				break;
+			case 3:
+				formato="yyyy-mm-dd";
+				Settings.GetInstance().setDate_config(formato);
+				break;
+			}
+			save_config.savejson();
+		}
+		public static void Dummies(){
+			int menu=0;
+    	String [] option={Languages.lenguajes.getProperty("normal2"),Languages.lenguajes.getProperty("dummies2")};
+		menu=funciones.menu(option, Languages.lenguajes.getProperty("dummies"),Languages.lenguajes.getProperty("mode"));
+		switch (menu){
+		case 0:
+			bool=false;
+			Settings.GetInstance().setDummies(false);
+			break;
+		case 1:
+			bool=true;
+			Settings.GetInstance().setDummies(true);
+			break;
+		}
+		save_config.savejson();
+		}
+		public static void Formatfitx(){
+			int menu=0;
+	    	String [] option={"xml", "json", "txt", Languages.lenguajes.getProperty("exit")};
+			menu=funciones.menu(option,Languages.lenguajes.getProperty("formato2"),Languages.lenguajes.getProperty("formatfitx"));
+			switch (menu){
+			case 0:
+				Formatfitx="xml";
+				Settings.instance.setFormatfitx(Formatfitx);
+				break;
+			case 1:
+				Formatfitx="json";
+				Settings.instance.setFormatfitx(Formatfitx);
+				break;
+			case 2:
+				Formatfitx="txt";
+				Settings.instance.setFormatfitx(Formatfitx);
+				break;
+			case 3:
+				break;
+			}
+			save_config.savejson();
+	}
+		
+		public static void FormatTheme(){
+			int menu=0;
+	    	String [] option={"GTK", "METAL", "MOTIF", "WINDOWS95",Languages.lenguajes.getProperty("exit")};
+			menu=funciones.menu(option,Languages.lenguajes.getProperty("theme"),Languages.lenguajes.getProperty("theme2"));
+			switch (menu){
+			case 0:
+				Theme = "GTK";
+				Settings.instance.setTheme(Theme);
+				break;
+			case 1:
+				Theme="METAL";
+				Settings.instance.setTheme(Theme);
+				break;
+			case 2:
+				Theme="MOTIF";
+				Settings.instance.setTheme(Theme);
+				break;
+			case 3:
+				Theme="WINDOWS95";
+				Settings.instance.setTheme(Theme);
+				break;
+			case 4:
+				break;
+			}
+	}
+}

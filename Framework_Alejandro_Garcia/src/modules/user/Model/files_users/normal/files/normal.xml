@@ -2,20 +2,20 @@
 <list>
   <Normal>
     <dni>12345678Z</dni>
-    <nom>sadasda</nom>
-    <adreca>sdasdasda</adreca>
+    <nom>sdasdas</nom>
+    <adreca>dasdasda</adreca>
     <edad>0</edad>
     <sexe>H</sexe>
     <fechanac>
-      <Persona>1980/10/10</Persona>
+      <Persona>1995-10-10</Persona>
       <dia>10</dia>
       <mes>10</mes>
-      <anio>1980</anio>
+      <anio>1995</anio>
       <format serialization="custom">
         <java.text.DateFormat>
           <default>
             <calendar>
-              <time>316307400000</time>
+              <time>789693000000</time>
               <timezone>Europe/Paris</timezone>
             </calendar>
             <numberFormat class="java.text.DecimalFormat" serialization="custom">
@@ -87,7 +87,7 @@
         <java.text.SimpleDateFormat>
           <default>
             <serialVersionOnStream>1</serialVersionOnStream>
-            <defaultCenturyStart>1937-02-17 16:56:35.460 CET</defaultCenturyStart>
+            <defaultCenturyStart>1937-02-19 20:59:25.64 CET</defaultCenturyStart>
             <formatData serialization="custom">
               <java.text.DateFormatSymbols>
                 <default>
@@ -5440,14 +5440,14 @@
               </java.text.DateFormatSymbols>
             </formatData>
             <locale reference="../../../java.text.DateFormat/default/numberFormat/java.text.DecimalFormat/default/symbols/java.text.DecimalFormatSymbols/default/locale"/>
-            <pattern>yyyy/mm/dd</pattern>
+            <pattern>yyyy-mm-dd</pattern>
           </default>
         </java.text.SimpleDateFormat>
       </format>
     </fechanac>
-    <email>dasads@gmail.clom</email>
-    <username>sdasdas</username>
-    <comments>15</comments>
+    <email>pepe@gmail.com</email>
+    <username>eadsads</username>
+    <comments>565</comments>
     <points>0</points>
   </Normal>
 </list>

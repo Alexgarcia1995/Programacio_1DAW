@@ -17,173 +17,179 @@ import utils.open_config;
 import utils.save_config;
 
 public class Main_Dummies {
-	
-	
+
 	public static void main(String[] args) {
-		int men = 0, men1 = 0, men2=0;
-		int menprin=0;
-		
-		do{
+		int men = 0, men1 = 0, men2 = 0;
+		int menprin = 0;
+
+		do {
 			Settings.GetInstance();
-			if (Settings.GetInstance().dummies==false){
+			if (Settings.GetInstance().dummies == false) {
 				Main_Framework2.main(null);
 			}
-			String[] principal=funciones.Menu1();
-			
+			String[] principal = funciones.Menu1();
+
 			String[] option = funciones.Menu2();
-			
+
 			String[] option1 = funciones.Menu3();
-			
-		menprin= funciones.menu(principal, Languages.lenguajes.getProperty("menu") + "("+ Languages.lenguajes.getProperty("dummies")+")",Languages.lenguajes.getProperty("menu_p"));
-		switch(menprin){
-		case 0:
-		do{	
-			Open.Open_auto();
-			men1 = funciones.menu(option1, Languages.lenguajes.getProperty("crear"), Languages.lenguajes.getProperty("opciones"));
-			switch (men1) {
-			// Cliente
+
+			menprin = funciones.menu(principal,
+					Languages.lenguajes.getProperty("menu") + "(" + Languages.lenguajes.getProperty("dummies") + ")",
+					Languages.lenguajes.getProperty("menu_p"));
+			switch (menprin) {
 			case 0:
 				do {
-					men = funciones.menu(option, Languages.lenguajes.getProperty("options"), Languages.lenguajes.getProperty("opciones"));
-					switch (men) {
+					Open.Open_auto();
+					men1 = funciones.menu(option1, Languages.lenguajes.getProperty("crear"),
+							Languages.lenguajes.getProperty("opciones"));
+					switch (men1) {
+					// Cliente
 					case 0:
-						Funciones_create_dummies.create_client();
+						do {
+							men = funciones.menu(option, Languages.lenguajes.getProperty("options"),
+									Languages.lenguajes.getProperty("opciones"));
+							switch (men) {
+							case 0:
+								Funciones_create_dummies.create_client();
+								break;
+							case 1:
+								Funciones_read_dummies.read_client();
+								break;
+							case 2:
+								Funciones_update_dummies.update_client();
+								break;
+							case 3:
+								Funciones_delete_dummies.delete_client();
+								break;
+							case 4:
+								Funciones_order_dummies.order_client();
+								break;
+							case 5:
+								Open.Open_client();
+								break;
+							case 6:
+								Save.save_on_demand_client();
+								break;
+							}
+						} while (men != 7);
+						// Save.save_auto_client();
 						break;
+					// Admins
 					case 1:
-						Funciones_read_dummies.read_client();
+						do {
+
+							men = funciones.menu(option, Languages.lenguajes.getProperty("options"),
+									Languages.lenguajes.getProperty("opciones"));
+							switch (men) {
+							case 0:
+								Funciones_create_dummies.create_admin();
+								break;
+							case 1:
+								Funciones_read_dummies.read_admin();
+								break;
+							case 2:
+								Funciones_update_dummies.update_admin();
+								break;
+							case 3:
+								Funciones_delete_dummies.delete_admin();
+								break;
+							case 4:
+								Funciones_order_dummies.order_admin();
+								break;
+							case 5:
+								Open.Open_admin();
+								break;
+							case 6:
+								Save.save_on_demand_admin();
+								break;
+							}
+						} while (men != 7);
+						Save.save_auto_admin();
 						break;
+					// Normal
 					case 2:
-						Funciones_update_dummies.update_client();
-						break;
-					case 3:
-						Funciones_delete_dummies.delete_client();
-						break;
-					case 4:
-						Funciones_order_dummies.order_client();
-						break;
-					case 5:
-						Open.Open_client();
-						break;
-					case 6:
-						Save.save_on_demand_client();
+						do {
+							men = funciones.menu(option, Languages.lenguajes.getProperty("options"),
+									Languages.lenguajes.getProperty("opciones"));
+							switch (men) {
+							case 0:
+								Funciones_create_dummies.create_normal();
+								break;
+							case 1:
+								Funciones_read_dummies.read_normal();
+								break;
+							case 2:
+								Funciones_update_dummies.update_normal();
+								break;
+							case 3:
+								Funciones_delete_dummies.delete_normal();
+								break;
+							case 4:
+								Funciones_order_dummies.order_normal();
+								break;
+							case 5:
+								Open.Open_normal();
+								break;
+							case 6:
+								Save.save_on_demand_normal();
+							}
+						} while (men != 7);
+						Save.save_auto_normal();
 						break;
 					}
-				} while (men != 7);
-				//Save.save_auto_client();
+				} while (men1 != 3);
 				break;
-			// Admins
+
 			case 1:
 				do {
-					
-					men = funciones.menu(option, Languages.lenguajes.getProperty("options"), Languages.lenguajes.getProperty("opciones"));
-					switch (men) {
+					String[] option3 = funciones.Menu_opcion();
+					men2 = funciones.menu(option3, Languages.lenguajes.getProperty("opciones"),
+							Languages.lenguajes.getProperty("opciones"));
+					switch (men2) {
 					case 0:
-						Funciones_create_dummies.create_admin();
+						do {
+							String[] option2 = funciones.Menu4();
+							men = funciones.menu(option2, Languages.lenguajes.getProperty("formato2"),
+									Languages.lenguajes.getProperty("formato"));
+							switch (men) {
+							case 0:
+								formatos.Formatfecha();
+								break;
+							case 1:
+								formatos.Formatomoneda();
+								break;
+							case 2:
+								formatos.Formatdecimal();
+								break;
+							case 3:
+								Languages.Lengua(Languages.lenguajes);
+								break;
+							case 4:
+								formatos.Dummies();
+								break;
+							case 5:
+								formatos.Formatfitx();
+								break;
+							case 6:
+								formatos.FormatTheme();
+								break;
+							}
+						} while (men != 7);
+						save_config.savejson();
 						break;
 					case 1:
-						Funciones_read_dummies.read_admin();
+						open_config.open_on_demand();
+						save_config.savejson();
 						break;
 					case 2:
-						Funciones_update_dummies.update_admin();
-						break;
-					case 3:
-						Funciones_delete_dummies.delete_admin();
-						break;
-					case 4:
-						Funciones_order_dummies.order_admin();
-						break;
-					case 5:
-						Open.Open_admin();
-						break;
-					case 6:
-						Save.save_on_demand_admin();
+						save_config.saveondemand();
 						break;
 					}
-				} while (men != 7);
-				Save.save_auto_admin();
+				} while (men2 != 3);
 				break;
-				//Normal
 			case 2:
-				do {
-					men = funciones.menu(option, Languages.lenguajes.getProperty("options"), Languages.lenguajes.getProperty("opciones"));
-					switch (men) {
-					case 0:
-						Funciones_create_dummies.create_normal();
-						break;
-					case 1:
-						Funciones_read_dummies.read_normal();
-						break;
-					case 2:
-						Funciones_update_dummies.update_normal();
-						break;
-					case 3:
-						Funciones_delete_dummies.delete_normal();
-						break;
-					case 4:
-						Funciones_order_dummies.order_normal();
-						break;
-					case 5:
-						Open.Open_normal();
-						break;
-					case 6:
-						Save.save_on_demand_normal();
-					}
-				} while (men != 7);
-				Save.save_auto_normal();
-				break;
+				System.exit(0);
 			}
-		} while (men1 != 3) ;
-		break;
-		
-		case 1:
-			do{
-			String[]option3={"Modificar","Abrir","Guardar","Exit"};
-			men2 = funciones.menu(option3,Languages.lenguajes.getProperty("opciones"), Languages.lenguajes.getProperty("opciones"));
-				switch(men2){
-				case 0:	
-					do {
-						String[] option2= funciones.Menu4();
-						men = funciones.menu(option2, Languages.lenguajes.getProperty("formato2"), Languages.lenguajes.getProperty("formato"));
-						switch (men) {
-						case 0:
-							formatos.Formatfecha();
-							break;
-						case 1:
-							formatos.Formatomoneda();
-							break;
-						case 2:
-							formatos.Formatdecimal();
-							break;
-						case 3:
-							Languages.Lengua(Languages.lenguajes);
-							break;
-						case 4:
-							formatos.Dummies();
-							break;
-						case 5:
-							formatos.Formatfitx();
-							break;
-						case 6:
-							formatos.FormatTheme();
-							break;
-						}
-					} while (men != 7);
-					save_config.savejson();
-					break;
-				case 1:
-					open_config.open_on_demand();
-					save_config.savejson();
-					break;
-				case 2:
-					save_config.saveondemand();
-					break;
-				}
-			}while(men2!=3);
-			break;
-		case 2:
-			System.exit(0);
-		}
-}while(menprin != 2);
+		} while (menprin != 2);
 	}
 }
-

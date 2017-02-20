@@ -150,39 +150,13 @@ public class funciones {
 		return option;
 	}
 
-	public static void Register_client(){
-		int location=-1;
-		Persona p1;
-		do{
-		p1=Funciones_Ejer_Genericos.Create_DNI_Generic(0);
-		location=Funciones_find.find_client((Client) p1);
-		if (location != -1) {
-			JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_dni"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
-		} else {
-			p1 = Funciones_Ejer_Genericos.Create_Generic(0);
-			Singleton.userclient.add((Client) p1);
-		}
-	}while(location!=-1);
-}
-	
-	
-	public static void Register_admin(){
-		Persona p1=null;
-		int location=-1;
-		String contraseña=funciones.ped_string("Contraseña", "Contraseña superadmin");
-		String valor="admin";
-		if(valor.equals(contraseña)){
-		p1=Funciones_Ejer_Genericos.Create_DNI_Generic(1);
-		location=Funciones_find.find_admin((Admin) p1);
-		if (location != -1) {
-			JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_dni"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
-		} else {
-			p1 = Funciones_Ejer_Genericos.Create_Generic(1);
-			Singleton.useradmin.add((Admin) p1);
+	public static String[] Menu_login(){
+		String[] option ={Languages.lenguajes.getProperty("login"),Languages.lenguajes.getProperty("register"),Languages.lenguajes.getProperty("exit")};
+		return option;
 	}
-		}
-		else {
-			JOptionPane.showMessageDialog(null,Languages.lenguajes.getProperty("error"),Languages.lenguajes.getProperty("error"),JOptionPane.ERROR_MESSAGE);
-		}
+	public static String[] Menu_opcion(){
+		String[] option ={Languages.lenguajes.getProperty("modify"),Languages.lenguajes.getProperty("open"),Languages.lenguajes.getProperty("save"),Languages.lenguajes.getProperty("exit")};
+		return option;
 	}
+
 }

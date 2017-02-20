@@ -52,6 +52,7 @@ public class formatos {
 		case 3:
 			break;
 		}
+		save_config.savejson();
 		}
 		public static void Formatdecimal(){
 			int menu=0;
@@ -73,6 +74,7 @@ public class formatos {
 			case 3:
 				break;
 			}
+			save_config.savejson();
 	}
 		public static String ValorDecimal(String format,double moneda){
 			String decimales="";
@@ -111,6 +113,7 @@ public class formatos {
 				Settings.GetInstance().setDate_config(formato);
 				break;
 			}
+			save_config.savejson();
 		}
 		public static void Dummies(){
 			int menu=0;
@@ -126,6 +129,7 @@ public class formatos {
 			Settings.GetInstance().setDummies(true);
 			break;
 		}
+		save_config.savejson();
 		}
 		public static void Formatfitx(){
 			int menu=0;
@@ -147,6 +151,7 @@ public class formatos {
 			case 3:
 				break;
 			}
+			save_config.savejson();
 	}
 		
 		public static void FormatTheme(){
@@ -173,5 +178,6 @@ public class formatos {
 			case 4:
 				break;
 			}
+			save_config.savejson();
 	}
 }

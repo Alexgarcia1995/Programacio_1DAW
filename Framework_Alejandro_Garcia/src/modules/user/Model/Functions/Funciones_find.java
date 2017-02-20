@@ -31,7 +31,28 @@ public class Funciones_find {
 			}
 			return -1;
 		}
+		public static int find_dni_client(String dni) { 
+			for (int i = 0; i<=(Singleton.userclient.size()-1); i++){
+				if((Singleton.userclient.get(i)).getdni().equals(dni))
+					return i;
+			}
+			return -1;
+		}
 		
+		public static int find_dni_admin(String dni) { 
+			for (int i=0; i<=(Singleton.useradmin.size()-1);i++){
+				if((Singleton.useradmin.get(i)).getdni().equals(dni))
+					return i;
+			}
+			return -1;
+		}
+		public static int find_dni_normal(String dni) { 
+			for (int i = 0; i<=(Singleton.usernormal.size()-1); i++){
+				if((Singleton.usernormal.get(i)).getdni().equals(dni))
+					return i;
+			}
+			return -1;
+		}
 		public static int find_nom_user(){
 			String valor="";
 			switch(Singleton_Login.type_user){

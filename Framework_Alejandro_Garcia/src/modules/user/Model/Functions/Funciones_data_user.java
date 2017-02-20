@@ -40,7 +40,6 @@ public class Funciones_data_user {
 		} while (good == false);
 		return cad;
 	}
-
 	public static String PideDireccion() {
 		String cad = "";
 		boolean good = false;
@@ -84,7 +83,7 @@ public class Funciones_data_user {
 			valor=Funciones_find.find_nom_user();
 			}while (good == false);
 			if(valor != -1){
-				JOptionPane.showMessageDialog(null, "Error", "Error",JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_rep"), Languages.lenguajes.getProperty("error"),JOptionPane.ERROR_MESSAGE);
 			}
 		} while (valor != -1);
 

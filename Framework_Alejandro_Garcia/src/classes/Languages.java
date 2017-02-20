@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 import utils.funciones;
+import utils.save_config;
 
 public class Languages extends Properties {
 	private static final long serialVersionUID = 1L;
@@ -70,6 +71,7 @@ public class Languages extends Properties {
 		case 3:
 			break;
 		}
+		save_config.savejson();
 	}
 	
 }

@@ -105,4 +105,29 @@ public class Funciones_update {
 			}
 			}
 }
+	
+	public static String update_dni_client(){
+		String valor="";
+		int location=-1;
+		do{
+		valor=Funciones_data_user.PideDNI();
+		location=Funciones_find.find_dni_client(valor);
+		if (location!=-1){
+			JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_dni"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
+		}
+		}while(location!=-1);
+		return valor;
+	}
+	public static String update_dni_admin(){
+		String valor="";
+		int location=-1;
+		do{
+		valor=Funciones_data_user.PideDNI();
+		location=Funciones_find.find_dni_admin(valor);
+		if (location!=-1){
+			JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_dni"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
+		}
+		}while(location!=-1);
+		return valor;
+	}
 }
