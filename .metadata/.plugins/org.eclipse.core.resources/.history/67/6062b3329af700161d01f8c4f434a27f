@@ -3,7 +3,6 @@ package modules.user.Model.BLL.BLL_user.CRUD;
 import javax.swing.JOptionPane;
 
 import classes.Languages;
-import classes.Singleton_Login;
 import modules.user.Model.BLL.BLL_user.*;
 import modules.user.Model.Functions.*;
 import modules.user.Model.classes.*;
@@ -11,11 +10,9 @@ import utils.funciones;
 
 public class Funciones_delete {
 
-	public static boolean delete_admin(){
+	public static void delete_admin(){
 		int location=-1;
-		boolean good=false;
 		Persona p1;
-		String delete;
 		int men1=0;
 		String [] menu={Languages.lenguajes.getProperty("delete")+" "+Languages.lenguajes.getProperty("client"),
 				Languages.lenguajes.getProperty("delete")+" "+Languages.lenguajes.getProperty("admin"),Languages.lenguajes.getProperty("exit")};
@@ -42,17 +39,8 @@ public class Funciones_delete {
 					p1=Funciones_find.IDadmin();
 					location=Funciones_find.find_admin((Admin) p1);
 					if(location != -1){
-						delete=Singleton.useradmin.get(location).getusername();
-						if (Singleton_Login.nom_user.equals(delete)){
-							Singleton.useradmin.remove(location);
-							good=true;
-							JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("us_delete"));	
-						}
-						else{
-							Singleton.useradmin.remove(location);
-							JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("us_delete"));	
-						}
-						
+						Singleton.useradmin.remove(location);
+						JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("us_delete"));
 					}
 					else{
 						JOptionPane.showMessageDialog(null, Languages.lenguajes.getProperty("error_eliminar"),Languages.lenguajes.getProperty("error"), JOptionPane.ERROR_MESSAGE);
@@ -62,7 +50,6 @@ public class Funciones_delete {
 			
 			}
 		}
-			return good;
 	}
 	
 	public static void delete_client(){

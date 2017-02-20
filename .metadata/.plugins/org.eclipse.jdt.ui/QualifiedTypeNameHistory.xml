@@ -48,7 +48,6 @@
 <fullyQualifiedTypeName name="modules.user.Model.BLL.BLL_user.Funciones_Ejer_Genericos"/>
 <fullyQualifiedTypeName name="modules.user.Model.classes.Singleton"/>
 <fullyQualifiedTypeName name="utils.signin_signup"/>
-<fullyQualifiedTypeName name="classes.Singleton_Login"/>
 <fullyQualifiedTypeName name="modules.user.Model.BLL.BLL_user.CRUD.Funciones_create"/>
 <fullyQualifiedTypeName name="modules.user.Model.BLL.BLL_user.CRUD.Funciones_delete"/>
 <fullyQualifiedTypeName name="modules.user.Model.Functions.Generics.Save"/>
@@ -60,4 +59,5 @@
 <fullyQualifiedTypeName name="modules.user.Model.Functions.Funciones_find"/>
 <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
 <fullyQualifiedTypeName name="modules.user.Model.BLL.BLL_user.CRUD.Funciones_update"/>
+<fullyQualifiedTypeName name="classes.Singleton_Login"/>
 </qualifiedTypeNameHistroy>

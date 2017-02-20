@@ -100,10 +100,7 @@ public class Main_Framework2 {
 											Funciones_update.update_admin();
 											break;
 										case 3:
-											back=Funciones_delete.delete_admin();
-											if(back==true){
-												men=7;
-											}
+											Funciones_delete.delete_admin();
 											break;
 										case 4:
 											Funciones_order.order_superadmin();
