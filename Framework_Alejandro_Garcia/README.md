@@ -3,16 +3,16 @@
 Hi ha diferents opcions dins de l'aplicacio:
 {Data}: Dona a elegir a l'usuari diferents tipus de format de la data (dd/mm/yyyy, dd-mm-yyyy, yyyy/mm/dd, yyyy-mm-dd)
 {Decimals}: Permet a l'usuari elegir quants decimals vol, fins un maxim de 3
-{Moneda}:Permet a l'usuari elegir entre tres tipus de moneda (Euros[€],Pound[£],Dolar[$])
+{Moneda}:Permet a l'usuari elegir entre tres tipus de moneda (Euros[â‚¬],Pound[Â£],Dolar[$])
 {Tema}:Permet elegir 4 tipus de temes(GTK,METAL,WINDOWS,MOTIF)
 {Dummies}:Per seleccionar com vols que treballe la aplicacio
 {Format fitxer}:Selecciona els tipus de fitxers amb el qual treballa tota la aplicacio(xml,json,txt)
 {Llengua}:Permet canviar totalment el llenguatge de tota la aplicacio (Angles,Espanyol, Catala)
 
-En el framework, per a començar en el mode dummies, has d'accedir a les opcions i seleccionar-lo. Una vegada ixes de les opcions, dalt de la finestra,
+En el framework, per a comenÃ§ar en el mode dummies, has d'accedir a les opcions i seleccionar-lo. Una vegada ixes de les opcions, dalt de la finestra,
 on es troba el titol d'aquesta, s'aprecia que fica "Menu(Dummies)", que dona a entendre que l'aplicacio ha canviat a mode dummies correctament.
 
-Les opcions s'aguarden sempre automaticament en un fitxer unic per defecte, pero estan les opcions On-demand per a guardar la configuració en una altre fitxer o 
+Les opcions s'aguarden sempre automaticament en un fitxer unic per defecte, pero estan les opcions On-demand per a guardar la configuraciÃ³ en una altre fitxer o 
 obrir-la desde un fitxer guardat previament. Quan s'obri la configuracio desde un fitxer, aquesta configuracio es guardara automaticament en l'arxiu per defecte 
 de configuracio, ja que si no es guarden, no s'aplica al framework.
 
@@ -27,7 +27,7 @@ Tota la aplicacio treballa referent a unes funcions.  (crear,llegir,actualitzar,
 
 
 [Dummies]
-En cas de que estiga el mode dummies activat,tota clase de usuaris pot fer totes les opcions del CRUD. Cap de CRUD guardarà fitxers automaticament, si vols guardar-los
+En cas de que estiga el mode dummies activat,tota clase de usuaris pot fer totes les opcions del CRUD. Cap de CRUD guardarÃ  fitxers automaticament, si vols guardar-los
 , s'ha de fer amb la funcio de Guardar on demand, pero no es recomanable guardar-los ja que totes les dades son aleatories. 
 
 [Menu principal]
